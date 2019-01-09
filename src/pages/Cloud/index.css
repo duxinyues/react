@@ -1,0 +1,13 @@
+.index-blog-content{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ant-list-item-meta-title{
+  margin-bottom: 15px;
+}
+.ant-list-item-meta-content{
+  width: 100%;
+  margin-top:25px;
+}
+.ant-card-meta-detail{background: rgba(255,255,255,0.5);padding: 10px;}

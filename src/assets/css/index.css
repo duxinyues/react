@@ -1,0 +1,74 @@
+ @charset "utf-8";
+.l_box { width: 30%; float: left }
+.r_box { width: 68%; float: right }
+.l_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #fff }
+.l_box .ant-card { background: rgba(255,255,255,0.5); margin-bottom: 20px; overflow: hidden }
+.l_box .ant-card ul { padding: 10px; overflow: hidden }
+.about_me img { width: 100%;height: 100%;}
+.about_me p { line-height: 24px; font-size: 14px }
+.about_me .head_img { width: 100px; float: left; clear: left; margin-right: 10px; height: 100px; position: relative;}
+.about_me .head_img::before,.about_me .head_img::after{content:"";display: block;position: absolute;top: 0px;left: 0px;border: 2px solid #0F0;z-index: 10;box-sizing: border-box;-webkit-animation: Anim 10s infinite linear;width: 100px;height: 100px;}
+.about_me .head_img::before{-webkit-animation-delay:-5s ;}
+@keyframes Anim{
+    0%,100%{
+        clip: rect(0px,100px,100px,97px);
+    }
+    25%{
+        clip: rect(0px,100px,3px,0px);
+    }
+    50%{
+        clip:rect(0px,3px,100px,0px);
+    }
+    75%{
+        clip: rect(97px,100px,100px,0px)
+    }
+}
+
+.wdxc li { width: 32%; overflow: hidden; float: left; height: 80px; margin-bottom: 2px; margin-right: 2px }
+.wdxc li img { height: 100%; min-height: 80px; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
+.wdxc li img:hover { transform: scale(1.05) }
+.tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../images/li.png) left center no-repeat; padding-left: 20px }
+.links a { display: block; float: left; margin: 0 10px 5px 0 }
+.guanzhu img { width: 100% }
+.r_box .ant-card { background: rgba(255,255,255,0.8); padding: 15px; overflow: hidden; color: #797b7c; margin-bottom: 15px }
+.r_box .ant-card h3 { font-size: 16px; line-height: 25px; text-shadow: #FFF 1px 1px 1px }
+.r_box .ant-card h3 a { color: #222 }
+.r_box .ant-card h3 a:hover { color: #000; text-decoration: underline }
+.r_box .ant-card .listInfo{display: flex;margin-top: 15px;}
+.r_box .ant-card .listInfo div{padding:3px;border-radius:5px;display: flex;}
+.r_box .ant-card .listInfo .createTime{color: #797b7c;}
+.r_box .ant-card .listInfo .blogTag{margin-left:5px;color:#fff;font-size: 12px;height: 20px;}
+.news_con{margin-top: 25px;margin-bottom: 25px;}
+article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
+.news_con p{line-height: 30px;text-indent: 30px;}
+.news_con pre{padding-bottom: 20px;text-indent: 30px;}
+.r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;}
+.artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
+.r_box .ant-card:hover img { transform: scale(1.05) }
+.r_box .ant-card:hover h3 a { color: #19585d; }
+.ant-pagination-item{cursor:pointer;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;min-width:32px;height:32px;line-height:30px;text-align:center;list-style:none;display:inline-block;vertical-align:middle;margin-right:8px;font-family:Arial;outline:0}
+.ant-pagination-jump-next,.ant-pagination-jump-prev,.ant-pagination-next,.ant-pagination-prev{font-family:Arial;cursor:pointer;color:rgba(255,255,255 .65);border-radius:4px;list-style:none;min-width:32px;height:32px;line-height:32px;text-align:center;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;display:inline-block;vertical-align:middle}
+.ant-pagination-disabled,.ant-pagination-disabled:focus,.ant-pagination-disabled:hover{cursor:not-allowed}
+a.curPage{color:#19585d;font-weight:700}
+.about{padding:20px;background:rgba(255,255,255,.8)}
+.about img{max-width:500px;margin:20px 0;width:100%}
+.cloud ul a{line-height:24px;height:24px;display:block;background:#999;float:left;padding:0 5px;margin:10px 10px 0 0;border-radius:8px;-moz-transition:all .5s;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;color:#FFF;font-size: 12px;}
+.cloud ul a:hover{border-radius:0;text-shadow:#000 1px 1px 1px}
+.ant-pagination-item{width:20px;text-align:center;margin:0 5px}
+.ant-pagination-item a{color:#fff}
+.ant-pagination-item-link{line-height:25px;color:#fff}
+.ant-card-body{zoom:1}
+.ant-timeline-item{position:relative;padding:0 0 20px;list-style:none;margin:0;font-size:14px}
+.ant-timeline-item-head{position:absolute;width:10px;height:10px;background-color:#fff;border-radius:100px;border:2px solid transparent;border-color:#1890ff}
+.ant-timeline-item-content{padding:0 0 0 20px;position:relative;top:-6px}
+.ant-timeline-item-tail{position:absolute;left:6px;top:.75em;height:100%;border-left:1px dashed rgba(0,0,0,.25)}
+.ant-timeline-item-last .ant-timeline-item-tail{border-left:2px dotted #e8e8e8;display:none}
+.ant-list-item-meta-title{text-indent: 0}
+
+/*calendar*/
+.output{width: 300px;background: rgba(255,255,255,0.4);}
+.main{padding-bottom: 15px;}
+.calendarHeader{display: flex;justify-content: space-around;margin-top: 15px;}
+.calendarMain{margin: 0 auto;margin-top: 15px;}
+.calendarMain th,td{padding: 5px 10px;cursor: pointer;}
+.calendarHeader .prev,.calendarHeader .next{cursor: pointer;}

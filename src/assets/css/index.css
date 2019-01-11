@@ -41,7 +41,7 @@
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
 .news_con p{line-height: 30px;text-indent: 30px;}
-.news_con pre{padding-bottom: 20px;text-indent: 30px;}
+.news_con pre{padding-bottom: 20px;background: #e5e1e1;color: #000;}
 .r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
 .r_box .ant-card:hover img { transform: scale(1.05) }

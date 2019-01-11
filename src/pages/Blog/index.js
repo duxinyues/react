@@ -4,7 +4,7 @@ import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
 import {CONFIG} from '../../config';
-import hljs from 'highlight.js';
+// import hljs from 'highlight.js';
 class Blog extends Component {
     constructor(props) {
         super(props);
@@ -32,9 +32,9 @@ class Blog extends Component {
         });
     };
     componentWillMount() {
-        marked.setOptions({
-            highlight:code => hljs.highlightAuto(code).value,
-        })
+        // marked.setOptions({
+        //     highlight:code => hljs.highlightAuto(code).value,
+        // })
         this.getBlogContent(this.props.match.params.number);
     }
     

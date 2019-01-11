@@ -19,7 +19,7 @@ class Home extends Component{
             // 当前选中的页码
             page: 1,
             // 一页的数量
-            pageNum: 6,
+            pageNum: 7,
         }
     }
     componentDidMount(){

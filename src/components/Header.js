@@ -18,10 +18,10 @@ class Header extends Component{
        const { issues } = this.props;
        return(
         <header>
-        <div className="logo"><img src={LogoImg} alt=""/></div>
+        <div className="logo"><img src={LogoImg} alt="读心" width="200px"/></div>
         <nav id="nav">
             <ul>
-                <li><Link to="/">首页</Link></li>
+                <li><Link to="/" id="selected">首页</Link></li>
                 <li><Link to="/archive">归档-{issues.length}</Link></li>
                 <li><Link to="/essays">随笔</Link></li>
             </ul>

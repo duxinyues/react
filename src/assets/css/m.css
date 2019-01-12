@@ -32,7 +32,7 @@ header,article{ width:96%; margin:auto}
 header,article{ width:96%; margin:auto}
 .logo{ width:100%}
 .logo img{   margin:auto}
-.bg{width: 100%;min-height: 100vh;background: url(../images/webBg.jpg);background-attachment:fixed;background-repeat: no-repeat;background-position: center;background-size: cover;}
+.bg{width: 100%;min-height: 100vh;background:#efefef;}
 .news_con pre{padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;}
 .infosbox img {  height: auto; width:100%;margin: 24px auto; }
 #archive span:nth-child(2){margin-right: 0;width: 25%;}

@@ -3,6 +3,7 @@ import {Row,Card,Icon,Tag,Col,Pagination} from 'antd'
 import AboutMe from './../../components/About';
 import WeChat from './../../components/Calendar';
 import FLink from './../../components/Link';
+import TodayPoetry from './../../components/TodayPoetry';
 import {Link,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
@@ -19,7 +20,7 @@ class Home extends Component{
             // 当前选中的页码
             page: 1,
             // 一页的数量
-            pageNum: 7,
+            pageNum: 8,
         }
     }
     componentDidMount(){
@@ -96,7 +97,7 @@ class Home extends Component{
                     >
                     <AboutMe/>
                     <Card className="cloud">
-                        <h2>标签云</h2>
+                        <h2>文章分类</h2>
                         <ul>
                             {
                                 labelList.map((value, key) => {
@@ -125,6 +126,7 @@ class Home extends Component{
                     </Card>
                     <FLink/>
                     < WeChat/>
+                    <TodayPoetry />
                     </QueueAnim>
                 </Row>
                 <Row className="r_box">
@@ -139,7 +141,7 @@ class Home extends Component{
                                 nowPageIssues.map((item,index)=>{
                                         const time = TimeUpdate(item.created_at);
                                         return (
-                                            <Card key={index} style={{width:'100%',marginBottom:20,display:'block'}}>
+                                            <Card key={index} style={{ width: '100%', marginBottom: 20, display: 'block', background: 'rgba(255, 255, 255, 0.8)'}}>
                                                 <Meta
                                                     title={<h3><Link to={`/blog/${item.number}`}>{item.title}</Link></h3>}
                                                     description={

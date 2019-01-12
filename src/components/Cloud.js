@@ -32,7 +32,7 @@ class Cloud extends Component {
         const {data} = this.state;
         return (
             <Row>
-                <h2>标签云</h2>
+                <h2>文章分类</h2>
                 <ul>
                     {
                         data.map((value, key) => {

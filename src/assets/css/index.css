@@ -41,7 +41,7 @@
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
 .news_con p{line-height: 30px;text-indent: 30px;}
-.news_con pre{padding-bottom: 20px;background: #e5e1e1;color: #000;}
+.news_con pre{padding-bottom: 20px;text-indent: 30px;}
 .r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
 .r_box .ant-card:hover img { transform: scale(1.05) }
@@ -55,8 +55,8 @@ a.curPage{color:#19585d;font-weight:700}
 .cloud ul a{line-height:24px;height:24px;display:block;background:#999;float:left;padding:0 5px;margin:10px 10px 0 0;border-radius:8px;-moz-transition:all .5s;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;color:#FFF;font-size: 12px;}
 .cloud ul a:hover{border-radius:0;text-shadow:#000 1px 1px 1px}
 .ant-pagination-item{width:20px;text-align:center;margin:0 5px}
-.ant-pagination-item a{color:#fff}
-.ant-pagination-item-link{line-height:25px;color:#fff}
+.ant-pagination-item a{color:#555;}
+.ant-pagination-item-link{line-height:25px;color:#555;}
 .ant-card-body{zoom:1}
 .ant-timeline-item{position:relative;padding:0 0 20px;list-style:none;margin:0;font-size:14px}
 .ant-timeline-item-head{position:absolute;width:10px;height:10px;background-color:#fff;border-radius:100px;border:2px solid transparent;border-color:#1890ff}

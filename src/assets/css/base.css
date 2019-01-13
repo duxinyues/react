@@ -20,11 +20,11 @@ article { width: 1000px; margin: auto; overflow: hidden }
 header { width: 1000px; overflow: hidden;margin: 0 auto }
 .logo { width: 1000px; margin: auto; font-size: 26px; padding: 10px 0 20px 0; -webkit-text-shadow: 1px 1px 1px rgba(255,255,255,.2); -moz-text-shadow: 1px 1px 1px rgba(255,255,255,.2); text-shadow: 1px 1px 1px rgba(255,255,255,.2); }
 .logo a { color: #222 }
-#archive{color: #fff;display: flex;justify-content: space-between}
+#archive{display: flex;justify-content: space-between}
 #archive span:nth-child(1){margin-left: 10px;width: 70%;}
 #archive span:nth-child(2){width: 20%;}
 nav{ width: 1000px; margin: auto; overflow: hidden; padding: 0 0 20px 0 }
-nav li { display: inline-block; float: left; padding-right:30px;text-align: center; overflow: hidden; line-height: 30px; }
+nav li { display: inline-block;padding-right:30px;text-align: center; overflow: hidden; line-height: 30px; }
 nav li a { color: #555; }
 nav li a:hover { font-weight:bold  }
 .mnav{ width:100%; background:#000; line-height:40px; height:40px; text-align:center;  position:fixed; bottom:0; display:none; z-index:9999999}
@@ -32,7 +32,7 @@ nav li a:hover { font-weight:bold  }
 .mnav li{ display:inline; padding:0 5px}
 .mnav li a{ color:#FFF}
 /*cd-top*/
-.cd-top { display: inline-block; height: 40px; width: 40px; position: fixed; bottom: 40px; right: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); overflow: hidden; text-indent: 100%; white-space: nowrap; background: rgba(0, 0, 0, 0.8) url(../images/top.png) no-repeat center; visibility: hidden; opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+/* .cd-top { display: inline-block; height: 40px; width: 40px; position: fixed; bottom: 40px; right: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); overflow: hidden; text-indent: 100%; white-space: nowrap; background: rgba(0, 0, 0, 0.8) url(../images/top.png) no-repeat center; visibility: hidden; opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; } */
 .cd-top.cd-is-visible { visibility: visible; opacity: 1; }
 /*footer*/
 footer { width: 100%; color: #a5a4a4; text-align: center; padding: 40px 0; clear: both; text-shadow: #fff 1px 0 2px, #fff 0 1px 2px, #fff -1px 0 2px, #fff 0 -1px 2px; }

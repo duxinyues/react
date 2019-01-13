@@ -4,7 +4,7 @@ import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
 import {CONFIG} from '../../config';
-// import hljs from 'highlight.js';
+import GitTalk from '../GitTalk'
 class Blog extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +19,9 @@ class Blog extends Component {
         const self = this;
         const api = `https://api.github.com/repos/${CONFIG['owner']}/blogtext/issues/` + path;
         axios.get(api, {
-            params: 'weiyongyuan94'
+            creator: 'weiyongyuan94',
+            client_id: '53b1502bf95091987671',
+            client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
         }).then((response) => {
             if (response.status === 200) {
                 const data = response.data;
@@ -32,15 +34,19 @@ class Blog extends Component {
         });
     };
     componentWillMount() {
-        // marked.setOptions({
-        //     highlight:code => hljs.highlightAuto(code).value,
-        // })
         this.getBlogContent(this.props.match.params.number);
+        this.setState({
+            path: this.props.match.params.number
+        })
     }
-    
+    componentWillReceiveProps(nextProps){
+        if (this.props.match.params.number !== nextProps.match.params.number) {
+            this.setState({ path: nextProps.match.params.number, talk: false })
+        }
+    }
     render() {
-        const {content} = this.state;
-
+        const {content,path,talk} = this.state;
+        console.log(path)
         return (
             <Row>
                 <Card style={{width:'100%'}}>
@@ -75,7 +81,7 @@ class Blog extends Component {
                                 })
                             }
                         </Card>
-                        
+                        {talk  ? <GitTalk path={this.state.path} /> : null}
                     </article>
                 </Card>
             </Row>

@@ -19,7 +19,9 @@ class EssaysCon extends Component {
         const self = this;
         const api = `https://api.github.com/repos/${CONFIG['owner']}/weiyongyuan94.github.io/issues/` + path;
         axios.get(api, {
-            params: 'weiyongyuan94'
+            creator: 'weiyongyuan94',
+            client_id: '53b1502bf95091987671',
+            client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
         }).then((response) => {
             if (response.status === 200) {
                 const data = response.data;

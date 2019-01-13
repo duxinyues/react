@@ -5,6 +5,7 @@ import WeChat from './../../components/Calendar';
 import FLink from './../../components/Link';
 import { Link,} from 'react-router-dom';
 import axios from 'axios';
+import TodayPoetry from './../../components/TodayPoetry';
 import { CONFIG } from '../../config';
 import QueueAnim from 'rc-queue-anim';
 import TimeUpdate from '../../utils';
@@ -31,7 +32,9 @@ class Essays extends Component {
     getBlogLabels = () => {
         axios.get(`https://api.github.com/repos/${CONFIG['owner']}/weiyongyuan94.github.io/issues`, {
             params: {
-                creator: 'weiyongyuan94'
+                creator: 'weiyongyuan94',
+                client_id: '53b1502bf95091987671',
+                client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
             },
         }).then((response) => {
             if (response.status === 200) {
@@ -113,6 +116,7 @@ class Essays extends Component {
                         </Card>
                         <FLink/>
                         <WeChat/>
+                        <TodayPoetry />
                     </QueueAnim>
                 </Row>
                 <Row className="r_box">

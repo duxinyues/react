@@ -39,7 +39,9 @@ class Home extends Component{
     getBlogLabels = ()=>{
         axios.get(`https://api.github.com/repos/${CONFIG['owner']}/blogtext/issues`, {
             params: {
-                creator:'weiyongyuan94'
+                creator: 'weiyongyuan94',
+                client_id: '53b1502bf95091987671',
+                client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
             },
         }).then((response) => {
             if (response.status === 200) {
@@ -125,7 +127,7 @@ class Home extends Component{
                         </ul>
                     </Card>
                     <FLink/>
-                    < WeChat/>
+                    <WeChat/>
                     <TodayPoetry />
                     </QueueAnim>
                 </Row>

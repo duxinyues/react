@@ -93,8 +93,6 @@ export default class TagBlog extends React.Component {
                                                                    )
                                                                })
                                                            ) : null
-
-
                                                         }
                                                     </Col>
                                                 </Row>

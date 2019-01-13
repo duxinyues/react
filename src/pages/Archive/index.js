@@ -3,14 +3,8 @@ import {Card, Timeline} from 'antd';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './index.less';
-
 const {Meta} = Card;
-
-
 class Archive extends React.Component {
-    state = {}
-
-    // 返回顶部
     render() {
         const {issues} = this.props;
         return (
@@ -37,11 +31,9 @@ class Archive extends React.Component {
         );
     }
 }
-
 const mapStateToProps = state => {
     return {
         issues: state.issues
     }
 }
-
 export default connect(mapStateToProps)(Archive);

@@ -33,8 +33,8 @@ export default class TagBlog extends React.Component {
             params: {
                 labels: data,
                 creator: 'weiyongyuan94',
-                client_id: '53b1502bf95091987671',
-                client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
+                client_id: 'a5636a8f618a5ce0c877',
+                client_secret: '054b02cccd28b32a030b4ac7778384fc3fe7e812',
             },
         }).then((response) => {
             if (response.status === 200) {

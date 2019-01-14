@@ -4,14 +4,11 @@ import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
 import {CONFIG} from '../../config';
-import GitTalk from '../GitTalk'
 class Blog extends Component {
     constructor(props) {
         super(props);
         this.state = {
             content: [],
-            path:'',
-            talk:true
         }
     }
     getBlogContent = (path) => {
@@ -20,8 +17,8 @@ class Blog extends Component {
         const api = `https://api.github.com/repos/${CONFIG['owner']}/blogtext/issues/` + path;
         axios.get(api, {
             creator: 'weiyongyuan94',
-            client_id: '53b1502bf95091987671',
-            client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
+            client_id: 'a5636a8f618a5ce0c877',
+            client_secret: '054b02cccd28b32a030b4ac7778384fc3fe7e812',
         }).then((response) => {
             if (response.status === 200) {
                 const data = response.data;
@@ -35,17 +32,14 @@ class Blog extends Component {
     };
     componentWillMount() {
         this.getBlogContent(this.props.match.params.number);
-        this.setState({
-            path: this.props.match.params.number
-        })
+       
     }
     componentWillReceiveProps(nextProps){
         if (this.props.match.params.number !== nextProps.match.params.number) {
-            this.setState({ path: nextProps.match.params.number, talk: false })
         }
     }
     render() {
-        const {content,path,talk} = this.state;
+        const {content,path} = this.state;
         console.log(path)
         return (
             <Row>
@@ -81,7 +75,6 @@ class Blog extends Component {
                                 })
                             }
                         </Card>
-                        {talk  ? <GitTalk path={this.state.path} /> : null}
                     </article>
                 </Card>
             </Row>

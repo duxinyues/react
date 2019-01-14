@@ -4,7 +4,6 @@ import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
 import {CONFIG} from '../../config';
-import hljs from 'highlight.js';
 class EssaysCon extends Component {
     constructor(props) {
         super(props);
@@ -20,8 +19,8 @@ class EssaysCon extends Component {
         const api = `https://api.github.com/repos/${CONFIG['owner']}/weiyongyuan94.github.io/issues/` + path;
         axios.get(api, {
             creator: 'weiyongyuan94',
-            client_id: '53b1502bf95091987671',
-            client_secret: '47f3f2006d5c743b97543a3bc8170507392b3b4b'
+            client_id: 'a5636a8f618a5ce0c877',
+            client_secret: '054b02cccd28b32a030b4ac7778384fc3fe7e812'
         }).then((response) => {
             if (response.status === 200) {
                 const data = response.data;
@@ -34,9 +33,7 @@ class EssaysCon extends Component {
         });
     };
     componentWillMount() {
-        marked.setOptions({
-            highlight:code => hljs.highlightAuto(code).value,
-        })
+       
         this.getBlogContent(this.props.match.params.number);
     }
     

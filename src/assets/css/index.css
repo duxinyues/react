@@ -24,9 +24,7 @@
     }
 }
 
-/* .wdxc li { width: 32%; overflow: hidden; float: left; height: 80px; margin-bottom: 2px; margin-right: 2px }
-.wdxc li img { height: 100%; min-height: 80px; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
-.wdxc li img:hover { transform: scale(1.05) } */
+
 .tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../images/li.png) left center no-repeat; padding-left: 20px }
 .links a { display: block; float: left; margin: 0 10px 5px 0 }
 /* .guanzhu img { width: 100% } */
@@ -37,12 +35,13 @@
 .r_box .ant-card .listInfo{display: flex;margin-top: 15px;}
 .r_box .ant-card .listInfo div{padding:3px;border-radius:5px;display: flex;}
 .r_box .ant-card .listInfo .createTime{color: #797b7c;}
-.r_box .ant-card .listInfo .blogTag{margin-left:5px;color:#fff;font-size: 12px;height: 20px;}
+.r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 16px}
+.calendar{background: url(../images//newsbg02.png)no-repeat 100% 100%;background-size: 100%;width: 20px;height: 20px;background-position: 0 3px;}
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
 .news_con p{line-height: 30px;text-indent: 30px;}
 .news_con pre{padding-bottom: 20px;text-indent: 30px;}
-.r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;}
+.r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;color: #F8A8A8;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
 .r_box .ant-card:hover img { transform: scale(1.05) }
 .r_box .ant-card:hover h3 a { color: #19585d; }

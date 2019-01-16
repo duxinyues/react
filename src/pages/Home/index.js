@@ -149,14 +149,14 @@ class Home extends Component{
                                                     description={
                                                         <Row>
                                                             <Row className="listInfo">
-                                                                <Col className="createTime"><Icon type="calendar" style={{marginRight:5}}/>{time}</Col>
+                                                                <Col className="createTime"><Icon className="calendar" style={{marginRight:5}}/>{time}</Col>
                                                                 <Col className="tag" style={{marginLeft:15}}>
                                                                     <Icon type="tags-o" style={{fontSize:20,marginRight:5}} />
                                                                     {
                                                                         item.labels && item.labels.length?(
                                                                             item.labels.map((value,key)=>{
                                                                                 return (
-                                                                                    <Tag className="blogTag" key={key} style={{backgroundColor:`#${value.color}`}} >
+                                                                                    <Tag className="blogTag" key={key} style={{ color:`#096`}} >
                                                                                         {value.name}
                                                                                     </Tag>
                                                                                 )

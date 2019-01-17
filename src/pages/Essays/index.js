@@ -114,7 +114,6 @@ class Essays extends Component {
                                 }
                             </ul>
                         </Card>
-                        <FLink/>
                         <WeChat/>
                         <TodayPoetry />
                     </QueueAnim>

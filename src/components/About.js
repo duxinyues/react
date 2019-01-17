@@ -8,7 +8,8 @@ export default class AboutMe extends Component {
             <h2>关于我</h2>
             <ul>
                 <div className="head_img"><img src={headImg} alt="" /></div>
-                <p><b>读心</b>  ，读心，读书，读自己！</p>
+                <p><b>WEB前端工程师</b></p>
+                <p><b>读心</b>  ，读书，读自己！</p>
             </ul>
         </Card>
         )

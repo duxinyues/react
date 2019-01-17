@@ -12,18 +12,15 @@ export default class Banner extends Component {
       ctx.lineWidth = 3;
       ctx.shadowBlur = 5;
       ctx.shadowColor = '#7FFFD4';
-
       var milliseconds = 0;
       var minutes = 0;
       var hour = 0;
       var date = "";
       var ctxBack = canvas.getContext("2d");
-      var numBack = canvas.getContext("2d");
       //Number	
       ctxBack.lineWidth = 1;
       ctxBack.shadowBlur = 0;
       ctxBack.shadowColor = '#F0F8FF';
-
       function pageInit() {
           showTime();
           showBack();
@@ -31,31 +28,7 @@ export default class Banner extends Component {
           drawMinPin();
           drawHouPin();
           setPoint();
-          setNum();
       }
-
-      function setNum() {
-          numBack.save();
-          numBack.translate(150, 150);
-          numBack.beginPath();
-          numBack.fillStyle = '#7FFFD4';
-          numBack.font = "12px Helvetica";
-          for (var i = 0; i < 60; i++) {
-              if (i % 5 === 0) {
-                  numBack.lineWidth = 5;
-                  var xPoint = Math.sin(i * 6 * 2 * Math.PI / 360) * 100;
-                  var yPoint = -Math.cos(i * 6 * 2 * Math.PI / 360) * 100;
-                  numBack.fillText(i === 0 ? 12 : i / 5,
-                      i === 0 ? -15 : xPoint - 10, i === 0 ? -185 : i <= 30 ? yPoint + 5 : yPoint + 10);
-              }
-          }
-          numBack.stroke();
-          numBack.closePath();
-          numBack.restore();
-      }
-
-
-
       // 绘制秒针
       function drawSecPin() {
           ctxBack.save();
@@ -77,7 +50,6 @@ export default class Banner extends Component {
           ctxBack.closePath();
           ctxBack.restore();
       }
-
       // 绘制分针
       function drawMinPin() {
           ctxBack.save();
@@ -101,7 +73,6 @@ export default class Banner extends Component {
           ctxBack.restore();
 
       }
-
       // 绘制时针
       function drawHouPin() {
 
@@ -133,27 +104,24 @@ export default class Banner extends Component {
           ctxBack.arc(150, 150, 3, 0, 2 * Math.PI);
           ctxBack.stroke();
       }
-
-
       function showBack() {
           for (var i = 0; i < 60; i++) {
               ctxBack.save();
               ctxBack.translate(150, 150);
               ctxBack.rotate(i / 60 * 2 * Math.PI);
               ctxBack.beginPath();
-              ctxBack.strokeStyle = '#7FFFD4';
+              ctxBack.strokeStyle = '#797b7c';
               ctxBack.moveTo(0, -150);
               ctxBack.lineWidth = i % 5 === 0 ? 5 : 2;
-              ctxBack.lineTo(0, -130);
+              ctxBack.lineTo(0, -140);
               ctxBack.stroke();
               ctxBack.closePath();
               ctxBack.restore();
           }
           ctxBack.beginPath();
-          ctxBack.arc(150, 150, 130, 0, 2 * Math.PI);
+          ctxBack.arc(150, 150, 150, 0, 2 * Math.PI);
           ctxBack.stroke();
       }
-
       function degToRad(degree) {
           var result;
           var factor = Math.PI / 180;
@@ -164,9 +132,7 @@ export default class Banner extends Component {
           }
           return result;
       }
-
       function showTime() {
-
           var now = new Date();
           var today = now.toLocaleDateString();
           var time = now.toLocaleTimeString();
@@ -176,14 +142,11 @@ export default class Banner extends Component {
           var sec = now.getSeconds();
           var mil = now.getMilliseconds();
           var smoothsec = sec + (mil / 1000);
-
           var smoothmin = min + (smoothsec / 60);
           var hours = hrs + (smoothmin / 60);
-
           milliseconds = smoothsec;
           minutes = smoothmin;
           hour = hours;
-
           switch (day) {
               case 1: date = '一'
                   break;
@@ -200,14 +163,12 @@ export default class Banner extends Component {
               case 0: date = '日'
                   break;
           }
-
           //Background
           var gradient = ctx.createRadialGradient(150, 150, 5, 150, 150, 100);
           gradient.addColorStop(0, "#03303a");
-          gradient.addColorStop(1, "black");
+          gradient.addColorStop(1, "#efefef");
           ctx.fillStyle = gradient;
           ctx.fillRect(0, 0, 300, 300);
-
           //Hours
           ctx.beginPath();
           ctx.strokeStyle = '#87CEFA';
@@ -224,14 +185,14 @@ export default class Banner extends Component {
           ctx.arc(150, 150, 125, degToRad(0), degToRad(smoothsec * 6 - 90));
           ctx.stroke();
           //Date
-          ctx.font = "25px Helvetica Bold";
+          ctx.font = "18px Helvetica Bold";
           ctx.fillStyle = '#7FFFD4';
-          ctx.fillText(today + "/星期" + date,75, 130);
+          ctx.fillText(today + "/星期" + date,75, 140);
           //Time
-          ctx.font = "23px Helvetica Bold";
+          ctx.font = "17px Helvetica Bold";
           ctx.fillStyle = '#7FFFD4';
-          //ctx.fillText(time+":"+mil, 160, 280);
-          ctx.fillText(time, 110, 180);
+        //   ctx.fillText(time+":"+mil, 160, 280);
+          ctx.fillText(time, 110, 170);
       }
       setInterval(pageInit, 50);
   }
@@ -249,13 +210,13 @@ export default class Banner extends Component {
         r: 72,
         lineWidth: 8,
         strokeStyle: 'rgba(248, 248, 248, 1)',
-        LinearGradientColor1: '#3EECED',
+        LinearGradientColor1: '#111',
         LinearGradientColor2: '#499BE6'
     }
   render() {
       const {canvaswidth, canvasheight } = this.props
     return (
-        <div style={{ width: '1000px', height: '300px', position: 'relative', margin:' 0 auto'}}>
+        <div style={{marginTop:'20px',marginBottom:'20px'}}>
               <canvas id="canvas" width={canvaswidth} height={canvasheight}></canvas>
           </div>
     )

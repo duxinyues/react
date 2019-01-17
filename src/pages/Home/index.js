@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
 import {Row,Card,Icon,Tag,Col,Pagination} from 'antd'
 import AboutMe from './../../components/About';
-import WeChat from './../../components/Calendar';
-import FLink from './../../components/Link';
+import Clock from './../../components/Banner';
 import TodayPoetry from './../../components/TodayPoetry';
 import {Link,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -98,6 +97,7 @@ class Home extends Component{
                         ]}
                     >
                     <AboutMe/>
+                    <Clock/>
                     <Card className="cloud">
                         <h2>文章分类</h2>
                         <ul>
@@ -126,8 +126,7 @@ class Home extends Component{
                             }
                         </ul>
                     </Card>
-                    <FLink/>
-                    <WeChat/>
+                    
                     <TodayPoetry />
                     </QueueAnim>
                 </Row>

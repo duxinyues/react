@@ -149,7 +149,7 @@ class Home extends Component{
                                                     description={
                                                         <Row>
                                                             <Row className="listInfo">
-                                                                <Col className="createTime"><Icon className="calendar" style={{marginRight:5}}/>{time}</Col>
+                                                                <Col className="createTime"><i className="calendar" style={{marginRight:5}}/>{time}</Col>
                                                                 <Col className="tag" style={{marginLeft:15}}>
                                                                     <Icon type="tags-o" style={{fontSize:20,marginRight:5}} />
                                                                     {

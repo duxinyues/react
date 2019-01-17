@@ -1,4 +1,30 @@
- @charset "utf-8";
+@charset "utf-8";
+.banner{width: 1000px;height:350px;overflow: hidden;margin: 0 auto;border: 1px solid red;margin-bottom: 15px;position: relative;}
+.banner img{width: 100%;height: 100%;position: absolute;top: 0;left: 0;opacity: 0;transition: opacity 5s linear}
+.banner img.active{opacity: 1;}
+.banner p{position: absolute;top: 25px;left: -400px;line-height: 30px;padding: 5px 30px;font-size: 16px;color: white;background: rgba(100,100,100,0.6);opacity: 0;transition: all .5s;}
+.bannerBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-animation-name: dong;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes dong{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{opacity: 0;}
+    75%{opacity: 1;}
+}
+
+
 .l_box { width: 30%; float: left }
 .r_box { width: 68%; float: right }
 .l_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #fff }

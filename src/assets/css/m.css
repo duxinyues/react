@@ -29,7 +29,8 @@ header,article{ width:96%; margin:auto}
 .lmname,.view{ display:none}
 }
 @media only screen and (max-width: 479px) {
-header,article{ width:96%; margin:auto}
+header,article,.banner{ width:96%; margin:auto}
+.banner{margin-bottom: 15px;}
 .logo{ width:100%}
 .logo img{   margin:auto}
 .bg{width: 100%;min-height: 100vh;background:#efefef;}

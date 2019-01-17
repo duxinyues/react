@@ -6,6 +6,7 @@ import {Col, Row} from 'antd';
 import {CONFIG} from './config';
 import axios from 'axios';
 import {connect} from 'react-redux';
+import Banner from './components/Banner';
 import {issuesList} from './redux/actions/';
 import TimeUpdate from './utils';
 class App extends Component {
@@ -53,20 +54,21 @@ class App extends Component {
     render() {
         return (
             <Router>
-                    <div className="bg">
-                        <Header />
-                        <article>
-                            <Col xs={1} xm={1} md={1} lg={1} xl={3} xxl={4}></Col>
-                            <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}>
-                                <Row>
-                                    <Col xs={24} sm={24} md={24} lg={17} xl={17} xxl={17}>
-                                        {this.props.children}
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </article>
-                        <Footer />
-                    </div>
+                <div className="bg">
+                    <Header />
+                    <Banner/>
+                    <article>
+                        <Col xs={1} xm={1} md={1} lg={1} xl={3} xxl={4}></Col>
+                        <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}>
+                            <Row>
+                                <Col xs={24} sm={24} md={24} lg={17} xl={17} xxl={17}>
+                                    {this.props.children}
+                                </Col>
+                            </Row>
+                        </Col>
+                    </article>
+                    <Footer />
+                </div>
             </Router>
         )
     }

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
+import hljs from 'highlight.js';
 import {CONFIG} from '../../config';
 class Blog extends Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class Blog extends Component {
                 const data = response.data;
                 self.setState({
                     content: [data],
+                    number:data.number
                 })
             }
         }).catch(function (error) {
@@ -31,16 +33,18 @@ class Blog extends Component {
         });
     };
     componentWillMount() {
+        marked.setOptions({
+            highlight: code => hljs.highlightAuto(code).value,
+        });
         this.getBlogContent(this.props.match.params.number);
-       
+
     }
     componentWillReceiveProps(nextProps){
         if (this.props.match.params.number !== nextProps.match.params.number) {
         }
     }
     render() {
-        const {content,path} = this.state;
-        console.log(path)
+        const { content} = this.state;
         return (
             <Row>
                 <Card style={{width:'100%'}}>
@@ -69,6 +73,7 @@ class Blog extends Component {
                                             
                                             <div className="news_con"
                                                  dangerouslySetInnerHTML={{__html: marked(item.body)}}/>
+                                            
                                         </div>
                                         
                                     )

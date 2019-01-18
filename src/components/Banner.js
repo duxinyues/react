@@ -20,7 +20,7 @@ export default class Banner extends Component {
       //Number	
       ctxBack.lineWidth = 1;
       ctxBack.shadowBlur = 0;
-      ctxBack.shadowColor = '#F0F8FF';
+      ctxBack.shadowColor = '#999';
       function pageInit() {
           showTime();
           showBack();
@@ -211,7 +211,7 @@ export default class Banner extends Component {
         lineWidth: 8,
         strokeStyle: 'rgba(248, 248, 248, 1)',
         LinearGradientColor1: '#111',
-        LinearGradientColor2: '#499BE6'
+        LinearGradientColor2: '#999'
     }
   render() {
       const {canvaswidth, canvasheight } = this.props

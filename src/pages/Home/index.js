@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {Row,Card,Icon,Tag,Col,Pagination} from 'antd'
 import AboutMe from './../../components/About';
-import Clock from './../../components/Banner';
 import TodayPoetry from './../../components/TodayPoetry';
 import {Link,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -19,7 +18,7 @@ class Home extends Component{
             // 当前选中的页码
             page: 1,
             // 一页的数量
-            pageNum: 10,
+            pageNum: 8,
         }
     }
     componentDidMount(){
@@ -86,7 +85,6 @@ class Home extends Component{
     render(){
         const {issues} = this.props;
         const { labelList, nowPageIssues, page, pageNum} = this.state;
-       
         return(
             <Row>
                 <Row className="l_box">
@@ -97,7 +95,6 @@ class Home extends Component{
                         ]}
                     >
                     <AboutMe/>
-                    <Clock/>
                     <Card className="cloud">
                         <h2>文章分类</h2>
                         <ul>

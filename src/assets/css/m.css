@@ -29,12 +29,13 @@ header,article{ width:96%; margin:auto}
 .lmname,.view{ display:none}
 }
 @media only screen and (max-width: 479px) {
-header,article,.banner{ width:96%; margin:auto}
+header,article{ width:96%; margin:auto}
+nav li{padding-right: 24px;}
 .banner{margin-bottom: 15px;}
 .logo{ width:100%}
 .logo img{   margin:auto}
 .bg{width: 100%;min-height: 100vh;background:#efefef;}
-.news_con pre{padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;}
+.news_con pre{padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;background: #000;color: #f8f8f8;}
 .infosbox img {  height: auto; width:100%;margin: 24px auto; }
 #archive span:nth-child(2){margin-right: 0;width: 25%;}
 #nav{width: 96%;margin: 0 auto;}

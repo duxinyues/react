@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Card, Icon, Tag, Col, Pagination } from 'antd';
 import AboutMe from './../../components/About';
 import WeChat from './../../components/Calendar';
-import FLink from './../../components/Link';
+// import FLink from './../../components/Link';
 import { Link,} from 'react-router-dom';
 import axios from 'axios';
 import TodayPoetry from './../../components/TodayPoetry';

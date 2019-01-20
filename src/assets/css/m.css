@@ -29,6 +29,7 @@ header,article{ width:96%; margin:auto}
 .lmname,.view{ display:none}
 }
 @media only screen and (max-width: 479px) {
+ /*智能手机*/
 header,article{ width:96%; margin:auto}
 nav li{padding-right: 24px;}
 .banner{margin-bottom: 15px;}

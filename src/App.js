@@ -56,7 +56,6 @@ class App extends Component {
                 <div className="bg">
                     <Header />
                     <article>
-                        <Col xs={1} xm={1} md={1} lg={1} xl={3} xxl={4}></Col>
                         <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}>
                             <Row>
                                 <Col xs={24} sm={24} md={24} lg={17} xl={17} xxl={17}>

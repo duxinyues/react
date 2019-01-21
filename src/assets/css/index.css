@@ -4,6 +4,7 @@
 .l_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #fff;}
 .l_box .ant-card { background: rgba(255,255,255,0.5); margin-bottom: 20px; overflow: hidden }
 .l_box .ant-card ul { padding: 10px; overflow: hidden }
+.l_box .ant-card-body{padding: 0}
 .about_me img {width: 100%;height: 100%;}
 .about_me p{line-height: 24px; font-size: 14px;text-align: center;}
 .about_me .head_img { width: 100px;height: 100px; position: relative;margin: 0 auto;margin-top: 20px;margin-bottom: 20px;}
@@ -30,7 +31,7 @@
 .r_box .ant-card h3 { font-size: 16px; line-height: 25px; text-shadow: #FFF 1px 1px 1px }
 .r_box .ant-card h3 a { color: #222 }
 .r_box .ant-card h3 a:hover { color: #000; text-decoration: underline }
-.r_box .ant-card .listInfo{display: flex;margin-top: 15px;}
+.r_box .ant-card .listInfo{display: flex;}
 .r_box .ant-card .listInfo div{padding:3px;border-radius:5px;display: flex;}
 .r_box .ant-card .listInfo .createTime{color: #797b7c;}
 .r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 16px}
@@ -56,11 +57,13 @@ a.curPage{color:#19585d;font-weight:700}
 .ant-pagination-item-link{line-height:25px;color:#555;}
 .ant-card-body{zoom:1}
 .ant-timeline-item{position:relative;padding:0 0 20px;list-style:none;margin:0;font-size:14px}
-.ant-timeline-item-head{position:absolute;width:10px;height:10px;background-color:#fff;border-radius:100px;border:2px solid transparent;border-color:#1890ff}
+.ant-timeline-item-head{position:absolute;left: 15px;width:10px;height:10px;background-color:#fff;border-radius:100px;border:2px solid transparent;border-color:#1890ff}
 .ant-timeline-item-content{padding:0 0 0 20px;position:relative;top:-6px}
-.ant-timeline-item-tail{position:absolute;left:6px;top:.75em;height:100%;border-left:1px dashed rgba(0,0,0,.25)}
+.ant-timeline-item-tail{position:absolute;left:20px;top:.75em;height:100%;border-left:1px dashed rgba(0,0,0,.25)}
 .ant-timeline-item-last .ant-timeline-item-tail{border-left:2px dotted #e8e8e8;display:none}
 .ant-list-item-meta-title{text-indent: 0}
+.ant-card-bordered{border: none;}
+.anticon{line-height: 32px;}
 
 /*calendar*/
 .output{width: 300px;background: rgba(255,255,255,0.4);}
@@ -71,8 +74,8 @@ a.curPage{color:#19585d;font-weight:700}
 .calendarHeader .prev,.calendarHeader .next{cursor: pointer;}
 
 /*poetry*/
-.todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);padding: 0 10px 15px 10px;}
+.todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);}
 .poetry-title{text-align: center;margin-top: 15px;}
 .poetry-author{text-align: center;margin-top: 5px;}
 .poetry-content{text-align: center;margin-top: 15px;}
-.tj{margin-top: 20px;}
+.tj,.tj-poetry{margin-top: 20px;padding-left: 10px;}

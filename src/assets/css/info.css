@@ -23,4 +23,5 @@
 #diggnum { margin: 5px; }
 .guanzhu{ top:10px;width:100%;}
 
+.ant-card-wider-padding .ant-card-body {padding: 0px;}
 .index-blog-content{margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}

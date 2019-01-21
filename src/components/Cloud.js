@@ -37,7 +37,7 @@ class Cloud extends Component {
     render() {
         const {data} = this.state;
         return (
-            <Row>
+            <Row style={{padding:"0"}}>
                 <h2>文章分类</h2>
                 <ul>
                     {

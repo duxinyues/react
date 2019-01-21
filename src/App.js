@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import {HashRouter as Router} from 'react-router-dom';
-import {Col, Row} from 'antd';
+import {Row} from 'antd';
 import {CONFIG} from './config';
 import axios from 'axios';
 import {connect} from 'react-redux';
@@ -56,13 +56,13 @@ class App extends Component {
                 <div className="bg">
                     <Header />
                     <article>
-                        <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}>
+                        {/* <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}> */}
                             <Row>
-                                <Col xs={24} sm={24} md={24} lg={17} xl={17} xxl={17}>
+                                {/* <Col xs={24} sm={24} md={24} lg={17} xl={17} xxl={17}> */}
                                     {this.props.children}
-                                </Col>
+                                {/* </Col> */}
                             </Row>
-                        </Col>
+                        {/* </Col> */}
                     </article>
                     <Footer />
                 </div>

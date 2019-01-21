@@ -67,7 +67,7 @@ export default class TagBlog extends React.Component {
                 loading={loading}
             >
                 <Meta
-                    title={<h3 style={{color:'#fff'}}>{`标签:${name}`}</h3>}
+                    title={<h3>{`标签:${name}`}</h3>}
                     description={
                         <List
                             itemLayout="horizontal"
@@ -76,21 +76,21 @@ export default class TagBlog extends React.Component {
                                 <List.Item>
                                     <List.Item.Meta
                                         style={{width:'100%'}}
-                                        title={<Link to={`/blog/${item.number}`}style={{fontSize:18,color:'#fff'}}>{item.title}</Link>}
+                                        title={<Link to={`/blog/${item.number}`}style={{fontSize:18}}>{item.title}</Link>}
                                         description={
                                             <Row>
                                                 <Row style={{display:'flex'}}>
-                                                    <Col style={{color:'#fff'}}>
-                                                        <Icon type="calendar" style={{marginRight:5,color:'#fff'}}/>
+                                                    <Col style={{}}>
+                                                        <Icon className="calendar" style={{marginRight:5}}/>
                                                         {item.created_at}
                                                     </Col>
                                                     <Col style={{marginLeft:15,display:'flex'}}>
-                                                        <Icon type="tags-o" style={{marginRight:10,color:'#fff'}}/>
+                                                        <Icon type="tags-o" style={{marginRight:10,paddingTop:3}}/>
                                                         {
                                                            item.labels && item.labels.length ? (
                                                                item.labels.map((value,index)=>{
                                                                    return (
-                                                                       <Tag key={index} style={{color:'#fff',backgroundColor:`#${value.color}`,padding:'2px 5px',borderRadius:5}}>
+                                                                       <Tag key={index} style={{backgroundColor:`#${value.color}`,padding:'2px 5px',borderRadius:5}}>
                                                                        {name}
                                                                        </Tag>
                                                                    )
@@ -101,7 +101,7 @@ export default class TagBlog extends React.Component {
                                                 </Row>
                                                 <Row style={{marginTop:25}}>
                                                     <Col>
-                                                        <p className='index-blog-content' style={{color:'#fff'}}>{item.body}</p>
+                                                        <p className='index-blog-content'>{item.body}</p>
                                                     </Col>
                                                 </Row>
                                             </Row>

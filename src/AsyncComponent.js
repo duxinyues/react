@@ -1,4 +1,5 @@
 import { Spin } from 'antd';
+import 'antd/dist/antd.css';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import React, { Component } from "react";
@@ -27,7 +28,7 @@ export default function asyncComponent(importComponent) {
             if (Component){
                 NProgress.done();
             }
-            return Component ? <Component {...this.props} /> : <div style={{ width: '100vh', height: '100vh' }}><Spin style={{ position: "absolute", marginTop: '25%', marginLeft: '25%', color:'#D2103A'}} size='large' tip="Loading..."/></div>
+            return Component ? <Component {...this.props} /> : <div style={{ width: '100vh', height: '100vh' }}><Spin style={{ position: "absolute", marginTop: '25%', marginLeft: '25%', color:'#D2103A'}} size='large'/></div>
         }
     }
 

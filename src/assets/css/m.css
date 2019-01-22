@@ -36,7 +36,8 @@ nav li{padding-right: 24px;}
 .logo{ width:100%}
 .logo img{   margin:auto}
 .bg{width: 100%;min-height: 100vh;background:#efefef;}
-.news_con pre{padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;background: #000;color: #f8f8f8;}
+.newsview { padding:0; }
+.news_con pre{padding-top:20px;padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;background: #000;color: #f8f8f8;}
 .infosbox img {  height: auto; width:100%;margin: 24px auto; }
 #archive span:nth-child(2){margin-right: 0;width: 25%;}
 #nav{width: 96%;margin: 0 auto;}

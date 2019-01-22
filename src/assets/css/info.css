@@ -11,6 +11,7 @@
 .news_content p { overflow: hidden; padding-bottom: 4px; padding-top: 6px; word-wrap: break-word; }
 .tags a {  padding: 3px 8px; margin: 0 5px 0 0; color: #fff;border-radius: 5px;margin-left: 5px;border-radius: 7px;}
 .infosbox img {  height: auto; width:65%;margin: 24px auto; }
+.infosbox .ant-card-body{padding: 0;}
 .nextinfo { line-height: 24px; width: 100%; overflow: hidden; margin: 20px 0 }
 .nextinfo p { padding: 4px 10px; border-radius: 5px; }
 .nextinfo a:hover { color: #fff; text-decoration: underline }

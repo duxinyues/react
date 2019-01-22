@@ -39,7 +39,7 @@
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
 .news_con p{line-height: 30px;text-indent: 30px;}
-.news_con pre{padding-bottom: 20px;text-indent: 30px;background: #000;color: #f8f8f8;}
+.news_con pre{padding-top: 20px;padding-bottom: 20px;text-indent: 30px;background: #000;color: #f8f8f8;}
 .r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;color: #F8A8A8;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
 .r_box .ant-card:hover img { transform: scale(1.05) }

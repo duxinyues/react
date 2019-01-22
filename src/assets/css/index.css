@@ -77,5 +77,5 @@ a.curPage{color:#19585d;font-weight:700}
 .todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);}
 .poetry-title{text-align: center;margin-top: 15px;}
 .poetry-author{text-align: center;margin-top: 5px;}
-.poetry-content{text-align: center;margin-top: 15px;}
+.poetry-content{text-align: center;margin-top: 15px;padding:0 7px;}
 .tj,.tj-poetry{margin-top: 20px;padding-left: 10px;}

@@ -20,9 +20,6 @@ class Header extends Component{
             <ul>
                 <li><Link to="/" id="selected">首页</Link></li>
                 <li><Link to="/archive">归档-{issues.length}</Link></li>
-                <li><a href="http://weiyongyuan94.lofter.com" rel="opener">乐乎</a></li>
-                <li><a href="https://github.com/weiyongyuan94" rel="opener">Github</a></li>
-                <li><a href="https://blog.csdn.net/xuelian3015" rel="opener">CSDN</a></li>
             </ul>
         </nav>
     </header>

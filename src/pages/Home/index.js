@@ -6,6 +6,7 @@ import {Link,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import {CONFIG}  from '../../config';
+import FLink from '../../components/Link'
 import  QueueAnim  from 'rc-queue-anim';
 import TimeUpdate from '../../utils';
 const {Meta} = Card;
@@ -123,7 +124,7 @@ class Home extends Component{
                             }
                         </ul>
                     </Card>
-                    
+                    <FLink />
                     <TodayPoetry />
                     </QueueAnim>
                 </Row>

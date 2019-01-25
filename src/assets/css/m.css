@@ -32,7 +32,7 @@ header,article{ width:96%; margin:auto}
  /*智能手机*/
 header,article{ width:96%; margin:auto}
 nav li{padding-right: 24px;}
-.banner{margin-bottom: 15px;}
+.banner{display: none;}
 .logo{ width:100%}
 .logo img{   margin:auto}
 .bg{width: 100%;min-height: 100vh;background:#efefef;}

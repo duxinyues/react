@@ -9,6 +9,7 @@ import {CONFIG}  from '../../config';
 import FLink from '../../components/Link'
 import  QueueAnim  from 'rc-queue-anim';
 import TimeUpdate from '../../utils';
+import Banner from "../../components/Banner";
 const {Meta} = Card;
 class Home extends Component{
     constructor(props){
@@ -19,7 +20,7 @@ class Home extends Component{
             // 当前选中的页码
             page: 1,
             // 一页的数量
-            pageNum: 8,
+            pageNum: 6,
         }
     }
     componentDidMount(){
@@ -129,6 +130,7 @@ class Home extends Component{
                     </QueueAnim>
                 </Row>
                 <Row className="r_box">
+                        <Banner/>
                         <QueueAnim
                             animConfig={[
                                 {opacity:[1,0],translateY:[0,150]},

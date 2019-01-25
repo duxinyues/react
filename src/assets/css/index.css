@@ -79,3 +79,9 @@ a.curPage{color:#19585d;font-weight:700}
 .poetry-author{text-align: center;margin-top: 5px;}
 .poetry-content{text-align: center;margin-top: 15px;padding:0 7px;}
 .tj,.tj-poetry{margin-top: 20px;padding-left: 10px;}
+.banner{margin-bottom: 15px;}
+.ant-carousel .slick-slide{text-align:center;height:250px;background:#364d79;overflow:hidden;}
+.ant-carousel .slick-slide img{width: 100%;height: 100%;}
+.bannerList{position: relative;}
+.dec-show{position: absolute;top: 0;width: 100%;height: 250px;color: #fff;}
+.dec-show div{padding-top: 100px;line-height: 50px;}

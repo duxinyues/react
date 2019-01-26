@@ -4,12 +4,16 @@ header{ width:96%; margin:auto}
 }
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 header,article{ width:96%; margin:auto}
+.ant-carousel .slick-list{direction: none;}
+.banner{display: none;}
 .picbox ul{    width: 23%;}
 .picshowlist{ display:none}
 .tuijian,.guanzhu{ width:270px; }
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
 header,article{ width:96%; margin:auto}
+.ant-carousel .slick-list{display: none;}
+.banner{display: none;}
 .picbox ul{    width: 23%;}
 .picshowlist{ display:none}
 .pagelist a { padding: 2px 3px;}
@@ -17,7 +21,8 @@ header,article{ width:96%; margin:auto}
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 header,article{ width:96%; margin:auto}
 .logo{  width:100%;text-align:center}
-/*nav{display:none}*/
+.ant-carousel .slick-list{display: none;}
+.banner{display: none;}
 .mnav{ display:block}
 .l_box{ display:none}
 .r_box,.infosbox,.picsbox{ width:100%}
@@ -32,6 +37,7 @@ header,article{ width:96%; margin:auto}
  /*智能手机*/
 header,article{ width:96%; margin:auto}
 nav li{padding-right: 24px;}
+.ant-carousel .slick-list{display: none;}
 .banner{display: none;}
 .logo{ width:100%}
 .logo img{   margin:auto}

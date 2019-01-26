@@ -26,3 +26,8 @@
 
 .ant-card-wider-padding .ant-card-body {padding: 0px;}
 .index-blog-content{margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
+
+.news_con thead{background: #d1d1d1;}
+.news_con table th ,td{text-align: center;border: 1px solid #fff;}
+.news_con table tbody tr:nth-child(even){background: cornsilk}
+.news_con table tbody tr:nth-child(odd){background: darkkhaki}

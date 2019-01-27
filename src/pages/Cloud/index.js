@@ -16,6 +16,7 @@ export default class TagBlog extends React.Component {
     }
 
     componentWillMount() {
+        document.title = this.props.match.params.name
         this.setState({name:this.props.match.params.name})
         this.getBlogApiData(this.props.match.params.name)
     }
@@ -90,7 +91,7 @@ export default class TagBlog extends React.Component {
                                                            item.labels && item.labels.length ? (
                                                                item.labels.map((value,index)=>{
                                                                    return (
-                                                                       <Tag key={index} style={{backgroundColor:`#${value.color}`,padding:'2px 5px',borderRadius:5}}>
+                                                                       <Tag key={index} style={{backgroundColor:`#${value.color}`,padding:'2px 5px',borderRadius:5,color:'#fff'}}>
                                                                        {name}
                                                                        </Tag>
                                                                    )

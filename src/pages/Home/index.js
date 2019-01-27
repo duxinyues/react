@@ -26,6 +26,7 @@ class Home extends Component{
     componentDidMount(){
         const { issues } = this.props;
         const { page, pageNum } = this.state;
+        document.title = "读心"
         this.setState({ nowPageIssues: issues.slice(0 + pageNum * (page - 1), pageNum + pageNum * (page - 1)) })
         this.getBlogLabels()
     }

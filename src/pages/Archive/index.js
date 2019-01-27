@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom';
 import './index.less';
 const {Meta} = Card;
 class Archive extends React.Component {
+    componentDidMount() {
+        document.title = "归档"
+    }
     render() {
         const {issues} = this.props;
         return (

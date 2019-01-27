@@ -23,9 +23,9 @@ class Blog extends Component {
         }).then((response) => {
             if (response.status === 200) {
                 const data = response.data;
+                document.title = data.title
                 self.setState({
                     content: [data],
-                    number:data.number
                 })
             }
         }).catch(function (error) {
@@ -33,6 +33,7 @@ class Blog extends Component {
         });
     };
     componentWillMount() {
+        
         marked.setOptions({
             highlight: code => hljs.highlightAuto(code).value,
         });
@@ -55,6 +56,7 @@ class Blog extends Component {
                                     return (
                                         <div className="newsview" key={key}>
                                             <h3 className="news_title">{item.title}</h3>
+                                      
                                             <div className="bloginfo">
                                                 <ul>
                                                     <li className="tags">标签:

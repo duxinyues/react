@@ -4,6 +4,7 @@ header{ width:96%; margin:auto}
 }
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 header,article{ width:96%; margin:auto}
+.ant-carousel{display: none;}
 .ant-carousel .slick-list{direction: none;}
 .banner{display: none;}
 .picbox ul{    width: 23%;}
@@ -12,6 +13,7 @@ header,article{ width:96%; margin:auto}
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
 header,article{ width:96%; margin:auto}
+.ant-carousel{display: none;}
 .ant-carousel .slick-list{display: none;}
 .banner{display: none;}
 .picbox ul{    width: 23%;}
@@ -21,6 +23,7 @@ header,article{ width:96%; margin:auto}
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 header,article{ width:96%; margin:auto}
 .logo{  width:100%;text-align:center}
+.ant-carousel{display: none;}
 .ant-carousel .slick-list{display: none;}
 .banner{display: none;}
 .mnav{ display:block}
@@ -37,6 +40,7 @@ header,article{ width:96%; margin:auto}
  /*智能手机*/
 header,article{ width:96%; margin:auto}
 nav li{padding-right: 24px;}
+.ant-carousel{display: none;}
 .ant-carousel .slick-list{display: none;}
 .banner{display: none;}
 .logo{ width:100%}

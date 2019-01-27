@@ -34,7 +34,7 @@
 .r_box .ant-card .listInfo{display: flex;}
 .r_box .ant-card .listInfo div{padding:3px;border-radius:5px;display: flex;}
 .r_box .ant-card .listInfo .createTime{color: #797b7c;}
-.r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 16px}
+.r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 12px}
 .calendar{background: url(../images//newsbg02.png)no-repeat 100% 100%;background-size: 100%;width: 20px;height: 20px;background-position: 0 3px;}
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
@@ -63,7 +63,7 @@ a.curPage{color:#19585d;font-weight:700}
 .ant-timeline-item-last .ant-timeline-item-tail{border-left:2px dotted #e8e8e8;display:none}
 .ant-list-item-meta-title{text-indent: 0}
 .ant-card-bordered{border: none;}
-.anticon{line-height: 32px;}
+.anticon{line-height: 22px;}
 
 /*calendar*/
 .output{width: 300px;background: rgba(255,255,255,0.4);}

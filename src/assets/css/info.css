@@ -3,8 +3,9 @@
 .newsview { padding: 0 30px }
 .intitle { line-height: 40px; height: 40px; font-size: 14px; ; border-bottom: #000 2px solid; }
 .intitle a { font-weight: normal; }
-.news_title { font-size: 24px; font-weight: normal; padding: 20px 0; color: #333; }
+.news_title { font-size: 24px; font-weight: normal; padding: 20px 0; color: #333;text-align: center; }
 .bloginfo{ width:100%; overflow:hidden}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0 325px;}
 .bloginfo li{ float:left; margin-right:20px}
 
 .news_content { line-height: 24px; font-size: 14px; }

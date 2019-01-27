@@ -4,6 +4,7 @@ import {Card, message, Row} from 'antd';
 import TimeUpate from './../../utils/';
 import marked from 'marked';
 import hljs from 'highlight.js';
+import { Link } from 'react-router-dom';
 import {CONFIG} from '../../config';
 class Blog extends Component {
     constructor(props) {
@@ -63,8 +64,9 @@ class Blog extends Component {
                                                          {
                                                             item.labels.map((tvalue, tkey) => {
                                                                 return (
-                                                                    <a href="/" target="_blank" key={tkey}
-                                                                        style={{ backgroundColor: `#${tvalue.color}` }}>{tvalue.name}</a>
+                                                                    <Link key={key} to={`/cloud/${tvalue.name}`}
+                                                                        style={{ backgroundColor: `#${tvalue.color}` }}>{tvalue.name}</Link>
+                                                                    
                                                                 )
                                                             })
                                                         }

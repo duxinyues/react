@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
     <meta name="keywords" content="读心个人博客，JavaScript，HTML5,CSS3,前端开发,用户体验" />
-    <meta name="detection" content="读心个人博客，web技术知识的积累和分享">
+    <meta name="detection" content="读心,个人博客，web技术知识的积累和分享">
     <meta name="author" content="读心,duxin" />
     <meta property="og:url" content="http://wyysz.com">
     <meta property="og:url" content="http://duxingdexin.com">
@@ -26,5 +26,19 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
   </body>
 </html>

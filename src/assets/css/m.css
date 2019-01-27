@@ -1,12 +1,14 @@
 @charset "utf-8";
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 header{ width:96%; margin:auto}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0;}
 }
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 header,article{ width:96%; margin:auto}
 .ant-carousel{display: none;}
 .ant-carousel .slick-list{direction: none;}
 .banner{display: none;}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0;}
 .picbox ul{    width: 23%;}
 .picshowlist{ display:none}
 .tuijian,.guanzhu{ width:270px; }
@@ -16,6 +18,7 @@ header,article{ width:96%; margin:auto}
 .ant-carousel{display: none;}
 .ant-carousel .slick-list{display: none;}
 .banner{display: none;}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0;}
 .picbox ul{    width: 23%;}
 .picshowlist{ display:none}
 .pagelist a { padding: 2px 3px;}
@@ -29,6 +32,7 @@ header,article{ width:96%; margin:auto}
 .mnav{ display:block}
 .l_box{ display:none}
 .r_box,.infosbox,.picsbox{ width:100%}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0;}
 .pagelist a { padding: 2px 3px;}
 .picbox ul{    width: 22%;}
 .picbox ul li i{ margin:5px}
@@ -48,6 +52,7 @@ nav li{padding-right: 24px;}
 .bg{width: 100%;min-height: 100vh;background:#efefef;}
 .newsview { padding:0; }
 .news_con pre{padding-top:20px;padding-bottom: 20px;overflow-x: scroll;text-indent: 30px;background: #000;color: #f8f8f8;}
+.bloginfo ul{display: flex;justify-content: space-around;margin: 0;}
 .infosbox img {  height: auto; width:100%;margin: 24px auto; }
 #archive span:nth-child(2){margin-right: 0;width: 25%;}
 #nav{width: 96%;margin: 0 auto;}

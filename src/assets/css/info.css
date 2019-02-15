@@ -16,7 +16,7 @@
 .nextinfo { line-height: 24px; width: 100%; overflow: hidden; margin: 20px 0 }
 .nextinfo p { padding: 4px 10px; border-radius: 5px; }
 .nextinfo a:hover { color: #fff; text-decoration: underline }
-.newsview table{margin: 30px 0 30px 30px;}
+.newsview table{margin: 30px 0 30px 30px;width: 97%;}
 .newsview table tr td:nth-child(2){padding-left: 15px;}
 .news_pl { margin: 10px 0; width: 100%;  overflow: hidden;  }
 .news_pl h2 { border-bottom: #000 2px solid; line-height: 40px; font-size: 14px; padding-left: 10px; color: #000 }

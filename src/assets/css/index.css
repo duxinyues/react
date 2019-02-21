@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import '~highlight.js/styles/github.css';
 .l_box { width: 30%; float: left }
 .r_box { width: 68%; float: right }
 .l_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #fff;}
@@ -26,7 +27,6 @@
 }
 .tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../images/li.png) left center no-repeat; padding-left: 20px }
 .links a { display: block; float: left; margin: 0 10px 5px 0 }
-/* .guanzhu img { width: 100% } */
 .r_box .ant-card { background: rgba(255,255,255,0.8); padding: 15px; overflow: hidden; color: #797b7c; margin-bottom: 15px }
 .r_box .ant-card h3 { font-size: 16px; line-height: 25px; text-shadow: #FFF 1px 1px 1px }
 .r_box .ant-card h3 a { color: #222 }
@@ -39,6 +39,7 @@
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
 .news_con p{line-height: 30px;text-indent: 30px;}
+.news_con li{text-indent: 30px;}
 .news_con pre{padding-top: 20px;padding-bottom: 20px;padding-left: 30px;background: #000;color: #f8f8f8;margin-left: 30px;}
 .r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;color: #F8A8A8;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
@@ -85,3 +86,4 @@ a.curPage{color:#19585d;font-weight:700}
 .bannerList{position: relative;}
 .dec-show{position: absolute;top: 0;width: 100%;height: 250px;color: #fff;}
 .dec-show div{padding-top: 100px;line-height: 50px;}
+

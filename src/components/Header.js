@@ -18,8 +18,8 @@ class Header extends Component{
         <div className="logo"><img src={LogoImg} alt="读心" width="200px"/></div>
         <nav id="nav">
             <ul>
-                <li><Link to="/" id="selected">首页</Link></li>
-                <li><Link to="/archive">归档-{issues.length}</Link></li>
+                <li><Link to="/" id="selected">Home</Link></li>
+                <li><Link to="/archive">Archive-{issues.length}</Link></li>
             </ul>
         </nav>
     </header>

@@ -64,7 +64,7 @@ a.curPage{color:#19585d;font-weight:700}
 .ant-timeline-item-last .ant-timeline-item-tail{border-left:2px dotted #e8e8e8;display:none}
 .ant-list-item-meta-title{text-indent: 0}
 .ant-card-bordered{border: none;}
-.anticon{line-height: 22px;}
+.anticon{line-height: 22px;position: relative;top: 5px;}
 
 /*calendar*/
 .output{width: 300px;background: rgba(255,255,255,0.4);}

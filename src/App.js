@@ -53,7 +53,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div className="bg">
+                <div className="bg" id="bg">
                     <Header />
                     <article>
                         {/* <Col xs={22} sm={22} md={22} lg={20} xl={18} xxl={16}> */}

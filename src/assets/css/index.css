@@ -26,6 +26,7 @@
     }
 }
 .tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../images/li.png) left center no-repeat; padding-left: 20px }
+.tuijian li:hover{color: #fff;}
 .links a { display: block; float: left; margin: 0 10px 5px 0 }
 .r_box .ant-card { background: rgba(255,255,255,0.8); padding: 15px; overflow: hidden; color: #797b7c; margin-bottom: 15px }
 .r_box .ant-card h3 { font-size: 16px; line-height: 25px; text-shadow: #FFF 1px 1px 1px }
@@ -76,6 +77,7 @@ a.curPage{color:#19585d;font-weight:700}
 
 /*poetry*/
 .todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);}
+.todayPoetry ul:hover{color: #fff;}
 .poetry-title{text-align: center;margin-top: 15px;}
 .poetry-author{text-align: center;margin-top: 5px;}
 .poetry-content{text-align: center;margin-top: 15px;padding:0 7px;}

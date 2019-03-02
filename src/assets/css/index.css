@@ -58,8 +58,8 @@ a.curPage{color:#19585d;font-weight:700}
 .ant-pagination-item a{color:#555;}
 .ant-pagination-item-link{line-height:25px;color:#555;}
 .ant-card-body{zoom:1}
-.ant-timeline-item{position:relative;padding:0 0 20px;list-style:none;margin:0;font-size:14px}
-.ant-timeline-item-head{position:absolute;left: 15px;width:10px;height:10px;background-color:#fff;border-radius:100px;border:2px solid transparent;border-color:#1890ff}
+.ant-timeline-item{position:relative;padding:0 0 28px;list-style:none;margin:0;font-size:14px}
+.ant-timeline-item-head{position:absolute;left: 20px;background-color:#fff;border-radius:100px;}
 .ant-timeline-item-content{padding:0 0 0 20px;position:relative;top:-6px}
 .ant-timeline-item-tail{position:absolute;left:20px;top:.75em;height:100%;border-left:1px dashed rgba(0,0,0,.25)}
 .ant-timeline-item-last .ant-timeline-item-tail{border-left:2px dotted #e8e8e8;display:none}

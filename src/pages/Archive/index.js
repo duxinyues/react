@@ -1,7 +1,8 @@
 import React from 'react';
-import {Card, Timeline} from 'antd';
+import {Card, Timeline,Icon} from 'antd';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import 'antd/dist/antd.css'
 import './index.less';
 const {Meta} = Card;
 class Archive extends React.Component {
@@ -18,7 +19,7 @@ class Archive extends React.Component {
                             {
                                 issues && issues.length ? (
                                     issues.map((item, index) => {
-                                        return (<Timeline.Item key={index}>
+                                        return (<Timeline.Item key={index} dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>
                                             <Link to={`/blog/${item.number}`} id="archive">
                                                 <span >{item.title}</span>
                                                 <span >{item.created_at}</span>

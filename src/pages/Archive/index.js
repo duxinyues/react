@@ -20,10 +20,16 @@ class Archive extends React.Component {
                                 issues && issues.length ? (
                                     issues.map((item, index) => {
                                         return (<Timeline.Item key={index} dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>
-                                            <Link to={`/blog/${item.number}`} id="archive">
-                                                <span >{item.title}</span>
-                                                <span >{item.created_at}</span>
-                                            </Link>
+                                        {
+                                                item.labels.map((tvalue, tkey) => {
+                                                    return(
+                                                        <Link to={`/blog/${item.number}`} key={tkey} id="archive" style={{ color: `#${tvalue.color}`,fontWeight:'bold' }}>
+                                                            <span >{item.title}</span>
+                                                            <span >{item.created_at}</span>
+                                                        </Link>
+                                                    )
+                                                })
+                                        }
                                         </Timeline.Item>)
                                     })
                                 ) : null

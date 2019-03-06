@@ -3,14 +3,6 @@ import {Link,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import LogoImg from './../assets/images/logo.png';
 class Header extends Component{
-    constructor(props){
-        super(props)
-        this.state={
-            artNum:''
-        }
-    }
-    componentWillMount(){
-    }
    render(){
        return(
         <header>

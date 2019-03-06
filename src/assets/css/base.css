@@ -28,10 +28,10 @@ nav{ width: 1000px; margin: auto; overflow: hidden; padding: 0 0 10px 0 }
 nav li { display: inline-block;padding-right:30px;text-align: center; overflow: hidden; line-height: 30px; }
 nav li a { color: #555; }
 nav li a:hover { font-weight:bold  }
-.mnav{ width:100%; background:#000; line-height:40px; height:40px; text-align:center;  position:fixed; bottom:0; display:none; z-index:9999999}
+/* .mnav{ width:100%; background:#000; line-height:40px; height:40px; text-align:center;  position:fixed; bottom:0; display:none; z-index:9999999}
 .mnav ul{display: flex;justify-content:  space-around;}
 .mnav li{ display:inline; padding:0 5px}
-.mnav li a{ color:#FFF}
+.mnav li a{ color:#FFF} */
 .cd-top.cd-is-visible { visibility: visible; opacity: 1; }
 /*footer*/
 footer { width: 100%; color: #a5a4a4; text-align: center; padding: 40px 0; clear: both; text-shadow: #fff 1px 0 2px, #fff 0 1px 2px, #fff -1px 0 2px, #fff 0 -1px 2px; }

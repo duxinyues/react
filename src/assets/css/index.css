@@ -38,10 +38,10 @@
 .r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 12px}
 .calendar{background: url(../images//newsbg02.png)no-repeat 100% 100%;background-size: 100%;width: 20px;height: 20px;background-position: 0 3px;}
 .news_con{margin-top: 25px;margin-bottom: 25px;}
-article .news_con  h3,h4,h5,h6{text-indent: 30px;margin: 15px 0;}
-.news_con p{line-height: 30px;text-indent: 30px;}
+article .news_con  h3,h4,h5,h6{margin: 15px 0;padding: 0 50px;}
+.news_con p{line-height: 30px;text-align: justify;padding: 0 50px;}
 .news_con li{text-indent: 30px;}
-.news_con pre{padding-top: 20px;padding-bottom: 20px;padding-left: 30px;background: #000;color: #f8f8f8;margin-left: 30px;}
+.news_con pre{padding-top: 20px;padding-bottom: 20px;padding-left: 30px;background: #000;color: #f8f8f8;width: 90%;margin: 0 auto;margin-bottom: 20px;}
 .r_box .ant-card i {display: block; max-height: 100px; overflow: hidden; float:left ;color: #F8A8A8;}
 .artList .ant-card p {margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap;-webkit-box-orient: vertical; width:95%}
 .r_box .ant-card:hover img { transform: scale(1.05) }
@@ -68,12 +68,12 @@ a.curPage{color:#19585d;font-weight:700}
 .anticon{line-height: 22px;position: relative;top: 5px;}
 
 /*calendar*/
-.output{width: 300px;background: rgba(255,255,255,0.4);}
+/* .output{width: 300px;background: rgba(255,255,255,0.4);}
 .main{padding-bottom: 15px;}
 .calendarHeader{display: flex;justify-content: space-around;margin-top: 15px;}
 .calendarMain{margin: 0 auto;margin-top: 15px;}
 .calendarMain th,td{padding: 5px 10px;cursor: pointer;}
-.calendarHeader .prev,.calendarHeader .next{cursor: pointer;}
+.calendarHeader .prev,.calendarHeader .next{cursor: pointer;} */
 
 /*poetry*/
 .todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);}

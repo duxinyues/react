@@ -1,6 +1,5 @@
 @charset "utf-8";
 .infosbox {width: 100%; float: right; overflow: hidden; background: rgba(255,255,255,0.8);}
-.newsview { padding: 0 30px }
 .intitle { line-height: 40px; height: 40px; font-size: 14px; ; border-bottom: #000 2px solid; }
 .intitle a { font-weight: normal; }
 .news_title { font-size: 24px; font-weight: normal; padding: 20px 0; color: #333;text-align: center; }
@@ -15,8 +14,8 @@
 .infosbox .ant-card-body{padding: 0;}
 .nextinfo { line-height: 24px; width: 100%; overflow: hidden; margin: 20px 0 }
 .nextinfo p { padding: 4px 10px; border-radius: 5px; }
-.nextinfo a:hover { color: #fff; text-decoration: underline }
-.newsview table{margin: 30px 0 30px 30px;width: 97%;}
+.nextinfo a:hover { color: #fff; text-decoration: underline ;}
+.newsview table{width: 90%;margin: 0 auto;margin-bottom: 20px;margin-top: 20px;}
 .newsview table tr td:nth-child(2){padding-left: 15px;}
 .news_pl { margin: 10px 0; width: 100%;  overflow: hidden;  }
 .news_pl h2 { border-bottom: #000 2px solid; line-height: 40px; font-size: 14px; padding-left: 10px; color: #000 }

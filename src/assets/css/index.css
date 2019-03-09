@@ -36,7 +36,7 @@
 .r_box .ant-card .listInfo div{padding:3px;border-radius:5px;display: flex;}
 .r_box .ant-card .listInfo .createTime{color: #797b7c;}
 .r_box .ant-card .listInfo .blogTag{color:#fff;font-size: 14px;height: 20px;line-height: 12px}
-.calendar{background: url(../images//newsbg02.png)no-repeat 100% 100%;background-size: 100%;width: 20px;height: 20px;background-position: 0 3px;}
+.calendar{background-size: 100%;width: 20px;height: 20px;background-position: 0 3px;}
 .news_con{margin-top: 25px;margin-bottom: 25px;}
 article .news_con  h3,h4,h5,h6{margin: 15px 0;padding: 0 50px;}
 .news_con p{line-height: 30px;text-align: justify;padding: 0 50px;}
@@ -66,14 +66,6 @@ a.curPage{color:#19585d;font-weight:700}
 .ant-list-item-meta-title{text-indent: 0}
 .ant-card-bordered{border: none;}
 .anticon{line-height: 22px;position: relative;top: 5px;}
-
-/*calendar*/
-/* .output{width: 300px;background: rgba(255,255,255,0.4);}
-.main{padding-bottom: 15px;}
-.calendarHeader{display: flex;justify-content: space-around;margin-top: 15px;}
-.calendarMain{margin: 0 auto;margin-top: 15px;}
-.calendarMain th,td{padding: 5px 10px;cursor: pointer;}
-.calendarHeader .prev,.calendarHeader .next{cursor: pointer;} */
 
 /*poetry*/
 .todayPoetry{margin-top: 20px;background: rgba(255,255,255,0.4);}

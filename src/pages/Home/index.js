@@ -26,7 +26,7 @@ class Home extends Component{
     componentDidMount(){
         const { issues } = this.props;
         const { page, pageNum } = this.state;
-        document.title = "读心，读自己 | 见证一个程序员的成长"
+        document.title = "读心，读自己 | 见证一个程序员的成长";
         this.setState({ nowPageIssues: issues.slice(0 + pageNum * (page - 1), pageNum + pageNum * (page - 1)) })
         this.getBlogLabels()
     }
@@ -149,9 +149,9 @@ class Home extends Component{
                                                     description={
                                                         <Row>
                                                             <Row className="listInfo">
-                                                                <Col className="createTime"><i className="calendar" style={{marginRight:5}}/>{time}</Col>
+                                                                <Col className="createTime"><Icon className="calendar" type="clock-circle" theme="twoTone" style={{marginRight:5,marginTop:-2}}/>{time}</Col>
                                                                 <Col className="tag" style={{marginLeft:15}}>
-                                                                    <Icon type="tags-o" style={{fontSize:20,marginRight:5}} />
+                                                                    <Icon type="tags-o" style={{fontSize:20,marginRight:5,marginTop:-3}} />
                                                                     {
                                                                         item.labels && item.labels.length?(
                                                                             item.labels.map((value,key)=>{
@@ -179,6 +179,7 @@ class Home extends Component{
                                 ):null
                         }
                         <Pagination
+                            defaultCurrent={1}
                             current={page}
                             total={issues.length}
                             pageSize={pageNum}

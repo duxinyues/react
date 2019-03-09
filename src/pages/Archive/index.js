@@ -7,7 +7,7 @@ import './index.less';
 const {Meta} = Card;
 class Archive extends React.Component {
     componentDidMount() {
-        document.title = "归档"
+        document.title = "文章归档"
     }
     render() {
         const {issues} = this.props;

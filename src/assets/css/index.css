@@ -6,10 +6,10 @@
 .l_box .ant-card { background: rgba(255,255,255,0.5); margin-bottom: 20px; overflow: hidden }
 .l_box .ant-card ul { padding: 10px; overflow: hidden }
 .l_box .ant-card-body{padding: 0}
-.about_me img {width: 100%;height: 100%;}
+.about_me img {width: 100%;height: 100%;border-radius: 50%;}
 .about_me p{line-height: 24px; font-size: 14px;text-align: center;}
 .about_me .head_img { width: 100px;height: 100px; position: relative;margin: 0 auto;margin-top: 20px;margin-bottom: 20px;}
-.about_me .head_img::before,.about_me .head_img::after{content:"";display: block;position: absolute;top: 0px;left: 0px;border: 2px solid #0F0;z-index: 10;box-sizing: border-box;animation: Anim 10s infinite linear;width: 100px;height: 100px;}
+/* .about_me .head_img::before,.about_me .head_img::after{content:"";display: block;position: absolute;top: 0px;left: 0px;border: 2px solid #0F0;z-index: 10;box-sizing: border-box;animation: Anim 10s infinite linear;width: 100px;height: 100px;}
 .about_me .head_img::before{animation-delay:-5s ;}
 @keyframes Anim{
     0%,100%{
@@ -24,7 +24,7 @@
     75%{
         clip: rect(97px,100px,100px,0px)
     }
-}
+} */
 .tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../images/li.png) left center no-repeat; padding-left: 20px }
 .tuijian li:hover{color: #fff;}
 .links a { display: block; float: left; margin: 0 10px 5px 0 }

@@ -31,6 +31,7 @@ class App extends Component {
         }).then((response)=>{
             if (response.status === 200){
               const data = response.data;
+              console.log(data)
               const list = this.formatTime(data);
               const {dispatch} = this.props;
               dispatch(issuesList(list));

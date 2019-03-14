@@ -68,7 +68,7 @@ export default class TagBlog extends React.Component {
                 loading={loading}
             >
                 <Meta
-                    title={<h3>{`标签:${name}`}</h3>}
+                    title={<h3 style={{paddingTop:20,paddingLeft:25}}>{`分类:${name}`}</h3>}
                     description={
                         <List
                             itemLayout="horizontal"
@@ -77,7 +77,7 @@ export default class TagBlog extends React.Component {
                                 <List.Item>
                                     <List.Item.Meta
                                         style={{width:'100%'}}
-                                        title={<Link to={`/blog/${item.number}`}style={{fontSize:18}}>{item.title}</Link>}
+                                        title={<Link to={`/blog/${item.number}`}style={{fontSize:18,marginLeft:-25}}>{item.title}</Link>}
                                         description={
                                             <Row>
                                                 <Row style={{display:'flex'}}>
@@ -102,7 +102,7 @@ export default class TagBlog extends React.Component {
                                                 </Row>
                                                 <Row style={{marginTop:25}}>
                                                     <Col>
-                                                        <p className='index-blog-content'>{item.body}</p>
+                                                        <p className='index-blog-content' style={{paddingLeft:25}}>{item.body}</p>
                                                     </Col>
                                                 </Row>
                                             </Row>

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Row,Card,Icon,Tag,Col,Pagination} from 'antd'
 import AboutMe from './../../components/About';
 import TodayPoetry from './../../components/TodayPoetry';
-import {Link,withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import {CONFIG}  from '../../config';
@@ -198,4 +198,4 @@ const mapStateToProps = state=>{
         issues:state.issues
     }
 }
-export default withRouter(connect(mapStateToProps)(Home));
+export default connect(mapStateToProps)(Home);

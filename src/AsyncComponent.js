@@ -8,13 +8,11 @@ export default function asyncComponent(importComponent) {
     class AsyncComponent extends Component {
         constructor(props) {
             super(props);
-
             this.state = {
                 component: null
             };
             NProgress.start();
         }
-
         async componentDidMount() {
             const { default: component } = await importComponent();
 
@@ -22,7 +20,6 @@ export default function asyncComponent(importComponent) {
                 component: component
             });
         }
-
         render() {
             const Component = this.state.component;
             if (Component){

@@ -156,7 +156,7 @@ class Home extends Component{
                                                                         item.labels && item.labels.length?(
                                                                             item.labels.map((value,key)=>{
                                                                                 return (
-                                                                                    <Tag className="blogTag" key={key} style={{ color:`#096`}} >
+                                                                                    <Tag className="blogTag" to={`/cloud/${value.name}`} key={key} style={{ color:`#096`}} >
                                                                                         {value.name}
                                                                                     </Tag>
                                                                                 )

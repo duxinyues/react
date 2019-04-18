@@ -92,7 +92,7 @@ export default class TagBlog extends React.Component {
                                                                item.labels.map((value,index)=>{
                                                                    return (
                                                                        <Tag key={index} style={{backgroundColor:`#${value.color}`,padding:'0px 5px',borderRadius:5,color:'#fff'}}>
-                                                                       {name}
+                                                                       {value.name}
                                                                        </Tag>
                                                                    )
                                                                })

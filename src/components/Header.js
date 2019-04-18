@@ -10,7 +10,7 @@ class Header extends Component{
         <nav id="nav">
             <ul>
                 <li><Link to="/" id="selected">首页</Link></li>
-                <li><Link to="/archive">归档</Link></li>
+                <li><a href="http://duxingdexin.com/" target="_blank" rel='noreferrer noopener'>特效汇集</a></li>
             </ul>
         </nav>
     </header>

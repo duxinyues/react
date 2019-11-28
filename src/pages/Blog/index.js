@@ -18,7 +18,7 @@ class Blog extends Component {
         const self = this;
         const api = `https://api.github.com/repos/${CONFIG['owner']}/blogtext/issues/` + path;
         axios.get(api, {
-            creator: 'weiyongyuan94',
+            creator: 'qingzhuxin',
             client_id: 'a5636a8f618a5ce0c877',
             client_secret: '054b02cccd28b32a030b4ac7778384fc3fe7e812',
         }).then((response) => {

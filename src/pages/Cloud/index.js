@@ -33,7 +33,7 @@ export default class TagBlog extends React.Component {
         axios.get(`https://api.github.com/repos/${CONFIG['owner']}/blogtext/issues`, {
             params: {
                 labels: data,
-                creator: 'weiyongyuan94',
+                creator: 'qingzhuxin',
                 client_id: 'a5636a8f618a5ce0c877',
                 client_secret: '054b02cccd28b32a030b4ac7778384fc3fe7e812',
             },

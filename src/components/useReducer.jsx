@@ -1,9 +1,10 @@
 import React, { useReducer } from "react";
-import {reducer} from "../reducer"
+import { reducer } from "../reducer"
 const initialState = { count: 0 };
-function Counter() {
+function Counter(props) {
+    console.log(props)
     const [state, dispatch] = useReducer(reducer, initialState);
-    
+
     return <React.Fragment>
         Count:{state.count}
         <button onClick={() => dispatch({ type: "decrement" })}>-</button>

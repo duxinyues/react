@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import {reducer} from "../reducer"
 export default function Child() {
     const [count, setCount] = useState(0)
     useEffect(() => {

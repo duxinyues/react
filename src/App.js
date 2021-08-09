@@ -1,21 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-07-10 15:03:42
- * @LastEditTime: 2021-07-22 23:34:41
+ * @LastEditTime: 2021-08-09 22:41:11
  * @LastEditors: yongyuan at <yongyuan253015@gmail.com>
  * @Description: In User Settings Edit
  * @FilePath: \react\src\App.js
  */
-import React, { useReducer } from "react"
-import Counter from "./components/useReducer";
-import { reducer } from "./reducer"
-const initialState = { count: 0 };
-const TodosDispatch = React.createContext(null);
+import React from "react";
+import InputDome  from "./components/input"
 function App() {
-  const [todos, dispatch] = useReducer(reducer, initialState);
-  return <TodosDispatch.Provider value={dispatch}>
-    <Counter todos={todos} />
-  </TodosDispatch.Provider>
+  return <InputDome />
 }
 
 export default App;

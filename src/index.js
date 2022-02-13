@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {UseMemoComponent}  from "./components/useMemo"
+import CreateArray from "./components/createArray"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseMemoComponent />
+    <CreateArray />
   </React.StrictMode>,
   document.getElementById('root')
 );

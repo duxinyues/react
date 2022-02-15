@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CreateArray from "./components/createArray"
+import PopoverMenu from './components/PopoverMenu'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CreateArray />
+    <PopoverMenu />
   </React.StrictMode>,
   document.getElementById('root')
 );

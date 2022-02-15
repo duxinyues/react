@@ -7,7 +7,6 @@ function CreateArray() {
         if (scope.length <= 1 || scope[1] == '' || scope.length > 2) return;
         setArr([...[...new Array(Number(scope[1]) + 1).keys()].slice(Number(scope[0]))])
     }
-    console.log('arr', arr)
     return <div>
         <p>输入区间： <input onChange={getScope} placeholder='例如：2,3' /></p>
         <p>

@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import PopoverMenu from './components/PopoverMenu'
 import reportWebVitals from './reportWebVitals';
-
+import ReduxComponent from "./components/ReduxComponent"
+import store from "./store";
+import { Provider } from "react-redux"
 ReactDOM.render(
-  <React.StrictMode>
-    <PopoverMenu />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ReduxComponent />
+  </Provider>,
   document.getElementById('root')
 );
 

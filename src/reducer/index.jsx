@@ -1,10 +1,12 @@
-export function allReducers(state, action) {
+export function allReducers(state = { num: 0 }, action) {
     switch (action.type) {
         case "increment":
-            return { count: state.count + 1 }
+            return { ...state, num: action.value + 1 }
         case "decrement":
-            return { count: state.count - 1 }
+            return { ...state, num: action.value - 1 }
+        case "clear":
+            return { num: 0 }
         default:
-            throw new Error();
+            return { num: 0 };
     }
 }

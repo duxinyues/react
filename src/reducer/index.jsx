@@ -1,4 +1,4 @@
-export function reducer(state, action) {
+export function allReducers(state, action) {
     switch (action.type) {
         case "increment":
             return { count: state.count + 1 }

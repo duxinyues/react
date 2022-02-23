@@ -7,11 +7,9 @@
  */
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import allReducers from "./reducer";
+import { allReducers } from "./reducer";
 
-const reducers = combineReducers({
-    ...allReducers
-})
+const reducers = combineReducers(allReducers)
 
 
 const initialState = {};

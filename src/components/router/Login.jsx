@@ -1,4 +1,5 @@
 import React from "react";
+import { Form, Input, Button, Checkbox } from 'antd';
 import { useNavigate, } from "react-router-dom";
 const styles = {
     login: {
@@ -13,21 +14,75 @@ const styles = {
 }
 function LoginForm() {
     const navigate = useNavigate()
-    const handleSubmit = ({target:{value}}) => {
+    const handleSubmit = (value) => {
+        console.log("value", value)
         localStorage.setItem('user', true)
         navigate('/')
     }
     return <div style={styles.login} className='login'>
         登录
-        <form
-            onSubmit={handleSubmit}
+        <Form
+            name="basic"
+            labelCol={{
+                span: 8,
+            }}
+            wrapperCol={{
+                span: 16,
+            }}
+            initialValues={{
+                remember: true,
+            }}
+            onFinish={handleSubmit}
+            autoComplete="off"
         >
-            <input type="text" name="username" />
-            <br />
-            <input type="password" name="password" />
-            <br />
-            <input type='submit' />
-        </form>
+            <Form.Item
+                label="Username"
+                name="username"
+                rules={[
+                    {
+                        required: true,
+                        message: 'Please input your username!',
+                    },
+                ]}
+            >
+                <Input />
+            </Form.Item>
+
+            <Form.Item
+                label="Password"
+                name="password"
+                rules={[
+                    {
+                        required: true,
+                        message: 'Please input your password!',
+                    },
+                ]}
+            >
+                <Input.Password />
+            </Form.Item>
+
+            <Form.Item
+                name="remember"
+                valuePropName="checked"
+                wrapperCol={{
+                    offset: 8,
+                    span: 16,
+                }}
+            >
+                <Checkbox>Remember me</Checkbox>
+            </Form.Item>
+
+            <Form.Item
+                wrapperCol={{
+                    offset: 8,
+                    span: 16,
+                }}
+            >
+                <Button type="primary" htmlType="submit">
+                    Submit
+                </Button>
+            </Form.Item>
+        </Form>
     </div>
 }
 

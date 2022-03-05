@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from "./components/useCallback"
+import { Form } from './components/form/index'
 import store from "./store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <Form />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

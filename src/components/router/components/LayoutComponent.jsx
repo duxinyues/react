@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import { Context } from "./context"
+import { Context } from "./context";
+import '../style/layout.scss';
 const { Header, Content, Footer } = Layout;
 function LayoutComponent() {
   const isLogin = localStorage.getItem("user")
@@ -17,10 +18,10 @@ function LayoutComponent() {
     <Context.Provider value={value}>
       <Layout className="layout">
         <Header style={{ display: "flex" }}>
-          <span className="logo" onClick={() => {
+          {/* <span className="logo" onClick={() => {
             const time = new Date().getTime();
             setValue({ name: "更新" + time })
-          }} >更新</span>
+          }} >更新</span> */}
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key='1'><Link to='/'>Home</Link></Menu.Item>
             <Menu.Item key='about'><Link to='about'>about</Link></Menu.Item>

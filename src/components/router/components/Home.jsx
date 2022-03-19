@@ -2,10 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "./context";
 function Home() {
-  const navigate = useNavigate()
-
-  React.useEffect(() => {
-  }, [])
+  const navigate = useNavigate();
   return (
     <Context.Consumer>
       {

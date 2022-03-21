@@ -17,7 +17,6 @@ function About() {
   return (
     <div>
       <h2 onClick={() => setValue((c) => c + 1)}>useLayoutEffect的使用</h2>
-
       <div
         id="useLayout"
         style={{ color: value === 1 ? 'red' : '#999' }}

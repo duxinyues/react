@@ -9,7 +9,6 @@ function LayoutComponent() {
   const [value, setValue] = useState({ name: "duXinYue" })
   const navigate = useNavigate()
   useEffect(() => {
-    console.log(isLogin)
     if (!isLogin) {
       navigate('/login')
     }

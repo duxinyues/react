@@ -2,6 +2,7 @@ import React, { useImperativeHandle } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "./context";
 function Home() {
+
   let ChildRef = React.createRef();
   const navigate = useNavigate();
   const handleChild = () => {
@@ -49,4 +50,4 @@ function Child({ onRef }) {
   return <span>子组件：{data}</span>
 }
 
-export default Home
+export default Home 

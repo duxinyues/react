@@ -8,6 +8,7 @@ import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Invoice from "./components/Invoice";
 export default function App() {
+    
     return (
         <Routes>
             <Route path="/" element={<LayoutComponent />}>

@@ -1,53 +1,12 @@
-import React, { useImperativeHandle } from "react";
-import { useNavigate } from "react-router-dom";
-import { Context } from "./context";
+import React from "react";
+import Bar from "./echartComponents/Bar";
 function Home() {
-
-  let ChildRef = React.createRef();
-  const navigate = useNavigate();
-  const handleChild = () => {
-    console.log(90, ChildRef.current.func())
-
-    ChildRef.current.func();
+  const style = {
+    width: "400px",
+    height: "400px",
+    border: '1px solid blue',
   }
-  return (
-    <Context.Consumer>
-      {
-        value => {
-          console.log("value", value)
-          return <div>
-            <h2>首页</h2>
-            <div>
-              <p onClick={() => {
-                navigate(`/invoices/890`, { replace: true })
-              }}>传参</p>
-            </div>
-
-            <div onClick={handleChild}>调用子组件方法</div>
-            <Child onRef={ChildRef} />
-          </div>
-        }
-      }
-    </Context.Consumer>
-  );
+  const data = [1, 4.5, 65, 3, 25, 100]
+  return <Bar styles={style} data={data} category={['一月','二月','三月','四月','五月',]}  />;
 }
-
-function Child({ onRef }) {
-  const [data, setData] = React.useState(0)
-  useImperativeHandle(onRef, () => {
-    return {
-      data: data,
-      func: func
-    }
-
-    function func() {
-      let newVal = data;
-      newVal++;
-      setData(newVal);
-      return newVal;
-    }
-  })
-  return <span>子组件：{data}</span>
-}
-
 export default Home 

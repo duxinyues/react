@@ -1,13 +1,42 @@
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae,
+  close: #ff7f82,
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b,
+);
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
 .layout {
   height: 100%;
   .sider {
     color: #fff;
-    padding: 10px;
+    padding: 15px 5px;
+
     .menuItem {
-      border: 1px solid red;
       margin-right: 5px;
       padding: 5px;
       cursor: pointer;
+      background: none;
+      border: 2px solid;
+      line-height: 1;
+    }
+    .pulse:hover,
+    .pulse:focus {
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em transparent;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 var(--hover);
+      }
     }
   }
   .content {
@@ -15,10 +44,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
-    .bar{
+    .bar {
       width: 100px;
       height: 100px;
-      border: 1px solid  black;
+      border: 1px solid black;
     }
   }
 }

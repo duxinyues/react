@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Outlet, useNavigate, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import '../style/layout.scss';
@@ -9,14 +9,14 @@ function LayoutComponent() {
   const onChangeRouter = (router) => { navigate(router) }
   return (<Layout className="layout">
     <Header style={{ display: "flex" }}>
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+      {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
         <Menu.Item key='1'><Link to='/'>首页</Link></Menu.Item>
-      </Menu>
+      </Menu> */}
     </Header>
     <Layout>
       <Sider className="sider">
         {
-          menuItem.map(item => (<span className="menuItem" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
+          menuItem.map(item => (<span key={item.title} className="menuItem pulse" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
         }
       </Sider>
       <Content className="content">

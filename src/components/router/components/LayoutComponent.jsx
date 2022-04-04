@@ -1,6 +1,6 @@
 import React from "react";
-import { Outlet, useNavigate, Link } from "react-router-dom";
-import { Layout, Menu } from "antd";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Layout } from "antd";
 import '../style/layout.scss';
 import menuItem from "../config/menu";
 const { Header, Content, Footer, Sider } = Layout;

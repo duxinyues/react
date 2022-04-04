@@ -4,13 +4,15 @@ import LayoutComponent from "./components/LayoutComponent";
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Bar from "./components/echartComponents/Bar";
+import RowBar from "./components/echartComponents/RowBar";
 export default function App() {
-    
+
     return (
         <Routes>
             <Route path="/" element={<LayoutComponent />}>
                 <Route index element={<Home />} />
                 <Route path="/barEcharts" element={<Bar />} />
+                <Route path="/rowBar" element={<RowBar />} />
                 <Route path="*" element={<NoMatch />} />
             </Route>
             {/* <Route path="login" element={<LoginForm />} /> */}

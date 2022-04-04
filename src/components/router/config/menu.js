@@ -1,6 +1,6 @@
 const menuItem = [
-  { title: "BarEcharts", router: "/barEcharts" },
-  { title: "LineEcharts", router: "/lineEcharts" }
+  { title: "柱状图", router: "/barEcharts" },
+  { title: "条形图", router: "/rowBar" }
 ];
 
 export default menuItem

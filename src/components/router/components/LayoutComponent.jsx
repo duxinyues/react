@@ -9,9 +9,7 @@ function LayoutComponent() {
   const onChangeRouter = (router) => { navigate(router) }
   return (<Layout className="layout">
     <Header style={{ display: "flex" }}>
-      {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key='1'><Link to='/'>首页</Link></Menu.Item>
-      </Menu> */}
+     
     </Header>
     <Layout>
       <Sider className="sider">

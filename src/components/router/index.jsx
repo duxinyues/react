@@ -5,7 +5,8 @@ import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Bar from "./components/echartComponents/Bar";
 import RowBar from "./components/echartComponents/RowBar";
-import FilesView from "./components/FilesView"
+import RadialPolar from "./components/echartComponents/RadialPolar"
+import FilesView from "./components/FilesView";
 export default function App() {
 
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="/barEcharts" element={<Bar />} />
                 <Route path="/rowBar" element={<RowBar />} />
+                <Route path="/radialPolar" element={<RadialPolar />} />
                 <Route path="/fileView" element={<FilesView />} />
                 <Route path="*" element={<NoMatch />} />
             </Route>

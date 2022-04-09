@@ -1,0 +1,40 @@
+.modal-shadow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    height: auto;
+    background-color: #fff;
+    border: 1px solid red;
+
+    .modal-head {
+      font-weight: 900;
+      padding: 10px;
+      border-bottom: 2px solid #000;
+    }
+    .modal-center {
+      padding: 10px;
+    }
+    .modal-footer{
+      span{
+        border: 1px solid red;
+      }
+    }
+  }
+}
+.none {
+  display: none;
+}
+.active {
+  display: flex;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.4);
+}

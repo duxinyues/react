@@ -40,7 +40,7 @@ function RowBar() {
       title: {
         text: '生产情况条形图',
         subtext: '一周的生产数据',
-        left: 'center',
+        left: 'left',
         show: true
       },
       tooltip: {

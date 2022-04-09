@@ -8,9 +8,9 @@ function LayoutComponent() {
   const navigate = useNavigate()
   const onChangeRouter = (router) => { navigate(router) }
   return (<Layout className="layout">
-    <Header style={{ display: "flex" }}>
+    {/* <Header style={{ display: "flex" }}>
      
-    </Header>
+    </Header> */}
     <Layout>
       <Sider className="sider">
         {

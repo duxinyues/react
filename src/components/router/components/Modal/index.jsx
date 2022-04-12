@@ -14,6 +14,9 @@ function ModalDome() {
         setVisible(false)
         console.log("取消")
       }}
+      onOk={()=>{
+        alert("点击确认按钮")
+      }}
     >
 
       弹窗子组件

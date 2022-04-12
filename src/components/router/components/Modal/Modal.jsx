@@ -9,13 +9,14 @@ import "./Modal.scss"
 function Modal({
   visible,
   onCancel = null,
+  onOk = null,
   title = '',
   width = '500',
   modalShadow = false,
+  footer = true,
   children }) {
   return <div
     className={`modal-shadow ${visible ? 'active' : 'none'} ${modalShadow && 'shadow'}`}
-    onClick={onCancel}
   >
     <div
       className="modal-content"
@@ -23,9 +24,17 @@ function Modal({
         width: `${width}px`
       }}
     >
-      <div className="modal-head">{title}</div>
+      <div className="modal-head">
+        {title}
+        <span onClick={onCancel}>X</span>
+      </div>
       <div className="modal-center">{children}</div>
-      <div className="modal-footer"><span>取消</span><span>确认</span></div>
+      {
+        footer && <div className="modal-footer">
+          <span className="btn-cancel" onClick={onCancel}>取消</span>
+          <span className="btn-confirm" onClick={onOk}>确认</span>
+        </div>
+      }
     </div>
   </div>
 }

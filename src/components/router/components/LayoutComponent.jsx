@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { Layout } from "antd";
 import '../style/layout.scss';
 import menuItem from "../config/menu";
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 function LayoutComponent() {
   const navigate = useNavigate()
   const onChangeRouter = (router) => { navigate(router) }

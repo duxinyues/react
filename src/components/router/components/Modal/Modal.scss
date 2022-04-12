@@ -11,19 +11,32 @@
   .modal-content {
     height: auto;
     background-color: #fff;
-    border: 1px solid red;
-
+    border-radius: 5px;
     .modal-head {
       font-weight: 900;
-      padding: 10px;
+      padding: 10px 5px 10px 10px;
       border-bottom: 2px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+      }
     }
     .modal-center {
       padding: 10px;
     }
-    .modal-footer{
-      span{
-        border: 1px solid red;
+    .modal-footer {
+      text-align: right;
+      display: flex;
+      justify-content: right;
+      margin-bottom: 10px;
+      span {
+        margin-right: 5px;
       }
     }
   }

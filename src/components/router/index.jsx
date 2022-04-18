@@ -7,7 +7,8 @@ import Bar from "./components/echartComponents/Bar";
 import RowBar from "./components/echartComponents/RowBar";
 import RadialPolar from "./components/echartComponents/RadialPolar"
 import FilesView from "./components/FilesView";
-import Modal from "./components/Modal"
+import Modal from "./components/Modal";
+import ReduxComponent from "../ReduxComponentUse"
 export default function App() {
 
     return (
@@ -19,6 +20,7 @@ export default function App() {
                 <Route path="/radialPolar" element={<RadialPolar />} />
                 <Route path="/fileView" element={<FilesView />} />
                 <Route path="/modal" element={<Modal />} />
+                <Route path="/useDispatch" element={<ReduxComponent />} />
                 <Route path="*" element={<NoMatch />} />
             </Route>
             {/* <Route path="login" element={<LoginForm />} /> */}

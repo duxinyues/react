@@ -3,7 +3,8 @@ const menuItem = [
   { title: "条形图", router: "/rowBar" },
   { title: "扇形图", router: "/radialPolar" },
   { title: "Modal", router: "/modal" },
-  { title: "文件预览", router: "/fileView" }
+  { title: "文件预览", router: "/fileView" },
+  { title: "useDispatch", router: "/useDispatch" },
 ];
 
 export default menuItem

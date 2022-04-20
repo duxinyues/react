@@ -20,7 +20,9 @@ function ReduxComponent() {
     return <div>
         {React.createElement('p',null,'p标签，内容是一个string')}
         <span style={styles.span} onClick={() => dispatch({ type: 'increment', value: reduxProps.num })}>+</span>
-        <span style={styles.span} onClick={() => { dispatch({ type: 'decrement', value: reduxProps.num }) }}>-</span>
+        <span style={styles.span} onClick={(e) => { 
+            console.log('事件',e)
+            dispatch({ type: 'decrement', value: reduxProps.num }) }}>-</span>
 
         <p>父组件：{reduxProps.num}</p>
         <ReduxChild />

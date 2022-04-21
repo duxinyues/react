@@ -4,6 +4,7 @@ const menuItem = [
   { title: "扇形图", router: "/radialPolar" },
   { title: "Modal", router: "/modal" },
   { title: "文件预览", router: "/fileView" },
+  { title: "表单", router: "/form" },
   { title: "SetState", router: "/setState" },
   { title: "useDispatch", router: "/useDispatch" },
 ];

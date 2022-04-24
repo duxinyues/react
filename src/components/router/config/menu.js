@@ -7,6 +7,7 @@ const menuItem = [
   { title: "表单", router: "/form" },
   { title: "SetState", router: "/setState" },
   { title: "useDispatch", router: "/useDispatch" },
+  { title: "connect", router: "/connect" },
 ];
 
 export default menuItem

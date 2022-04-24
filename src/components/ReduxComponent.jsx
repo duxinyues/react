@@ -23,7 +23,6 @@ function ReduxComponent(props) {
     </div>
 }
 const mapStateToProps = (state) => {
-    console.log("props", state)
     return state.allReducers
 }
 const mapDispatchToProps = (dispatch) => ({

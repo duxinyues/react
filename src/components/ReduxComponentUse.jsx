@@ -12,7 +12,7 @@ const styles = {
         marginLeft: '5px'
     }
 }
-function ReduxComponent() {
+function ReduxComponentUse() {
     const dispatch = useDispatch();
     const reduxProps = useSelector(state => {
         return state.allReducers
@@ -30,5 +30,5 @@ function ReduxComponent() {
         
     </div>
 }
-export default ReduxComponent
+export default ReduxComponentUse
 

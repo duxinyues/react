@@ -8,6 +8,7 @@ const menuItem = [
   { title: "SetState", router: "/setState" },
   { title: "useDispatch", router: "/useDispatch" },
   { title: "connect", router: "/connect" },
+  { title: "增删改", router: "/addList" },
 ];
 
 export default menuItem

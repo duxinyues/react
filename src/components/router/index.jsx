@@ -12,6 +12,7 @@ import ReduxComponentUse from "../ReduxComponentUse";
 import SetState from "./components/setState";
 import Form from "./components/form";
 import ReduxComponent from "../ReduxComponent";
+import AddList from "./components/list/add"
 export default function App() {
 
     return (
@@ -24,9 +25,10 @@ export default function App() {
                 <Route path="/fileView" element={<FilesView />} />
                 <Route path="/modal" element={<Modal />} />
                 <Route path="/useDispatch" element={<ReduxComponentUse />} />
-                <Route path="/connect" element={<ReduxComponentUse />} />
+                <Route path="/connect" element={<ReduxComponent />} />
                 <Route path="/setState" element={<SetState />} />
                 <Route path="/form" element={<Form />} />
+                <Route path="/addList" element={<AddList />} />
                 <Route path="*" element={<NoMatch />} />
             </Route>
             {/* <Route path="login" element={<LoginForm />} /> */}

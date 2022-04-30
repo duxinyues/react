@@ -17,10 +17,6 @@ const styles = {
 function ReduxComponent(props) {
     // const { count,start } = useCountdownHook(10);
     const { num, start, clear } = useTimers()
-    React.useEffect(() => {
-        console.log(props)
-        start()
-    }, [])
     return <div>
         <span style={styles.span} onClick={() => props.increment(props.num)}>+</span>
         <span style={styles.span} onClick={() => { props.decrement(props.num) }}>-</span>

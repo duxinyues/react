@@ -48,6 +48,7 @@ $colors: (
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
+    overflow-y: auto;
     .bar {
       width: 100px;
       height: 100px;

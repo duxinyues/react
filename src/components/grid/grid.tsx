@@ -1,18 +1,31 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./grid.scss";
-
+import data from "./data.json";
+import { StarFilled } from '@ant-design/icons';
+import moment from "moment"
+const formatDate = (date: Date) => {
+  return moment(date).format('YYYY-MM-DD')
+}
 export default function Grid() {
-useEffect(()=>{
-  document.title = "Grid网格布局"
-},[])
+  useEffect(() => {
+    document.title = "Grid网格布局"
+  }, [])
   return <div>
     <h1>Grid网格布局</h1>
     <div className="grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      {data.map((item) => <div className='item'>
+        <div className='head'><img src="https://www.lvbad.com/uploads/allimg/2003/0T6343307-8.jpg" alt="封面" /></div>
+        <div className='info'>
+          <div className='prjName'>{item.prjName}</div>
+          <div className='prjManager'>项目经理：{item.prjManager}</div>
+          <div className='prjStartDate'>立项日期：{formatDate(new Date(item.prjStartDate))}</div>
+          <div>任务：{item.taskCount} 完成：{item.taskDoneCount} 进行：{item.taskDoingCount}</div>
+        </div>
+        <div className='option'>
+          <div className='status'><span className={`${item.projectStatus} point`} /> {item.projectStatus === 'approving' ? '审批中' : '进行中'}</div>
+          <div className='star'><StarFilled /></div>
+        </div>
+      </div>)}
     </div>
   </div>
 }

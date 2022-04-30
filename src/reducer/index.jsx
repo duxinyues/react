@@ -1,4 +1,5 @@
 export function allReducers(state = { num: 0 }, action) {
+    console.log(action, action.value + 1)
     switch (action.type) {
         case "increment":
             return { ...state, num: action.value + 1 }

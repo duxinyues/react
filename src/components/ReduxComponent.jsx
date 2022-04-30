@@ -1,5 +1,7 @@
 import React from "react";
 import ReduxChild from './ReduxChild';
+import useCountdownHook from "../hooks/useCountdownHook";
+import useTimers from "../hooks/useTimer";
 import { connect } from "react-redux"
 const styles = {
     span: {
@@ -13,12 +15,21 @@ const styles = {
     }
 }
 function ReduxComponent(props) {
-    console.log("props", props)
+    // const { count,start } = useCountdownHook(10);
+    const { num, start, clear } = useTimers()
+    React.useEffect(() => {
+        console.log(props)
+        start()
+    }, [])
     return <div>
         <span style={styles.span} onClick={() => props.increment(props.num)}>+</span>
         <span style={styles.span} onClick={() => { props.decrement(props.num) }}>-</span>
 
         <p>父组件：{props.num}</p>
+        {/* <p>倒计时：{count}s</p> */}
+        <p>定时器：{num}s</p>
+        <p><button onClick={() => clear()}>暂停</button></p>
+        <p><button onClick={() => start()}>开始</button></p>
         <ReduxChild />
     </div>
 }
@@ -26,7 +37,7 @@ const mapStateToProps = (state) => {
     return state.allReducers
 }
 const mapDispatchToProps = (dispatch) => ({
-    increment: value => dispatch({ type: 'increment', value: value }),
+    increment: value => dispatch({ type: 'increment', value }),
     decrement: value => dispatch({ type: 'decrement', value })
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ReduxComponent)

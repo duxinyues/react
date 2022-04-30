@@ -43,7 +43,7 @@ function AddList() {
           <div className="task-wrapper" key={item.id}>
             <div className='selected'></div>
             <div>{item.desc}</div>
-            <div className='remove' onClick={()=>remove(item.id)}>删除</div>
+            {/* <div className='remove' onClick={()=>remove(item.id)}>删除</div> */}
           </div>
         ))
       }

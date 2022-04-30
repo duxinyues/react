@@ -9,6 +9,7 @@ const menuItem = [
   { title: "useDispatch", router: "/useDispatch" },
   { title: "connect", router: "/connect" },
   { title: "flex", router: "/flex" },
+  { title: "grid", router: "/grid" },
 ];
 
 export default menuItem

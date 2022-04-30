@@ -1,17 +1,18 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from
+  "react-router-dom"
 import { Layout } from "antd";
-import '../style/layout.scss';
-import menuItem from "../config/menu";
+import './container.scss';
+import menuItem from "../../config/menu";
 const { Content, Footer, Sider } = Layout;
-function LayoutComponent() {
+export default function Container() {
   const navigate = useNavigate()
-  const onChangeRouter = (router) => { navigate(router) }
+  const onChangeRouter = (router: any) => { navigate(router) }
   return (<Layout className="layout">
     <Layout>
       <Sider className="sider">
         {
-          menuItem.map(item => (<span key={item.title} className="menuItem pulse" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
+          menuItem.map((item: any) => (<span key={item.title} className="menuItem pulse" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
         }
       </Sider>
       <Content className="content">
@@ -22,5 +23,3 @@ function LayoutComponent() {
   </Layout>
   );
 }
-
-export default LayoutComponent

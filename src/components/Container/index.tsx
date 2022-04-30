@@ -11,6 +11,7 @@ export default function Container() {
   return (<Layout className="layout">
     <Layout>
       <Sider className="sider">
+        <h1>组件：</h1>
         {
           menuItem.map((item: any) => (<span key={item.title} className="menuItem pulse" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
         }

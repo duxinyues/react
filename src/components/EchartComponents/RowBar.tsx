@@ -28,58 +28,53 @@ echarts.use([
   UniversalTransition,
   CanvasRenderer
 ]);
-const defaultStyle = { width: '1000px', height: '500px' }
+const defaultStyle = { width: '900px', height: '400px' }
 /**
  *  
  */
-function Bar() {
+function RowBar() {
   useEffect(() => {
+    const root = document.getElementById('bar') as HTMLElement;
     // 基于准备好的dom，初始化echarts实例
-    const myChart = echarts.init(document.getElementById('bar'));
+    const myChart = echarts.init(root);
     const options = {
       title: {
-        text: '生产情况',
+        text: '生产情况条形图',
         subtext: '一周的生产数据',
         left: 'left',
         show: true
       },
       tooltip: {
-        show: true,
-      },
-      toolbox: {
-        show: true,
-        showTitle: true, // 隐藏默认文字，否则两者位置会重叠
-        feature: {
-          saveAsImage: {
-            show: true,
-            title: 'Save As Image'
-          },
-          dataView: {
-            show: true,
-            title: 'Data View'
-          },
-        },
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
       },
       color: ["#003366", "#006699", "#4cabce", "#e5323e"],
 
-      legend: {
-        data: ['产量', '物料']
+      legend: {},
+      grid: {
+        left: '1%',
+        right: '1%',
+        bottom: '10%',
+        containLabel: true
       },
-
       xAxis: {
-        type: "category",
-        data: ["2012", "2013", "2014", "2015", "2016"],
-        axisTick: {
-          show: false
-        }
+        type: 'value',
+        axisLabel: '', // 隐藏x轴的label标签
+        show: false, // 隐藏Y轴方向的刻度线
+        boundaryGap: [0, 0.1]
       },
       yAxis: {
-        type: 'value',
+        type: "category",
+        data: ["2012", "2013", "2014", "2015", "2016"],
+        axisLabel: '',
+        show: false,
       },
       series: [
         {
           data: [320, 332, 301, 334, 30],
-          name: '产量',
+          name: '产能',
           type: 'bar',
           itemStyle: {
             color: '#003366'
@@ -87,16 +82,18 @@ function Bar() {
           showBackground: true,
           backgroundStyle: {
             color: 'rgba(180, 180, 180, 0.2)'
-          }
+          },
+          barWidth: 10
         }, {
           type: 'bar',
-          name: '物料',
+          name: '耗能',
           data: [220, 182, 191, 234, 290],
           itemStyle: {
             color: '#4cabce',
-          }
+          },
+          barWidth: 10
         }
-      ],
+      ]
     }
     // 绘制图表
     myChart.setOption(options);
@@ -105,4 +102,4 @@ function Bar() {
 }
 
 
-export default Bar;
+export default RowBar;

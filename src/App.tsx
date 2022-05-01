@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import menuItem from "./config/menu"
 import Home from "./components/Home"
 import Container from "./components/Container";
 import NoMatch from "./components/NoMatch";
@@ -15,8 +14,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Container />}>
-
-
         <Route index element={<Home />} />
         <Route path="/barEcharts" element={<Bar />} />
         <Route path="/rowBar" element={<RowBar />} />
@@ -27,7 +24,6 @@ function App() {
         <Route path="/grid" element={<Grid />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
-      {/* <Route path="login" element={<LoginForm />} /> */}
       <Route path="*" element={<NoMatch />} />
     </Routes>
   );

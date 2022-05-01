@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import * as echarts from 'echarts';
-const defaultStyle = { width: '1000px', height: '500px' }
+const defaultStyle = { width: '500px', height: '500px' }
 function RadialPolar() {
   useEffect(() => {
-    const root = document.getElementById('main') as HTMLElement;
-    const myChart = echarts.init(root);
+    const myChart = echarts.init(document.getElementById('main') as HTMLElement);
     const options = {
       title: [
         {

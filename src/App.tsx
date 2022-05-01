@@ -1,19 +1,22 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
+import menuItem from "./config/menu"
 import Home from "./components/Home"
-import Container from './components/Container';
+import Container from "./components/Container";
 import NoMatch from "./components/NoMatch";
 import Bar from "./components/EchartComponents/Bar";
 import RowBar from "./components/EchartComponents/RowBar";
 import RadialPolar from "./components/EchartComponents/RadialPolar"
 import Modal from "./components/Modal";
 import Form from "./components/form";
-import Flex from './components/flex/flex';
-import Grid from "./components/grid/grid"
+import Flex from "./components/flex/flex";
+import Grid from "./components/grid/grid";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Container />}>
+
+
         <Route index element={<Home />} />
         <Route path="/barEcharts" element={<Bar />} />
         <Route path="/rowBar" element={<RowBar />} />

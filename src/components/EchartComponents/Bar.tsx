@@ -28,7 +28,7 @@ echarts.use([
   UniversalTransition,
   CanvasRenderer
 ]);
-const defaultStyle = { width: '1000px', height: '500px' }
+const defaultStyle = { width: '700px', height: '500px' }
 /**
  *  
  */

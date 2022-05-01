@@ -7,7 +7,6 @@ $colors: (
   slide: #8fc866,
   offset: #19bc8b,
 );
-$fff:(fff:#fff);
 @each $button, $color in $colors {
   .#{$button} {
     --color: #{$color};
@@ -17,35 +16,7 @@ $fff:(fff:#fff);
 .layout {
   height: 100%;
   .sider {
-    color: var(--colorFff);
-    padding: 15px 5px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 10px;
-    h1{
-      color: var(--colorFff);
-    }
-    .menuItem {
-      display: inline-block;
-      padding: 5px;
-      cursor: pointer;
-      background: none;
-      border: 2px solid;
-      line-height: 1;
-      margin-bottom: 10px;
-      margin-right: 5px;
-    }
-    .pulse:hover,
-    .pulse:focus {
-      animation: pulse 1s;
-      box-shadow: 0 0 0 2em transparent;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 var(--hover);
-      }
-    }
+    background-color: transparent;
   }
   .content {
     display: flex;

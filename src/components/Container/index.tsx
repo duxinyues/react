@@ -1,20 +1,40 @@
 import React from "react";
 import { Outlet, useNavigate } from
   "react-router-dom"
-import { Layout } from "antd";
+import { Layout, Menu, MenuProps } from "antd";
 import './container.scss';
 import menuItem from "../../config/menu";
+
 const { Content, Footer, Sider } = Layout;
+const items: MenuProps['items'] = menuItem.map(
+  (item, index) => {
+    return {
+      key: item.router,
+      label: item.title,
+      children: item.subs?.map((item, key) => {
+        return {
+          key: item.router,
+          label: item.title,
+          kayPath: item.router
+        };
+      }),
+    };
+  },
+);
 export default function Container() {
   const navigate = useNavigate()
-  const onChangeRouter = (router: any) => { navigate(router) }
+  const onChangeRouter = (router: string) => { navigate(router) }
   return (<Layout className="layout">
     <Layout>
       <Sider className="sider">
-        <h1>组件：</h1>
-        {
-          menuItem.map((item: any) => (<span key={item.title} className="menuItem pulse" onClick={() => { onChangeRouter(item.router) }}>{item.title}</span>))
-        }
+        <Menu
+          mode="inline"
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          style={{ height: '100%', borderRight: 0 }}
+          items={items}
+          onClick={({ key }) => onChangeRouter(key)}
+        />
       </Sider>
       <Content className="content">
         <Outlet />

@@ -1,24 +1,9 @@
-import React from "react";
-import Echarts from "../HocEcharts"
-const defaultStyle = { width: '1000px', height: '500px' }
+import  { useState } from "react";
+import HocEcharts from "../HocEcharts";
 
-function Bar() {
-  const [theme] = React.useState('roma');
-  const Events = {
-    click: {
-      query: 'series',
-      callback: function (e: any, instance: any) {
-        console.log(e, '22')
-        console.log(instance, '333')
-      }
-    },
-    legendselectchanged: {
-      query: 'series',
-      callback: function (e: any, instance: any) {
-      }
-    }
-  }
-  const options = {
+function Echarts() {
+  const [theme] = useState('roma');
+  const option = {
     title: {
       text: '生产情况',
       subtext: '一周的生产数据',
@@ -42,12 +27,17 @@ function Bar() {
         },
       },
     },
-    color: ["#003366", "#006699", "#4cabce", "#e5323e"],
+    // color: ["#003366", "#006699", "#4cabce", "#e5323e"],
 
     legend: {
       data: ['产量', '物料']
     },
-
+    grid: {
+      left: '0%',
+      right: '0%',
+      bottom: '0%',
+      containLabel: true
+    },
     xAxis: {
       type: "category",
       data: ["2012", "2013", "2014", "2015", "2016"],
@@ -63,9 +53,9 @@ function Bar() {
         data: [320, 332, 301, 334, 30],
         name: '产量',
         type: 'bar',
-        itemStyle: {
-          color: '#003366'
-        },
+        // itemStyle: {
+        //   color: '#003366'
+        // },
         showBackground: true,
         backgroundStyle: {
           color: 'rgba(180, 180, 180, 0.2)'
@@ -74,22 +64,35 @@ function Bar() {
         type: 'bar',
         name: '物料',
         data: [220, 182, 191, 234, 290],
-        itemStyle: {
-          color: '#4cabce',
-        }
+        // itemStyle: {
+        //   color: '#4cabce',
+        // }
       }
     ],
+  };
+  const Events = {
+    click: {
+      query: 'series',
+      callback: function (e: any, instance: any) {
+        console.log(e, '22')
+        console.log(instance, '333')
+      }
+    },
+    legendselectchanged: {
+      query: 'series',
+      callback: function (e: any, instance: any) {
+      }
+    }
   }
-  return <Echarts
-    option={options}
+  return <HocEcharts
+    option={option}
     className="custom-echarts-bar" // echarts的样式在styles全局设置
-    isResize={true}
     theme={theme}
+    isResize={true}
     showLoading={true}
-    wrapStyle={defaultStyle}
     events={Events}
+    wrapStyle={{ width: '700px', height: '500px' }}
   />
 }
 
-
-export default Bar;
+export default Echarts

@@ -9,14 +9,21 @@ const menuItem = [
     ]
   },
   {
-    title: "CSS布局",
+    title: "CSS",
     router: "2",
     subs: [
       { title: "flex", router: "/flex", component: "Flex" },
       { title: "grid", router: "/grid", component: "Grid" },
     ]
   },
-  { title: "自定义Modal", router: "/modal", component: "Modal" },
+  {
+    title: "自定义组件",
+    router: "3",
+    subs: [
+      { title: "自定义Modal", router: "/modal", component: "Modal" },
+    ]
+  },
+
 
 ];
 

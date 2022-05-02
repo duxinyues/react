@@ -8,8 +8,8 @@ import RowBar from "./components/EchartComponents/RowBar";
 import RadialPolar from "./components/EchartComponents/RadialPolar"
 import Modal from "./components/Modal";
 import Form from "./components/form";
-import Flex from "./components/flex/flex";
-import Grid from "./components/grid/grid";
+import Flex from "./components/css/flex/flex";
+import Grid from "./components/css/grid/grid";
 function App() {
   return (
     <Routes>

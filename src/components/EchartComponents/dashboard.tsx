@@ -72,6 +72,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
+    console.log(process.env.REACT_APP_ENV)
     fetch("https://api.github.com/users/duxinyues")
       .then(response => response.json())
       .then(res => {

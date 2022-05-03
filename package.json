@@ -29,8 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env REACT_APP_ENV=development  react-scripts start",
+    "build": "cross-env REACT_APP_ENV=production build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@types/draft-js": "^0.11.9"
+    "@types/draft-js": "^0.11.9",
+    "cross-env": "^7.0.3"
   }
 }

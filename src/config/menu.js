@@ -1,8 +1,9 @@
 const menuItem = [
   {
-    title: "Echarts",
+    title: "图标库",
     router: "1",
     subs: [
+      { title: "dashboard", router: "/dashboard", component: "Dashboard" },
       { title: "柱状图", router: "/barEcharts", component: "Bar" },
       { title: "条形图", router: "/rowBar", component: "RowBar" },
       { title: "扇形图", router: "/radialPolar", component: "RadialPolar" },
@@ -23,8 +24,6 @@ const menuItem = [
       { title: "自定义Modal", router: "/modal", component: "Modal" },
     ]
   },
-
-
 ];
 
 export default menuItem

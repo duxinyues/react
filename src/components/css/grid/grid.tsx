@@ -1,19 +1,35 @@
 import React, { useEffect } from "react";
 import "./grid.scss";
-import data from "./data.json";
+import gridData from "./data.json";
+import { Button } from "antd"
 import { StarFilled } from '@ant-design/icons';
+import { useFetch } from "../../../hooks/useFetch"
 import moment from "moment"
 const formatDate = (date: Date) => {
   return moment(date).format('YYYY-MM-DD')
 }
 export default function Grid() {
   useEffect(() => {
-    document.title = "Grid网格布局"
+    document.title = "Grid网格布局";
+    fetch("../data.json").then(res => res.json()).then(res => {
+      console.log("====", res)
+    })
   }, [])
+
+  const { data, doFetch } = useFetch(
+    ({ url }) => new Promise(resolve => {
+      fetch(url).then(res => resolve(res))
+    }),
+    {
+      url: "../data.json",
+    },
+    'initNotRun'
+  )
+  console.log("data===", data)
   return <div>
     <h1>Grid网格布局</h1>
     <div className="grid">
-      {data.map((item) => <div className='item'>
+      {gridData.map((item: any) => <div className='item'>
         <div className='head'><img src="https://www.lvbad.com/uploads/allimg/2003/0T6343307-8.jpg" alt="封面" /></div>
         <div className='info'>
           <div className='prjName'>{item.prjName}</div>
@@ -29,7 +45,7 @@ export default function Grid() {
     </div>
     <h2>隐式网格布局</h2>
     <div className="grid1">
-      {data.map((item) => <div className='item'>
+      {gridData.map((item: any) => <div className='item'>
         <div className='head'><img src="https://www.lvbad.com/uploads/allimg/2003/0T6343307-8.jpg" alt="封面" /></div>
         <div className='info'>
           <div className='prjName'>{item.prjName}</div>

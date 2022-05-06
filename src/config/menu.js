@@ -24,6 +24,13 @@ const menuItem = [
       { title: "自定义Modal", router: "/modal", component: "Modal" },
     ]
   },
+  {
+    title: "基本信息",
+    router: "4",
+    subs: [
+      { title: "读心悦", router: "/duxinyues", component: "Modal" },
+    ]
+  },
 ];
 
 export default menuItem

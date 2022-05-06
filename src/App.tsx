@@ -11,6 +11,7 @@ import Form from "./components/form";
 import Flex from "./components/css/flex/flex";
 import Grid from "./components/css/grid/grid";
 import Dashboard from './components/EchartComponents/dashboard';
+import Duxinyue from './components/Duxin/duxinyue';
 function App() {
   return (
     <Routes>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/flex" element={<Flex />} />
         <Route path="/grid" element={<Grid />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/duxinyues" element={<Duxinyue />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
       <Route path="*" element={<NoMatch />} />

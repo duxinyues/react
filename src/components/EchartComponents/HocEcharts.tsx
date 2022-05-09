@@ -13,12 +13,13 @@ interface Option {
   events?: IAny,// 事件配置对象，回调有events和echarts实例,
   isResize?: boolean, //自适应窗口变化
   showLoading?: boolean,
+  refresh?: boolean, // 是否刷新
 }
 
 
 // 高阶组件
 const Echarts = ({
-  option ,
+  option,
   wrapStyle = {
     width: '400px',
     height: '400px',
@@ -28,7 +29,8 @@ const Echarts = ({
   showLoading = true,
   isResize = true,
   events,
-  className
+  className,
+  refresh = false
 }: Option) => {
 
   const ref = useRef<HTMLDivElement | any>(null);
@@ -75,7 +77,8 @@ const Echarts = ({
 
   useEffect(() => {
     init()
-  }, [])
+    console.log(refresh)
+  }, [refresh])
 
   useEffect(() => {
     if (isResize) {

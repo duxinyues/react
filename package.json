@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "cross-env REACT_APP_ENV=development  react-scripts start",
-    "build": "cross-env REACT_APP_ENV=production build",
+    "build": "cross-env REACT_APP_ENV=production  react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

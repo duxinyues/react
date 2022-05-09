@@ -1,5 +1,5 @@
 import React from "react";
-import Echarts from "../HocEcharts"
+import Echarts from "./HocEcharts"
 const defaultStyle = { width: '1000px', height: '500px' }
 
 function Bar() {

@@ -25,11 +25,10 @@ export default function Grid() {
     },
     'initNotRun'
   )
-  console.log("data===", data)
   return <div>
     <h1>Grid网格布局</h1>
     <div className="grid">
-      {gridData.map((item: any) => <div className='item'>
+      {gridData.map((item: any, index) => <div className='item' key={index}>
         <div className='head'><img src="https://www.lvbad.com/uploads/allimg/2003/0T6343307-8.jpg" alt="封面" /></div>
         <div className='info'>
           <div className='prjName'>{item.prjName}</div>

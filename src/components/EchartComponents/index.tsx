@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import HocEcharts from "../HocEcharts";
+import HocEcharts from "./HocEcharts";
 
 function Echarts() {
   const [theme] = useState('roma');

@@ -1,4 +1,4 @@
-import Echarts from "../HocEcharts"
+import Echarts from "./HocEcharts"
 
 const defaultStyle = { width: '900px', height: '400px' }
 /**

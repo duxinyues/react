@@ -8,7 +8,7 @@ const { Content, Footer, Sider } = Layout;
 const items: MenuProps['items'] = menuItem.map(
   (item, index) => {
     return {
-      key: item.router,
+      key: index,
       label: item.title,
       children: item.subs?.map((item, key) => {
         return {

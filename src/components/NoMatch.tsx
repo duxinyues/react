@@ -1,14 +1,16 @@
-import React from "react";
+import { Result, Button } from 'antd';
 import { Link } from "react-router-dom"
 function NoMatch() {
   return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
+    <Result
+    status="warning"
+    title="Nothing to see here!"
+    extra={
+      <Button type="primary" key="console">
         <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
-  );
+      </Button>
+    }
+  />);
 }
 
 export default NoMatch

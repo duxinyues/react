@@ -1,27 +1,31 @@
 const menuItem = [
   {
     title: "图标库",
-    router: "1",
+    key: "1",
+    router: null,
     subs: [
-      { title: "dashboard", router: "/dashboard", component: "Dashboard" },
-      { title: "柱状图", router: "/barEcharts", component: "Bar" },
-      { title: "条形图", router: "/rowBar", component: "RowBar" },
-      { title: "扇形图", router: "/radialPolar", component: "RadialPolar" },
+      { title: "dashboard", router: "/admin/dashboard", component: "Dashboard" },
+      { title: "柱状图", router: "/admin/barEcharts", component: "Bar" },
+      { title: "条形图", router: "/admin/rowBar", component: "RowBar" },
+      { title: "扇形图", router: "/admin/radialPolar", component: "RadialPolar" },
     ]
   },
   {
     title: "CSS",
-    router: "2",
+    key: "2",
+    router: null,
     subs: [
-      { title: "flex", router: "/flex", component: "Flex" },
-      { title: "grid", router: "/grid", component: "Grid" },
+      { title: "flex", router: "/admin/flex", component: "Flex" },
+      { title: "grid", router: "/admin/grid", component: "Grid" },
     ]
   },
   {
     title: "自定义组件",
-    router: "3",
+    key: "3",
+    router: null,
     subs: [
-      { title: "自定义Modal", router: "/modal", component: "Modal" },
+      { title: "自定义Modal", router: "/admin/modal", component: "Modal" },
+      { title: "表单", router: "/admin/form", component: "Form" },
     ]
   },
   // {

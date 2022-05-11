@@ -77,7 +77,6 @@ const Echarts = ({
 
   useEffect(() => {
     init()
-    console.log(refresh)
   }, [refresh])
 
   useEffect(() => {

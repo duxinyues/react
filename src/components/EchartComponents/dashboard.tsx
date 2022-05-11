@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Echarts from "./HocEcharts";
 import * as echarts from 'echarts';
 import Test from "./Test";
@@ -7,11 +7,7 @@ import { createArray } from "../../config/utils"
 export default function Dashboard() {
   const refreshRef = useRef(false)
   const [theme] = useState('roma');
-  const option1 = {
-    // title: {
-    //   text: '生产情况',
-    //   left: 'left',
-    // },
+  const [option1, setOption1] = useState({
     tooltip: {
       show: true,
     },
@@ -42,22 +38,21 @@ export default function Dashboard() {
       splitTitle: { show: false },
       axisTick: { show: false },
     },
-    series: [
-      {
-        data: createArray(10, 1000, 8),
-        name: '产量',
-        type: 'bar',
-        itemStyle: {
-          color: 'red'
-        },
-        barWidth: 10,
-        showBackground: false,
-        backgroundStyle: {
-          color: 'rgba(180, 180, 180, 0.2)'
-        }, // 柱状图背景
-      }
-    ],
-  };
+    series: {
+      data: createArray(10, 1000, 8),
+      name: '产量',
+      type: 'bar',
+      itemStyle: {
+        color: 'red'
+      },
+      barWidth: 10,
+      showBackground: false,
+      backgroundStyle: {
+        color: 'rgba(180, 180, 180, 0.2)'
+      }, // 柱状图背景
+    },
+  })
+
   const option2 = {
     tooltip: {
       trigger: 'item'
@@ -102,26 +97,31 @@ export default function Dashboard() {
     ]
   }
   useEffect(() => {
-    // const timer = setInterval(() => {
-    //   refreshRef.current = !refreshRef.current;
-    //   console.log("===", refreshRef.current)
-    // }, 1000);
+    const timer = setInterval(() => {
+      setOption1({
+        ...option1,
+        series: {
+          ...option1.series,
+          data: createArray(300, 900, 8)
+        }
+      })
+    }, 1000)
 
-    // return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer)
+  }, [option1.series.data])
   return <div>
     <div className="row">
       <Echarts
         refresh={refreshRef.current}
         option={option1}
         theme={theme}
-        wrapStyle={{ height: '200px', width: '400px',border: '1px solid black' }}
+        wrapStyle={{ height: '200px', width: '400px', border: '1px solid black' }}
       />
       <Test />
       <Echarts
         option={option2}
         theme={theme}
-        wrapStyle={{ height: '200px', width: '400px',border: '1px solid black' }}
+        wrapStyle={{ height: '200px', width: '400px', border: '1px solid black' }}
       />
       <Echarts
         option={{

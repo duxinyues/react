@@ -12,23 +12,22 @@ import Form from "./components/Form/DXForm";
 import Flex from "./components/css/flex/flex";
 import Grid from "./components/css/grid/grid";
 import Dashboard from './components/EchartComponents/dashboard';
-import Duxinyue from './components/Duxin/duxinyue';
+import Sin from "./components/EchartComponents/Sin";
 function App() {
-  const Component = allComponents["Flex"];
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/admin" element={<Container />}>
+      <Route path="/components" element={<Container />}>
         <Route index element={<Dashboard />} />
-        <Route path="/admin/barEcharts" element={<Bar />} />
-        <Route path="/admin/rowBar" element={<RowBar />} />
-        <Route path="/admin/radialPolar" element={<RadialPolar />} />
-        <Route path="/admin/modal" element={<Modal />} />
-        <Route path="/admin/form" element={<Form />} />
-        <Route path="/admin/flex" element={<Flex />} />
-        <Route path="/admin/grid" element={<Grid />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/duxinyues" element={<Duxinyue />} />
+        <Route path="/components/barEcharts" element={<Bar />} />
+        <Route path="/components/rowBar" element={<RowBar />} />
+        <Route path="/components/radialPolar" element={<RadialPolar />} />
+        <Route path="/components/modal" element={<Modal />} />
+        <Route path="/components/form" element={<Form />} />
+        <Route path="/components/flex" element={<Flex />} />
+        <Route path="/components/grid" element={<Grid />} />
+        <Route path="/components/dashboard" element={<Dashboard />} />
+        <Route path="/components/Sin" element={<Sin />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
       <Route path="*" element={<NoMatch />} />

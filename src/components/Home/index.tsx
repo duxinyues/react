@@ -70,15 +70,13 @@ function Home() {
   return <div className="home">
     <div>
       <img src={info.avatar_url} alt="logo" />
-      <h1><Link to="/components">{info.name},React组件库</Link></h1>
-
+      <h1><Link to="/components">{info.name},React组件</Link></h1>
       <div className="repos">
         {
           repos.map((item: any, index) => (<div className="item" key={item.id}>
             <div className="title">{item.name}</div>
             <div className="desc"><a href={item.html_url} target="_blank" rel="noopener noreferrer">{item.description}</a></div>
             <div className="language">主要语言：{item.language}，大小：{item.size}，forks：{item.forks}，watchers：{item.watchers}</div>
-
             <div className="created_at">创建：{formatDate(new Date(item.created_at))}</div>
             <div className="updated_at">更新：{formatDate(new Date(item.updated_at))}</div>
             <div className="pushed_at">推送：{formatDate(new Date(item.pushed_at))}</div>

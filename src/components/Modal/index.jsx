@@ -1,14 +1,17 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Modal from "./Modal"
 import "./index.scss";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function useInterval(callback, time) {
+
   const ref = useRef(callback)
   useLayoutEffect(() => {
     ref.current = callback
   })
 
   useEffect(() => {
+
     const timer = setInterval(() => {
       ref.current()
     }, time)
@@ -17,16 +20,17 @@ function useInterval(callback, time) {
   }, [])
 }
 function ModalDome() {
+  const [localStorage, setLocalStorage] = useLocalStorage("name")
   const [visible, setVisible] = useState(false);
-  const [count, setCount] = useState(0);
-  useInterval(() => {
-    setCount(count => count + 1)
-  }, 1000)
-  useInterval(() => {
-    // console.log(count)
-  }, 1000)
+  useEffect(() => {
+    console.log("localStorage", JSON.parse(localStorage))
+  }, [])
   return <div className="modal-dome">
-    <span onClick={() => { setVisible(true) }}>modal</span>
+    <span onClick={() => {
+      setVisible(true);
+      setLocalStorage({ name: 896 })
+    }}
+    >modal</span>
 
     <Modal
       title="弹窗标题"

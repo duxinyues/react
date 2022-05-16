@@ -1,8 +1,9 @@
 import Echarts from "./HocEcharts";
 export default function Sin() {
-  document.title = "三角函数";
+  document.title = "数学函数";
   function func(x: number) {
-    return Math.sin(x);
+    // return Math.sin(x);
+    return x * x
   }
   function generateData() {
     let data = [];
@@ -28,6 +29,9 @@ export default function Sin() {
       minorSplitLine: {
         show: true
       }
+    },
+    tooltip: {
+      show: true,
     },
     yAxis: {
       name: 'y',
@@ -60,7 +64,7 @@ export default function Sin() {
     ],
     series: [
       {
-        type: 'bar',
+        type: 'line',
         showSymbol: false,
         clip: true,
         data: generateData()

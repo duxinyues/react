@@ -28,7 +28,7 @@ function ModalDome() {
   return <div className="modal-dome">
     <span onClick={() => {
       setVisible(true);
-      setLocalStorage({ name: 896 })
+      setLocalStorage({ name: new Date().getTime() })
     }}
     >modal</span>
 

@@ -8,7 +8,7 @@ const menuItem = [
       { title: "柱状图", router: "/components/barEcharts", component: "Bar" },
       { title: "条形图", router: "/components/rowBar", component: "RowBar" },
       { title: "扇形图", router: "/components/radialPolar", component: "RadialPolar" },
-      { title: "三角函数", router: "/components/Sin", component: "Sin" },
+      { title: "数学函数", router: "/components/Sin", component: "Sin" },
     ]
   },
   {

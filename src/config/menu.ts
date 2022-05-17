@@ -18,6 +18,7 @@ const menuItem = [
     subs: [
       { title: "flex", router: "/components/flex", component: "Flex" },
       { title: "grid", router: "/components/grid", component: "Grid" },
+      { title: "过度", router: "/components/transition", component: "Transition" },
     ]
   },
   {
@@ -26,7 +27,7 @@ const menuItem = [
     router: null,
     subs: [
       { title: "自定义Modal", router: "/components/modal", component: "Modal" },
-      { title: "表单", router: "/components/form", component: "Form" },
+      // { title: "表单", router: "/components/form", component: "Form" },
     ]
   },
 ];

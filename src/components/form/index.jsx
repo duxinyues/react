@@ -1,22 +1,21 @@
 import React from "react";
-
-
+import DXForm from "./DXForm";
+const styles = {
+  width: '500px',
+  border: '1px solid black',
+  padding: '10px',
+}
 function Form(props) {
-  console.log("props", props)
-  const onSubmit = (event) => {
-    console.log("event", event.target.fieldColor)
-    // event.preventDefault();
-  }
+  const formData = [{
+    label: '姓名',
+    name: 'usename',
+    rules: [{ required: true, message: '请输入姓名' }],
+    type: 'input',
+  }]
   return <React.Fragment>
-    <form onSubmit={onSubmit}>
-      <div>
-        <label htmlFor="fieldColor">你的颜色是：</label>
-        <input type="text" name="fieldColor" />
-      </div>
-      <div>
-        <input type='submit' value="提交" />
-      </div>
-    </form>
+    <div style={styles}>
+      <DXForm formData={formData} />
+    </div>
   </React.Fragment>
 }
 

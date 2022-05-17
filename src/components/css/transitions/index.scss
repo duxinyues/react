@@ -1,0 +1,17 @@
+.transition {
+  button {
+    background-color: hsl(180, 50%, 50%);
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    padding: 0.3em 1em;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0.2s;
+    transition-timing-function:ease-in-out;
+  }
+  button:hover {
+    border-radius: 1em;
+    background-color: hsl(0, 50%, 50%);
+  }
+}

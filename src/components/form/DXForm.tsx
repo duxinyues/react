@@ -3,7 +3,7 @@
  */
 import { useState, Component } from "react"
 import { Form, Input, Button, Checkbox } from 'antd';
-export default function CustomForm() {
+export default function DXForm({ formData: [], }) {
   const onFinish = (values: any) => {
     console.log('Success:', values);
   };
@@ -37,9 +37,9 @@ export default function CustomForm() {
       <Input.Password />
     </Form.Item>
 
-    <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+    {/* <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
       <Checkbox>Remember me</Checkbox>
-    </Form.Item>
+    </Form.Item> */}
 
     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
       <Button type="primary" htmlType="submit">

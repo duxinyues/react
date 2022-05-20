@@ -18,7 +18,7 @@ const menuItem = [
     subs: [
       { title: "flex", router: "/components/flex", component: "Flex" },
       { title: "grid", router: "/components/grid", component: "Grid" },
-      { title: "过度", router: "/components/transition", component: "Transition" },
+      { title: "动画", router: "/components/transition", component: "Transition" },
     ]
   },
   {

@@ -32,6 +32,7 @@ function App() {
         <Route path="/components/Sin" element={<Sin />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
+      
       <Route path="*" element={<NoMatch />} />
     </Routes>
   );

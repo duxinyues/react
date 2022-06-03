@@ -1,38 +1,51 @@
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
-import Modal from "./Modal"
+import { useState,  } from "react";
+// import Modal from "./Modal"
 import "./index.scss";
-import useLocalStorage from "../../hooks/useLocalStorage";
-
-function useInterval(callback, time) {
-
-  const ref = useRef(callback)
-  useLayoutEffect(() => {
-    ref.current = callback
-  })
-
-  useEffect(() => {
-
-    const timer = setInterval(() => {
-      ref.current()
-    }, time)
-
-    return () => clearInterval(timer)
-  }, [])
-}
+import { Modal, Form, Input } from "antd";
 function ModalDome() {
-  const [localStorage, setLocalStorage] = useLocalStorage("name")
   const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    console.log("localStorage", JSON.parse(localStorage))
-  }, [])
+
+  const onFinish = () => {
+
+  }
   return <div className="modal-dome">
     <span onClick={() => {
       setVisible(true);
-      setLocalStorage({ name: new Date().getTime() })
     }}
     >modal</span>
 
+
     <Modal
+      visible={visible}
+      onOk={() => { }}
+      onCancel={() => { }}
+      okText='确定'
+      cancelText="取消"
+    >
+      <Form
+        onFinish={onFinish}
+        layout="vertical"
+      >
+        <Form.Item
+          name='username'
+          rules={[{
+            required: true,
+            message: '请输入用户名'
+          }]}>
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name='pwd'
+          rules={[{
+            required: true,
+            message: '密码'
+          }]}>
+          <Input />
+        </Form.Item>
+      </Form>
+    </Modal>
+
+    {/* <Modal
       title="弹窗标题"
       modalShadow='true'
       visible={visible}
@@ -46,7 +59,7 @@ function ModalDome() {
     >
 
       弹窗子组件
-    </Modal>
+    </Modal> */}
   </div>
 }
 

@@ -3,7 +3,6 @@ import Bar from "../components/EchartComponents/Bar";
 import RowBar from "../components/EchartComponents/RowBar";
 import RadialPolar from "../components/EchartComponents/RadialPolar"
 import Modal from "../components/Modal";
-import Form from "../components/Form";
 import Flex from "../components/css/flex/flex";
 import Grid from "../components/css/grid/grid";
 import Dashboard from "../components/EchartComponents/dashboard"
@@ -16,7 +15,6 @@ const allComponents = {
   RowBar,
   RadialPolar,
   Modal,
-  Form,
   Flex,
   Grid
 }

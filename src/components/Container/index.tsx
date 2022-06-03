@@ -28,8 +28,8 @@ export default function Container() {
       <Sider className="sider">
         <Menu
           mode="inline"
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
+          defaultSelectedKeys={['0']}
+          defaultOpenKeys={['0']}
           style={{ height: '100%', borderRight: 0 }}
           items={items}
           onClick={({ key }) => onChangeRouter(key)}

@@ -1,4 +1,4 @@
-import {  useState, useEffect, } from "react"
+import { useState, useEffect, } from "react"
 import { Link } from "react-router-dom";
 import "./home.scss"
 import moment from "moment"
@@ -38,7 +38,7 @@ const defaultUser = {
   type: "",
   url: "",
 }
-const getTimers=(time:string) =>(new Date(time)).getTime()
+const getTimers = (time: string) => (new Date(time)).getTime()
 function Home() {
   const [info, setInfo] = useState(defaultUser);
   const [repos, setRepos] = useState([]);
@@ -60,7 +60,7 @@ function Home() {
     fetch("https://api.github.com/users/duxinyues/repos")
       .then(response => response.json())
       .then(res => {
-        const data =res.sort((a:any,b:any)=>(getTimers(b.pushed_at)-getTimers(a.pushed_at)))
+        const data = res.sort((a: any, b: any) => (getTimers(b.pushed_at) - getTimers(a.pushed_at)))
         setRepos(data)
       })
       .catch(err => {
@@ -71,6 +71,10 @@ function Home() {
     <div>
       <img src={info.avatar_url} alt="logo" />
       <h1><Link to="/components">{info.name},React组件</Link></h1>
+
+      <div className="three">
+        <div><Link to='/Three'>Three</Link></div>
+      </div>
       <div className="repos">
         {
           repos.map((item: any, index) => (<div className="item" key={item.id}>

@@ -22,8 +22,16 @@ const menuItem = [
     ]
   },
   {
-    title: "自定义组件",
+    title: "THREE",
     key: "3",
+    router: null,
+    subs: [
+      { title: "Three光源", router: "/components/Three", component: "Three" },
+    ]
+  },
+  {
+    title: "自定义组件",
+    key: "-1",
     router: null,
     subs: [
       { title: "自定义Modal", router: "/components/modal", component: "Modal" },

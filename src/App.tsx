@@ -27,9 +27,10 @@ function App() {
         <Route path="/components/grid" element={<Grid />} />
         <Route path="/components/dashboard" element={<Dashboard />} />
         <Route path="/components/Sin" element={<Sin />} />
+        <Route path="/components/Three" element={<Three />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
-      <Route path="/Three" element={<Three />} />
+      {/* <Route path="/Three" element={<Three />} /> */}
       <Route path="*" element={<NoMatch />} />
     </Routes>
   );

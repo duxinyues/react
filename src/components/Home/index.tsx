@@ -1,10 +1,6 @@
 import { useState, useEffect, } from "react"
 import { Link } from "react-router-dom";
 import "./home.scss"
-import moment from "moment"
-const formatDate = (date: Date) => {
-  return moment(date).format('YYYY-MM-DD')
-}
 const defaultUser = {
   avatar_url: "https://img.zcool.cn/community/01ade35542ed1a0000019ae9789872.jpg@1280w_1l_2o_100sh.jpg",
   bio: "",
@@ -38,13 +34,10 @@ const defaultUser = {
   type: "",
   url: "",
 }
-const getTimers = (time: string) => (new Date(time)).getTime()
 function Home() {
   const [info, setInfo] = useState(defaultUser);
-  const [repos, setRepos] = useState([]);
   useEffect(() => {
     getInfo();
-    getRepos();
   }, [])
   function getInfo() {
     fetch("https://api.github.com/users/duxinyues")
@@ -56,36 +49,17 @@ function Home() {
         console.log("err", err)
       })
   }
-  function getRepos() {
-    fetch("https://api.github.com/users/duxinyues/repos")
-      .then(response => response.json())
-      .then(res => {
-        const data = res.sort((a: any, b: any) => (getTimers(b.pushed_at) - getTimers(a.pushed_at)))
-        setRepos(data)
-      })
-      .catch(err => {
-        console.log("err", err)
-      })
-  }
+
   return <div className="home">
     <div>
       <img src={info.avatar_url} alt="logo" />
-      <h1><Link to="/components">{info.name},React组件</Link></h1>
-
-      <div className="three">
-        <div><Link to='/Three'>Three</Link></div>
-      </div>
+      <h1><Link to="/components">{info.name}</Link></h1>
       <div className="repos">
-        {
-          repos.map((item: any, index) => (<div className="item" key={item.id}>
-            <div className="title">{item.name}</div>
-            <div className="desc"><a href={item.html_url} target="_blank" rel="noopener noreferrer">{item.description}</a></div>
-            <div className="language">主要语言：{item.language}，大小：{item.size}，forks：{item.forks}，watchers：{item.watchers}</div>
-            <div className="created_at">创建：{formatDate(new Date(item.created_at))}</div>
-            <div className="updated_at">更新：{formatDate(new Date(item.updated_at))}</div>
-            <div className="pushed_at">推送：{formatDate(new Date(item.pushed_at))}</div>
-          </div>))
-        }
+        <Link to='/components'>
+          <div className="item">
+            <div className="title">React组件</div>
+          </div>
+        </Link>
       </div>
     </div>
 

@@ -9,6 +9,7 @@ const menuItem = [
       { title: "条形图", router: "/components/rowBar", component: "RowBar" },
       { title: "扇形图", router: "/components/radialPolar", component: "RadialPolar" },
       { title: "数学函数", router: "/components/Sin", component: "Sin" },
+      { title: "散点图", router: "/components/ScatterChart", component: "ScatterChart" },
     ]
   },
   {

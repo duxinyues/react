@@ -12,6 +12,8 @@ import Dashboard from './components/EchartComponents/dashboard';
 import Sin from "./components/EchartComponents/Sin";
 import Transition from "./components/css/transitions";
 import Three from "./components/Three";
+import Editor  from "./components/Editor";
+import ScatterChart from "./components/EchartComponents/ScatterChart";
 function App() {
   return (
     <Routes>
@@ -28,6 +30,8 @@ function App() {
         <Route path="/components/dashboard" element={<Dashboard />} />
         <Route path="/components/Sin" element={<Sin />} />
         <Route path="/components/Three" element={<Three />} />
+        <Route path="/components/edit" element={<Editor />} />
+        <Route path="/components/ScatterChart" element={<ScatterChart />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
       {/* <Route path="/Three" element={<Three />} /> */}

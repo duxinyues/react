@@ -10,11 +10,11 @@ const items: MenuProps['items'] = menuItem.map(
     return {
       key: index,
       label: item.title,
-      children: item.subs?.map((item, key) => {
+      children: item.subs?.map((items, key) => {
         return {
-          key: item.router,
-          label: item.title,
-          kayPath: item.router
+          key: items.router,
+          label: items.title,
+          kayPath: items.router
         };
       }),
     };

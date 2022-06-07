@@ -1,6 +1,6 @@
 import Echarts from "./HocEcharts"
 
-const defaultStyle = {  width: '900px', height: '500px' , border: '1px solid red' }
+const defaultStyle = { width: '900px', height: '500px' }
 export default function ScatterChart() {
     const dataAll = [
         [10.0, 8.04],
@@ -15,31 +15,7 @@ export default function ScatterChart() {
         [7.0, 4.82],
         [5.0, 5.68]
     ];
-    const markLineOpt = {
-        animation: false,
-        label: {
-            formatter: 'y = 0.5 * x + 3',
-            align: 'right'
-        },
-        lineStyle: {
-            type: 'solid'
-        },
-        tooltip: {
-            formatter: 'y = 0.5 * x + 3'
-        },
-        data: [
-            [
-                {
-                    coord: [0, 3],
-                    symbol: 'none'
-                },
-                {
-                    coord: [20, 13],
-                    symbol: 'none'
-                }
-            ]
-        ]
-    };
+  
     const options = {
         title: {
             text: "散点图",
@@ -54,7 +30,7 @@ export default function ScatterChart() {
         tooltip: {
             formatter: 'Group {a}: ({c})'
         },
-        xAxis: {  },
+        xAxis: {},
         yAxis: {},
         series: {
             symbolSize: 20,

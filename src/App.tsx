@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Container from "./components/Container";
 import NoMatch from "./components/NoMatch";
 import Bar from "./components/EchartComponents/Bar";
@@ -12,13 +12,15 @@ import Dashboard from './components/EchartComponents/dashboard';
 import Sin from "./components/EchartComponents/Sin";
 import Transition from "./components/css/transitions";
 import Three from "./components/Three";
+import Scene from "./components/Three/scene";
 import Editor  from "./components/Editor";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/components" element={<Container />}>
+      {/* <Route path="/" element={<Home />} /> */}
+      {/* <Route path="/components" element={<Container />}> */}
+      <Route path="/" element={<Container />}>
         <Route index element={<Dashboard />} />
         <Route path="/components/transition" element={<Transition />} />
         <Route path="/components/barEcharts" element={<Bar />} />
@@ -30,6 +32,7 @@ function App() {
         <Route path="/components/dashboard" element={<Dashboard />} />
         <Route path="/components/Sin" element={<Sin />} />
         <Route path="/components/Three" element={<Three />} />
+        <Route path="/components/Scene" element={<Scene />} />
         <Route path="/components/edit" element={<Editor />} />
         <Route path="/components/ScatterChart" element={<ScatterChart />} />
         <Route path="*" element={<NoMatch />} />

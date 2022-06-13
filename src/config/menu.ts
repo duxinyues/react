@@ -28,6 +28,7 @@ const menuItem = [
     router: null,
     subs: [
       { title: "Three光源", router: "/components/Three", component: "Three" },
+      { title: "Three场景", router: "/components/Scene", component: "Scene" },
     ]
   },
   {
@@ -36,7 +37,6 @@ const menuItem = [
     router: null,
     subs: [
       { title: "自定义Modal", router: "/components/modal", component: "Modal" },
-      // { title: "表单", router: "/components/form", component: "Form" },
     ]
   },
 ];

@@ -17,9 +17,10 @@ export default function Three() {
         // 设置渲染器的颜色
         renderer.setClearColor(new THREE.Color('black'), 1);
         // 设置渲染器宽高
-        renderer.setSize(1500, 400);
+        renderer.setSize(1500, 600);
 
-        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        // 添加物体
+        const geometry = new THREE.BoxGeometry(3, 3, 3);
         const material = new THREE.MeshPhongMaterial({ color: 'blue' });
         const mesh = new THREE.Mesh(geometry, material);
 

@@ -15,6 +15,7 @@ import Three from "./components/Three";
 import Scene from "./components/Three/scene";
 import Editor  from "./components/Editor";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
+import SortDrag from "./components/SortDrag";
 function App() {
   return (
     <Routes>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/components/Scene" element={<Scene />} />
         <Route path="/components/edit" element={<Editor />} />
         <Route path="/components/ScatterChart" element={<ScatterChart />} />
+        <Route path="/components/SortDrag" element={<SortDrag />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
       {/* <Route path="/Three" element={<Three />} /> */}

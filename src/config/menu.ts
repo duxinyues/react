@@ -37,6 +37,7 @@ const menuItem = [
     router: null,
     subs: [
       { title: "自定义Modal", router: "/components/modal", component: "Modal" },
+      { title: "Tree拖拽排序", router: "/components/SortDrag", component: "SortDrag" },
     ]
   },
 ];

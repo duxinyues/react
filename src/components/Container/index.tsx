@@ -14,7 +14,7 @@ const items: MenuProps['items'] = menuItem.map(
         return {
           key: items.router,
           label: items.title,
-          kayPath: items.router
+          kaypath: items.router
         };
       }),
     };

@@ -1,4 +1,14 @@
-import { Routes, Route } from "react-router-dom";
+/*
+ * @Author: duxinyues yongyuan253015@gmail.com
+ * @Date: 2022-06-26 22:10:16
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-07-03 14:02:53
+ * @FilePath: \react\src\App.tsx
+ * @Description: 
+ * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
+ */
+import { Suspense,lazy } from "react";
+import { useRoutes } from "react-router-dom";
 // import Home from "./components/Home";
 import Container from "./components/Container";
 import NoMatch from "./components/NoMatch";
@@ -13,35 +23,53 @@ import Sin from "./components/EchartComponents/Sin";
 import Transition from "./components/css/transitions";
 import Three from "./components/Three";
 import Scene from "./components/Three/scene";
-import Editor  from "./components/Editor";
+import Editor from "./components/Editor";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
+const Three3D = lazy(()=>import("./components/Three/3d"))
 function App() {
+  const element = useRoutes([
+    {
+      path: "/",
+      element: <Container />,
+      children:[
+        {
+          index: true,
+          path: "/",
+          element: <Dashboard />,
+        },
+      ]
+    },
+    {
+      path: "/components",
+      element: <Container />,
+      children: [
+        {
+          index: true,
+          path: "/components/dashboard",
+          element: <Dashboard />,
+        },
+        { path: "/components/transition", element: <Transition /> },
+        { path: "/components/barEcharts", element: <Bar /> },
+        { path: "/components/modal", element: <Modal /> },
+        { path: "/components/flex", element: <Flex /> },
+        { path: "/components/grid", element: <Grid /> },
+        { path: "/components/Three", element: <Three /> },
+        { path: "/components/rowBar", element: <RowBar /> },
+        { path: "/components/radialPolar", element: <RadialPolar /> },
+        { path: "/components/Scene", element: <Scene /> },
+        { path: "/components/edit", element: <Editor /> },
+        { path: "/components/ScatterChart", element: <ScatterChart /> },
+        { path: "/components/SortDrag", element: <SortDrag /> },
+        { path: "/components/Sin", element: <Sin /> },
+      ],
+    },
+    { path: "/three3d", element: <Three3D /> },
+    { path: "*", element: <NoMatch /> },])
   return (
-    <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
-      {/* <Route path="/components" element={<Container />}> */}
-      <Route path="/" element={<Container />}>
-        <Route index element={<Dashboard />} />
-        <Route path="/components/transition" element={<Transition />} />
-        <Route path="/components/barEcharts" element={<Bar />} />
-        <Route path="/components/rowBar" element={<RowBar />} />
-        <Route path="/components/radialPolar" element={<RadialPolar />} />
-        <Route path="/components/modal" element={<Modal />} />
-        <Route path="/components/flex" element={<Flex />} />
-        <Route path="/components/grid" element={<Grid />} />
-        <Route path="/components/dashboard" element={<Dashboard />} />
-        <Route path="/components/Sin" element={<Sin />} />
-        <Route path="/components/Three" element={<Three />} />
-        <Route path="/components/Scene" element={<Scene />} />
-        <Route path="/components/edit" element={<Editor />} />
-        <Route path="/components/ScatterChart" element={<ScatterChart />} />
-        <Route path="/components/SortDrag" element={<SortDrag />} />
-        <Route path="*" element={<NoMatch />} />
-      </Route>
-      {/* <Route path="/Three" element={<Three />} /> */}
-      <Route path="*" element={<NoMatch />} />
-    </Routes>
+    <Suspense fallback={<div>loading</div>}>
+      {element}
+    </Suspense>
   );
 }
 

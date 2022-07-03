@@ -1,90 +1,72 @@
+/*
+ * @Author: duxinyues yongyuan253015@gmail.com
+ * @Date: 2022-06-26 22:10:16
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-07-03 13:46:35
+ * @FilePath: \react\src\components\Three\scene.jsx
+ * @Description: 
+ * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
+ */
 import { useEffect } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
+export default function Three() {
+    useEffect(() => {
+        init()
+    }, [])
+    const init = () => {
+        // 创建场景
+        const scene = new THREE.Scene();
+        // 创建摄像机
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);
 
-export default function Scene(){
-    const init = ()=>{
-        let  scene = new THREE.Scene();
-        let camera = new THREE.PerspectiveCamera(45,window.innerWidth / window.innerHeight,0.1,1000);
- 
-        let renderer = new THREE.WebGLRenderer();
-        renderer.setClearColor(new THREE.Color(0xeeeeee,0.1));
-        renderer.setSize(1500,500);
+        // 创建渲染器
+        const renderer = new THREE.WebGLRenderer();
+        // 设置渲染器的颜色
+        renderer.setClearColor(new THREE.Color('black'), 1);
+        // 设置渲染器宽高
+        renderer.setSize(1500, 600);
 
-        var planeGeometry = new THREE.PlaneGeometry(60, 20, 20, 20);
-        var planeMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-        var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-        plane.receiveShadow = true;
+        // 添加物体
+        const geometry = new THREE.BoxGeometry(3, 3, 3);
+        const material = new THREE.MeshPhongMaterial({ color: 'red' });
+        const mesh = new THREE.Mesh(geometry, material);
 
-        plane.rotation.x = -0.5 * Math.PI;
-        plane.position.x = 15;
-        plane.position.y = 0;
-        plane.position.z = 0;
+        scene.add(mesh);
 
-        scene.add(plane);
+        // 设置相机在Z轴方向的值，这样看到物体的一个面
+        camera.position.z = 19;
 
-        var cubeGeometry = new THREE.BoxGeometry(4, 4, 4);
-        var cubeMaterial = new THREE.MeshLambertMaterial({color: 0xff7777});
-        var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        cube.castShadow = true;
+        // 调整相机的角度，这样同时可以看到物体多个面。
+        camera.position.set(3, 3, 4);
+        camera.lookAt(mesh.position);
 
-        cube.position.x = -4;
-        cube.position.y = 3;
-        cube.position.z = 0;
-
-        // add the cube to the scene
-        scene.add(cube);
-
-        var sphereGeometry = new THREE.SphereGeometry(4, 20, 20);
-        var sphereMaterial = new THREE.MeshLambertMaterial({color: 0x7777ff});
-        var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-
-        // position the sphere
-        sphere.position.x = 20;
-        sphere.position.y = 0;
-        sphere.position.z = 2;
-        sphere.castShadow = true;
-
-        // add the sphere to the scene
-        scene.add(sphere);
-        camera.position.x = -25;
-        camera.position.y = 30;
-        camera.position.z = 25;
-        camera.lookAt(new THREE.Vector3(10, 0, 0));
-
-        // add subtle ambient lighting
-        var ambiColor = "#0c0c0c";
-        var ambientLight = new THREE.AmbientLight(ambiColor);
-        scene.add(ambientLight);
-
-        var spotLight = new THREE.SpotLight(0xffffff);
-        spotLight.position.set(-40, 60, -10);
-        spotLight.castShadow = true;
-        // scene.add( spotLight );
-
-        var pointColor = "#ccffcc";
-        var pointLight = new THREE.PointLight(pointColor);
+        // 设置灯光
+        const pointColor = '#ccffcc';
+        const pointLight = new THREE.PointLight(pointColor);
         pointLight.distance = 100;
+        pointLight.position.set(3, 2, 1);
+
         scene.add(pointLight);
 
-        const sphereLight = new THREE.SphereGeometry(0.3);
-        const sphereLightMaterial = new THREE.MeshBasicMaterial({color:'blue'});
-        var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
-        sphereLightMesh.castShadow = true;
+        // 设置基本光源
+        const ambientLight = new THREE.AmbientLight('red', 0.5);
+        scene.add(ambientLight);
 
-        sphereLightMesh.position = new THREE.Vector3(3, 0, 3);
-        scene.add(sphereLightMesh);
 
-        document.getElementById("secen").appendChild(renderer.domElement);
+        document.getElementById('webgl').appendChild(renderer.domElement);
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.addEventListener('change', () => {
+            renderer.render(scene, camera)
+        })
         const animate = () => {
             window.requestAnimationFrame(animate);
+            mesh.rotation.y += 0.03;
             renderer.render(scene, camera);
         }
         animate();
     }
-    useEffect(()=>{
-        init()
-    },[])
-
-    return <div id="secen"></div>
+    return <div id='webgl'></div>
 }

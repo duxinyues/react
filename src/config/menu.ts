@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-03 13:49:05
+ * @LastEditTime: 2022-07-03 22:19:35
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -38,6 +38,7 @@ const menuItem = [
     subs: [
       { title: "光源", router: "/components/Three", component: "Three" },
       { title: "场景", router: "/components/Scene", component: "Scene" },
+      { title: "材质", router: "/components/Material", component: "Material" },
     ]
   },
   {

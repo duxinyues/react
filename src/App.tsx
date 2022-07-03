@@ -26,7 +26,10 @@ import Scene from "./components/Three/scene";
 import Editor from "./components/Editor";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
-const Three3D = lazy(()=>import("./components/Three/3d"))
+const Three3D = lazy(()=>import("./components/Three/3d"));
+const Material = lazy(()=>import("./components/Three/Material"));
+
+
 function App() {
   const element = useRoutes([
     {
@@ -58,6 +61,7 @@ function App() {
         { path: "/components/rowBar", element: <RowBar /> },
         { path: "/components/radialPolar", element: <RadialPolar /> },
         { path: "/components/Scene", element: <Scene /> },
+        { path: "/components/Material", element: <Material /> },
         { path: "/components/edit", element: <Editor /> },
         { path: "/components/ScatterChart", element: <ScatterChart /> },
         { path: "/components/SortDrag", element: <SortDrag /> },

@@ -1,9 +1,9 @@
 /*
  * @Author: duxinyues yongyuan253015@gmail.com
- * @Date: 2022-07-03 14:01:20
+ * @Date: 2022-07-03 22:16:15
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-03 22:13:32
- * @FilePath: \react\src\components\Three\3d.jsx
+ * @LastEditTime: 2022-07-03 22:51:14
+ * @FilePath: \react\src\components\Three\Material.jsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
@@ -21,28 +21,36 @@ export default function Three3D() {
 
 
         // 添加物体
-        // const geometry = new THREE.SphereGeometry(30, 40, 50);// 创建一个球体几何对象
-        const geometry0 = new THREE.BoxGeometry(100, 130, 30); // 创建一个立方体几何对象
-        // const geometry =  new THREE.CylinderGeometry( 50, 50, 100, 25 ); // 创建一个圆柱几何对象
-        // const geometry =  new THREE.OctahedronGeometry(50); // 创建一个八面体几何对象
-        // const geometry =  new THREE.DodecahedronGeometry(50); // 创建一个十二面体几何对象
-        // const geometry = new THREE.IcosahedronGeometry(50); // 创建一个二十面体几何对象
-        const material0 = new THREE.MeshPhongMaterial({ color: '0x0000ff' }); // 材质对象
-        const mesh0 = new THREE.Mesh(geometry0, material0); // 网格模型对象Mesh
-        scene.add(mesh0);
-
         // 立方体网格模型
+        const geometry0 = new THREE.BoxGeometry(10, 100, 100);
+        // MeshBasicMaterial基础材质
+        const material0 = new THREE.MeshBasicMaterial({
+            color: 'blue',
+            opacity: 0.7,
+            transparent: true,
+        }); //材质对象Material
+        const mesh0 = new THREE.Mesh(geometry0, material0); //网格模型对象Mesh
+        mesh0.translateX(250);
+        scene.add(mesh0); //网格模型添加到场景中
+
         const geometry1 = new THREE.BoxGeometry(100, 100, 100);
+        // MeshLambertMaterial，Lambert材质
         const material1 = new THREE.MeshLambertMaterial({
-            color: 0x0000ff
+            color: 0x0000ff,
+            opacity: 0.7,
+            transparent: true,
+            wireframe: true
         }); //材质对象Material
         const mesh1 = new THREE.Mesh(geometry1, material1); //网格模型对象Mesh
         scene.add(mesh1); //网格模型添加到场景中
 
         // 球体网格模型
         const geometry2 = new THREE.SphereGeometry(60, 40, 40);
-        const material2 = new THREE.MeshLambertMaterial({
-            color: 0xff00ff
+        //  
+        const material2 = new THREE.MeshPhongMaterial({
+            color: 0xff00ff,
+            specular: 0x448899,
+            shininess: 0.1
         });
         const mesh2 = new THREE.Mesh(geometry2, material2); //网格模型对象Mesh
         mesh2.translateY(120); //球体网格模型沿Y轴正方向平移120
@@ -58,6 +66,13 @@ export default function Three3D() {
         mesh3.position.set(120, 0, 0);//设置mesh3模型对象的xyz坐标为120,0,0
         scene.add(mesh3); //
 
+        const geometry4 = new THREE.CylinderBufferGeometry(20, 30, 20, 12,21);
+        const material4 = new THREE.MeshStandardMaterial({
+            color: "pink",
+        })
+        const mesh4 = new THREE.Mesh(geometry4, material4)
+        mesh4.translateZ(250);
+        scene.add(mesh4);
         // 辅助坐标系  参数250表示坐标系大小，可以根据场景大小去设置
         const axisHelper = new THREE.AxesHelper(500);
         scene.add(axisHelper);
@@ -104,7 +119,7 @@ export default function Three3D() {
             mesh3.rotation.y += 0.03;
             mesh2.rotateY(0.02);
             mesh1.rotateX(0.02);
-            mesh0.rotateZ(0.04);
+            mesh1.rotateZ(0.04);
             renderer.render(scene, camera);
         }
         animate();

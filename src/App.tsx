@@ -28,7 +28,7 @@ import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
 const Three3D = lazy(()=>import("./components/Three/3d"));
 const Material = lazy(()=>import("./components/Three/Material"));
-
+const Light = lazy(()=>import("./components/Three/Light"))
 
 function App() {
   const element = useRoutes([
@@ -62,6 +62,7 @@ function App() {
         { path: "/components/radialPolar", element: <RadialPolar /> },
         { path: "/components/Scene", element: <Scene /> },
         { path: "/components/Material", element: <Material /> },
+        { path: "/components/Light", element: <Light /> },
         { path: "/components/edit", element: <Editor /> },
         { path: "/components/ScatterChart", element: <ScatterChart /> },
         { path: "/components/SortDrag", element: <SortDrag /> },

@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-03 22:19:35
+ * @LastEditTime: 2022-07-03 23:23:32
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -36,20 +36,21 @@ const menuItem = [
     key: "3",
     router: null,
     subs: [
-      { title: "光源", router: "/components/Three", component: "Three" },
+      { title: "实例", router: "/components/Three", component: "Three" },
       { title: "场景", router: "/components/Scene", component: "Scene" },
       { title: "材质", router: "/components/Material", component: "Material" },
+      { title: "光源", router: "/components/Light", component: "Light" },
     ]
   },
-  {
-    title: "自定义组件",
-    key: "-1",
-    router: null,
-    subs: [
-      { title: "自定义Modal", router: "/components/modal", component: "Modal" },
-      { title: "Tree拖拽排序", router: "/components/SortDrag", component: "SortDrag" },
-    ]
-  },
+  // {
+  //   title: "自定义组件",
+  //   key: "-1",
+  //   router: null,
+  //   subs: [
+  //     { title: "自定义Modal", router: "/components/modal", component: "Modal" },
+  //     { title: "Tree拖拽排序", router: "/components/SortDrag", component: "SortDrag" },
+  //   ]
+  // },
 ];
 
 export default menuItem

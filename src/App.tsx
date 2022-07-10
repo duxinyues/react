@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-03 14:02:53
+ * @LastEditTime: 2022-07-10 23:36:26
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -28,7 +28,8 @@ import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
 const Three3D = lazy(()=>import("./components/Three/3d"));
 const Material = lazy(()=>import("./components/Three/Material"));
-const Light = lazy(()=>import("./components/Three/Light"))
+const Light = lazy(()=>import("./components/Three/Light"));
+const Box = lazy(()=>import("./components/Three/Box"))
 
 function App() {
   const element = useRoutes([
@@ -63,6 +64,7 @@ function App() {
         { path: "/components/Scene", element: <Scene /> },
         { path: "/components/Material", element: <Material /> },
         { path: "/components/Light", element: <Light /> },
+        { path: "/components/Box", element: <Box /> },
         { path: "/components/edit", element: <Editor /> },
         { path: "/components/ScatterChart", element: <ScatterChart /> },
         { path: "/components/SortDrag", element: <SortDrag /> },

@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-07 22:46:19
+ * @LastEditTime: 2022-07-16 21:35:29
  * @FilePath: \react\src\components\Container\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -16,16 +16,23 @@ import menuItem from "../../config/menu";
 const { Content, Footer, Sider } = Layout;
 const items: MenuProps['items'] = menuItem.map(
   (item, index) => {
+    if (item.subs) {
+      return {
+        key: index,
+        label: item.title,
+        children: item.subs.map((items, key) => {
+          return {
+            key: items.router,
+            label: items.title,
+            kaypath: items.router
+          };
+        }),
+      };
+    }
     return {
-      key: index,
+      key: item.router,
       label: item.title,
-      children: item.subs?.map((items, key) => {
-        return {
-          key: items.router,
-          label: items.title,
-          kaypath: items.router
-        };
-      }),
+      kaypath: item.router
     };
   },
 );

@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-10 23:36:26
+ * @LastEditTime: 2022-07-16 21:32:00
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -65,12 +65,13 @@ function App() {
         { path: "/components/Material", element: <Material /> },
         { path: "/components/Light", element: <Light /> },
         { path: "/components/Box", element: <Box /> },
-        { path: "/components/edit", element: <Editor /> },
+        
         { path: "/components/ScatterChart", element: <ScatterChart /> },
         { path: "/components/SortDrag", element: <SortDrag /> },
         { path: "/components/Sin", element: <Sin /> },
       ],
     },
+    { path: "/edit", element: <Editor /> },
     { path: "/three3d", element: <Three3D /> },
     { path: "*", element: <NoMatch /> },])
   return (

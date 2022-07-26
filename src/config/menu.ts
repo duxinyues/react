@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-10 23:31:18
+ * @LastEditTime: 2022-07-16 21:32:30
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -43,6 +43,12 @@ const menuItem = [
       { title: "几何", router: "/components/Box", component: "Box" },
     ]
   },
+  {
+    title: "编辑",
+    key: "edit",
+    router: "/edit",
+    component: "Edit"
+  }
   // {
   //   title: "自定义组件",
   //   key: "-1",

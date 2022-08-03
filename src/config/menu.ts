@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-16 21:32:30
+ * @LastEditTime: 2022-08-03 22:44:23
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -48,16 +48,15 @@ const menuItem = [
     key: "edit",
     router: "/edit",
     component: "Edit"
-  }
-  // {
-  //   title: "自定义组件",
-  //   key: "-1",
-  //   router: null,
-  //   subs: [
-  //     { title: "自定义Modal", router: "/components/modal", component: "Modal" },
-  //     { title: "Tree拖拽排序", router: "/components/SortDrag", component: "SortDrag" },
-  //   ]
-  // },
+  },
+  {
+    title: "可视化",
+    key: "visualization",
+    router: null,
+    subs: [
+      { title: "自定义Modal", router: "/app1", component: "Modal" },
+    ]
+  },
 ];
 
 export default menuItem

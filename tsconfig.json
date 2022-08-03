@@ -20,9 +20,12 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
   },
   "include": [
     "src"
-, "src/components/Three/.jsx"  ]
+  ],
+  "extends": "./paths.json"
+
 }

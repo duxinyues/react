@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-07-16 21:32:00
+ * @LastEditTime: 2022-08-03 22:46:05
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -29,7 +29,8 @@ import SortDrag from "./components/SortDrag";
 const Three3D = lazy(()=>import("./components/Three/3d"));
 const Material = lazy(()=>import("./components/Three/Material"));
 const Light = lazy(()=>import("./components/Three/Light"));
-const Box = lazy(()=>import("./components/Three/Box"))
+const Box = lazy(()=>import("./components/Three/Box"));
+const App1 = lazy(()=>import('./components/Visualization/app1'));
 
 function App() {
   const element = useRoutes([
@@ -72,6 +73,7 @@ function App() {
       ],
     },
     { path: "/edit", element: <Editor /> },
+    { path: "/app1", element: <App1 /> },
     { path: "/three3d", element: <Three3D /> },
     { path: "*", element: <NoMatch /> },])
   return (

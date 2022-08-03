@@ -4600,6 +4600,13 @@ file-loader@^6.2.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+file-selector@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.npmmirror.com/file-selector/-/file-selector-0.2.4.tgz#7b98286f9dbb9925f420130ea5ed0a69238d4d80"
+  integrity sha512-ZDsQNbrv6qRi1YTDOEWzf5J2KjZ9KMI1Q2SGeTkCJmNNW25Jg4TW4UMcmoqcg4WrAyKRcpBXdbWRxkfrOzVRbA==
+  dependencies:
+    tslib "^2.0.3"
+
 filelist@^1.0.1:
   version "1.0.4"
   resolved "https://registry.npmmirror.com/filelist/-/filelist-1.0.4.tgz#f78978a1e944775ff9e62e744424f215e58352b5"
@@ -9453,6 +9460,13 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-file-picker@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.npmmirror.com/use-file-picker/-/use-file-picker-1.5.0.tgz#f561f74a18e492eededd6cbfea82dd9689351657"
+  integrity sha512-rO8c4PT47pVGzICnRzTdAGuOyh2vvEYGdRCMw27PvkQv20DfM9nArqpKrWp/j2P3AfwQJAKOuCwy96ezV+TkGA==
+  dependencies:
+    file-selector "0.2.4"
 
 use-sync-external-store@^1.0.0:
   version "1.1.0"

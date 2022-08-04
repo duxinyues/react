@@ -1,3 +1,12 @@
+/*
+ * @Author: duxinyues yongyuan253015@gmail.com
+ * @Date: 2022-06-26 22:10:16
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-08-04 22:33:17
+ * @FilePath: \react\src\components\EchartComponents\HocEcharts.tsx
+ * @Description: 
+ * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
+ */
 import { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 

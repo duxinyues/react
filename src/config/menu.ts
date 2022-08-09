@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-03 22:44:23
+ * @LastEditTime: 2022-08-09 22:54:38
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -56,6 +56,10 @@ const menuItem = [
     subs: [
       { title: "自定义Modal", router: "/app1", component: "Modal" },
     ]
+  },{
+    title: "Move",
+    key: "Move",
+    router: "/move"
   },
 ];
 

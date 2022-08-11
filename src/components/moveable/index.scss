@@ -1,9 +1,10 @@
 .container {
-    width: 100vw;
+    width: calc(100vw - 285px);
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border: 1px solid blue;
     .target {
         width: 300px;
         height: 300px;

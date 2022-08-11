@@ -2,12 +2,12 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-09 22:54:48
+ * @LastEditTime: 2022-08-11 21:50:30
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
-import { Suspense,lazy } from "react";
+import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
 // import Home from "./components/Home";
 import Container from "./components/Container";
@@ -26,19 +26,20 @@ import Scene from "./components/Three/scene";
 import Editor from "./components/Editor";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
-const Three3D = lazy(()=>import("./components/Three/3d"));
-const Material = lazy(()=>import("./components/Three/Material"));
-const Light = lazy(()=>import("./components/Three/Light"));
-const Box = lazy(()=>import("./components/Three/Box"));
-const App1 = lazy(()=>import('./components/Visualization/app1'));
-const MoveableComponent = lazy(()=>import("./components/moveable"));
+const Three3D = lazy(() => import("./components/Three/3d"));
+const Material = lazy(() => import("./components/Three/Material"));
+const Light = lazy(() => import("./components/Three/Light"));
+const Box = lazy(() => import("./components/Three/Box"));
+const App1 = lazy(() => import('./components/Visualization/app1'));
+const Drag = lazy(() => import("./components/moveable"));
+const Resizable = lazy(() => import("./components/moveable/Resizable"))
 
 function App() {
   const element = useRoutes([
     {
       path: "/",
       element: <Container />,
-      children:[
+      children: [
         {
           index: true,
           path: "/",
@@ -74,7 +75,22 @@ function App() {
     },
     { path: "/edit", element: <Editor /> },
     { path: "/app1", element: <App1 /> },
-    { path: "/move", element: <MoveableComponent /> },
+    {
+      path: "/move",
+      element: <Container />,
+      children: [
+        {
+          index: true,
+          path: "/move/drag",
+          element: <Drag />,
+        },
+        {
+          index: true,
+          path: "/move/resizable",
+          element: <Resizable />,
+        },
+      ]
+    },
     { path: "/three3d", element: <Three3D /> },
     { path: "*", element: <NoMatch /> },])
   return (

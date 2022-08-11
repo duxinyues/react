@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-09 22:54:38
+ * @LastEditTime: 2022-08-11 22:46:57
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -43,12 +43,7 @@ const menuItem = [
       { title: "几何", router: "/components/Box", component: "Box" },
     ]
   },
-  {
-    title: "编辑",
-    key: "edit",
-    router: "/edit",
-    component: "Edit"
-  },
+
   {
     title: "可视化",
     key: "visualization",
@@ -56,10 +51,19 @@ const menuItem = [
     subs: [
       { title: "自定义Modal", router: "/app1", component: "Modal" },
     ]
-  },{
-    title: "Move",
+  }, {
+    title: "React-moveable",
     key: "Move",
-    router: "/move"
+    router: null,
+    subs: [
+      { title: "Drag", router: "/move/drag" },
+      { title: "Resizable", router: "/move/resizable" },
+    ]
+  }, {
+    title: "编辑",
+    key: "edit",
+    router: "/edit",
+    component: "Edit"
   },
 ];
 

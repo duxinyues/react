@@ -1,15 +1,14 @@
 /*
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
- * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-11 21:50:30
+ * @LastEditors: 韦永愿 1638877065@qq.com
+ * @LastEditTime: 2022-08-12 11:45:21
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
-// import Home from "./components/Home";
 import Container from "./components/Container";
 import NoMatch from "./components/NoMatch";
 import Bar from "./components/EchartComponents/Bar";
@@ -23,7 +22,7 @@ import Sin from "./components/EchartComponents/Sin";
 import Transition from "./components/css/transitions";
 import Three from "./components/Three";
 import Scene from "./components/Three/scene";
-import Editor from "./components/Editor";
+import Directory from "./components/Widget/directory";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
 const Three3D = lazy(() => import("./components/Three/3d"));
@@ -73,7 +72,9 @@ function App() {
         { path: "/components/Sin", element: <Sin /> },
       ],
     },
-    { path: "/edit", element: <Editor /> },
+    { path: "/widget", element: <Container />,children:[
+      { path: "/widget/directory", element: <Directory /> },
+    ] },
     { path: "/app1", element: <App1 /> },
     {
       path: "/move",

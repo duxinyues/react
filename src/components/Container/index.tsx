@@ -11,7 +11,6 @@ import { Outlet, useNavigate } from
   "react-router-dom"
 import { Layout, Menu, MenuProps } from "antd";
 import './container.scss';
-import menuItem from "../../config/menu";
 import { connect } from "react-redux";
 
 const { Content, Footer, Sider } = Layout;

@@ -1,0 +1,56 @@
+.container {
+    #login {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .content {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        @keyframes humanMove {
+            0% {
+                top: -100px;
+            }
+            25% {
+                top: -120px;
+            }
+            50% {
+                top: -100px;
+            }
+            75% {
+                top: -80px;
+            }
+            100% {
+                background: -100px;
+            }
+        }
+        .login-plane-human {
+            position: absolute;
+            width: 260px;
+            right: -120px;
+            top: -100px;
+            animation: humanMove 8s linear 0s infinite normal;
+        }
+        .login-main {
+            width: 100%;
+        }
+    }
+    .login-ground {
+        position: absolute;
+        z-index: 9998;
+        width: 100%;
+        height: 400px;
+        background-image: url("../../../assets/login/ground.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        bottom: 0;
+        left: 0;
+    }
+}

@@ -1,8 +1,8 @@
 /*
  * @Author: 韦永愿 1638877065@qq.com
  * @Date: 2022-08-12 09:06:11
- * @LastEditors: 韦永愿 1638877065@qq.com
- * @LastEditTime: 2022-08-12 11:44:20
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-08-13 15:40:04
  * @FilePath: \react\src\reducers\menu.ts
  * @Description: 
  * Copyright (c) 2022 by 韦永愿 email: 1638877065@qq.com, All Rights Reserved.
@@ -65,7 +65,8 @@ const menuState= [
         key: "component",
         router: null,
         children: [
-            { title: "编辑目录",key:'directory', router: "/widget/directory" }
+            { title: "编辑目录",key:'directory', router: "/widget/directory" },
+            { title: "登录",key:'directory', router: "/login" }
         ]
     },
 ];

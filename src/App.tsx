@@ -1,8 +1,8 @@
 /*
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
- * @LastEditors: 韦永愿 1638877065@qq.com
- * @LastEditTime: 2022-08-12 11:45:21
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-08-13 15:40:37
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -22,7 +22,7 @@ import Sin from "./components/EchartComponents/Sin";
 import Transition from "./components/css/transitions";
 import Three from "./components/Three";
 import Scene from "./components/Three/scene";
-import Directory from "./components/Widget/directory";
+import Directory from "./components/Widget/directory/directory";
 import ScatterChart from "./components/EchartComponents/ScatterChart";
 import SortDrag from "./components/SortDrag";
 const Three3D = lazy(() => import("./components/Three/3d"));
@@ -31,7 +31,8 @@ const Light = lazy(() => import("./components/Three/Light"));
 const Box = lazy(() => import("./components/Three/Box"));
 const App1 = lazy(() => import('./components/Visualization/app1'));
 const Drag = lazy(() => import("./components/moveable"));
-const Resizable = lazy(() => import("./components/moveable/Resizable"))
+const Resizable = lazy(() => import("./components/moveable/Resizable"));
+const Login =lazy(()=>import('./components/Widget/login'));
 
 function App() {
   const element = useRoutes([
@@ -72,9 +73,13 @@ function App() {
         { path: "/components/Sin", element: <Sin /> },
       ],
     },
-    { path: "/widget", element: <Container />,children:[
-      { path: "/widget/directory", element: <Directory /> },
-    ] },
+    {
+      path: "/widget",
+      element: <Container />,
+      children: [
+        { path: "/widget/directory", element: <Directory /> },
+      ]
+    },
     { path: "/app1", element: <App1 /> },
     {
       path: "/move",
@@ -93,6 +98,7 @@ function App() {
       ]
     },
     { path: "/three3d", element: <Three3D /> },
+    { path: "/login", element: <Login /> },
     { path: "*", element: <NoMatch /> },])
   return (
     <Suspense fallback={<div>loading</div>}>

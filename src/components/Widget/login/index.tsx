@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-08-13 15:31:23
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-13 21:40:09
+ * @LastEditTime: 2022-08-14 21:35:22
  * @FilePath: \react\src\components\Widget\login\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -27,6 +27,13 @@ export default function Login() {
         scene.fog = new THREE.Fog(0x000000, 0, 10000);
         const depth = 1400; // 盒子的深度
 
+        const container: any = document.getElementById("login");
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        const fov = 15;
+        const distance = width / 2 / Math.tan(Math.PI / 12);
+        const zAxisNumber = Math.floor(distance - depth / 2);
+
         // 背景
         new THREE.TextureLoader().load(require('../../../assets/login/sky.png'), (texture) => {
             const geometry = new THREE.BoxGeometry(width, height, depth);
@@ -34,13 +41,6 @@ export default function Login() {
             const mesh = new THREE.Mesh(geometry, material)
             scene.add(mesh);
         })
-
-        const container: any = document.getElementById("login");
-        const width = container.clientWidth;
-        const height = container.clientHeight;
-        const fov = 15;
-        const distance = width / 2 / Math.tan(Math.PI / 12);
-        const zAxisNumber = Math.floor(distance - depth / 2);
 
         // 相机
         const camera = new THREE.PerspectiveCamera(fov, width / height, 1, 30000)
@@ -50,7 +50,7 @@ export default function Login() {
 
         // 光源
         const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-        const light_rightBottom = new THREE.PointLight(0x0655fd, 5, 6);
+        const light_rightBottom = new THREE.PointLight(0xffffff, 5, 6);
         light_rightBottom.position.set(0, 100, -200);
         scene.add(light_rightBottom);
         scene.add(ambientLight);
@@ -86,11 +86,6 @@ export default function Login() {
             [[0, 0, 1], sprite2, 20]];
             // 初始化500个节点
             for (let i = 0; i < 500; i++) {
-                /**
-                 * const x: number = Math.random() * 2 * width - width
-                 * 等价
-                 * THREE.MathUtils.randFloatSpread(width)
-                 */
                 const x: number = THREE.MathUtils.randFloatSpread(width)
                 const y: number = _.random(0, height / 2)
                 const z: number = _.random(-depth / 2, zAxisNumber)

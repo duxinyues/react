@@ -2,14 +2,13 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-01 23:20:03
+ * @LastEditTime: 2022-09-01 23:33:00
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
-import { constant } from "lodash";
 const Container = lazy(() => import('./components/Container'))
 const NoMatch = lazy(() => import('./components/NoMatch'))
 const Bar = lazy(() => import('./components/EchartComponents/Bar'));
@@ -17,9 +16,9 @@ const RowBar = lazy(() => import('./components/EchartComponents/RowBar'))
 const RadialPolar = lazy(() => import('./components/EchartComponents/RadialPolar'))
 const Modal = lazy(() => import('./components/Modal'));
 const Flex = lazy(() => import('./components/css/flex/flex'));
-const Grid = lazy(()=>import('./components/css/grid/grid'));
-const Dashboard = lazy(()=>import('./components/EchartComponents/dashboard'))
-const Sin = lazy(()=>import('./components/EchartComponents/Sin'))
+const Grid = lazy(() => import('./components/css/grid/grid'));
+const Dashboard = lazy(() => import('./components/EchartComponents/dashboard'))
+const Sin = lazy(() => import('./components/EchartComponents/Sin'))
 const Transition = lazy(() => import('./components/css/transitions'))
 const Three = lazy(() => import('./components/Three'))
 const Scene = lazy(() => import('./components/Three/scene'))
@@ -102,7 +101,7 @@ function App() {
     { path: "/login", element: <Login /> },
     { path: "*", element: <NoMatch /> },])
   return (
-    <Suspense fallback={<div>loading</div>}>
+    <Suspense fallback={<div className="react-container"><div className="progress-9"></div></div>}>
       {element}
     </Suspense>
   );

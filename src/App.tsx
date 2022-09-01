@@ -2,29 +2,30 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-13 15:40:37
+ * @LastEditTime: 2022-09-01 23:20:03
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
-import Container from "./components/Container";
-import NoMatch from "./components/NoMatch";
-import Bar from "./components/EchartComponents/Bar";
-import RowBar from "./components/EchartComponents/RowBar";
-import RadialPolar from "./components/EchartComponents/RadialPolar"
-import Modal from "./components/Modal";
-import Flex from "./components/css/flex/flex";
-import Grid from "./components/css/grid/grid";
-import Dashboard from './components/EchartComponents/dashboard';
-import Sin from "./components/EchartComponents/Sin";
-import Transition from "./components/css/transitions";
-import Three from "./components/Three";
-import Scene from "./components/Three/scene";
-import Directory from "./components/Widget/directory/directory";
-import ScatterChart from "./components/EchartComponents/ScatterChart";
-import SortDrag from "./components/SortDrag";
+import { constant } from "lodash";
+const Container = lazy(() => import('./components/Container'))
+const NoMatch = lazy(() => import('./components/NoMatch'))
+const Bar = lazy(() => import('./components/EchartComponents/Bar'));
+const RowBar = lazy(() => import('./components/EchartComponents/RowBar'))
+const RadialPolar = lazy(() => import('./components/EchartComponents/RadialPolar'))
+const Modal = lazy(() => import('./components/Modal'));
+const Flex = lazy(() => import('./components/css/flex/flex'));
+const Grid = lazy(()=>import('./components/css/grid/grid'));
+const Dashboard = lazy(()=>import('./components/EchartComponents/dashboard'))
+const Sin = lazy(()=>import('./components/EchartComponents/Sin'))
+const Transition = lazy(() => import('./components/css/transitions'))
+const Three = lazy(() => import('./components/Three'))
+const Scene = lazy(() => import('./components/Three/scene'))
+const Directory = lazy(() => import('./components/Widget/directory/directory'))
+const ScatterChart = lazy(() => import('./components/EchartComponents/ScatterChart'))
+const SortDrag = lazy(() => import('./components/SortDrag'));
 const Three3D = lazy(() => import("./components/Three/3d"));
 const Material = lazy(() => import("./components/Three/Material"));
 const Light = lazy(() => import("./components/Three/Light"));
@@ -32,7 +33,7 @@ const Box = lazy(() => import("./components/Three/Box"));
 const App1 = lazy(() => import('./components/Visualization/app1'));
 const Drag = lazy(() => import("./components/moveable"));
 const Resizable = lazy(() => import("./components/moveable/Resizable"));
-const Login =lazy(()=>import('./components/Widget/login'));
+const Login = lazy(() => import('./components/Widget/login'));
 
 function App() {
   const element = useRoutes([

@@ -1,8 +1,8 @@
 /*
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
- * @LastEditors: 韦永愿 1638877065@qq.com
- * @LastEditTime: 2022-08-12 11:38:19
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-09-07 17:16:11
  * @FilePath: \react\src\config\menu.ts
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -22,16 +22,16 @@ const menuItem= [
           { title: "散点图", key: '1-6', router: "/components/ScatterChart", component: "ScatterChart" },
       ]
   },
-  {
-      title: "CSS",
-      key: "2",
-      router: null,
-      children: [
-          { title: "flex", key: '2-1', router: "/components/flex", component: "Flex" },
-          { title: "grid", key: '2-2', router: "/components/grid", component: "Grid" },
-          { title: "动画", key: '2-3', router: "/components/transition", component: "Transition" },
-      ]
-  },
+//   {
+//       title: "CSS",
+//       key: "2",
+//       router: null,
+//       children: [
+//           { title: "flex", key: '2-1', router: "/components/flex", component: "Flex" },
+//           { title: "grid", key: '2-2', router: "/components/grid", component: "Grid" },
+//           { title: "动画", key: '2-3', router: "/components/transition", component: "Transition" },
+//       ]
+//   },
   {
       title: "THREE",
       key: "3",
@@ -49,7 +49,7 @@ const menuItem= [
       key: "visualization",
       router: null,
       children: [
-          { title: "自定义Modal",key:'visualization-1', router: "/app1", component: "Modal" },
+          { title: "大屏",key:'visualization-1', router: "/app1", component: "Modal" },
       ]
   }, {
       title: "React-moveable",
@@ -59,11 +59,12 @@ const menuItem= [
           { title: "Drag",key:'Move-1', router: "/move/drag" },
           { title: "Resizable",key:'Move-2', router: "/move/resizable" },
       ]
-  }, {
-      title: "编辑",
-      key: "edit",
-      router: "/edit",
-      component: "Edit"
   },
+//    {
+//       title: "编辑",
+//       key: "edit",
+//       router: "/edit",
+//       component: "Edit"
+//   },
 ];
 export default menuItem

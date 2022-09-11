@@ -1,8 +1,8 @@
 /*
  * @Author: 韦永愿 1638877065@qq.com
  * @Date: 2022-08-12 08:49:42
- * @LastEditors: 韦永愿 1638877065@qq.com
- * @LastEditTime: 2022-08-12 10:16:01
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-09-11 13:46:13
  * @FilePath: \react\src\index.tsx
  * @Description: 
  * Copyright (c) 2022 by 韦永愿 email: 1638877065@qq.com, All Rights Reserved.
@@ -13,7 +13,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import { HashRouter } from "react-router-dom"
+import { HashRouter,BrowserRouter } from "react-router-dom"
 import store from "./store"
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -21,9 +21,9 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   // </React.StrictMode>
 );

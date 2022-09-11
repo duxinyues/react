@@ -1,17 +1,19 @@
 /*
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
- * @LastEditors: 韦永愿 1638877065@qq.com
- * @LastEditTime: 2022-08-12 11:01:05
+ * @LastEditors: duxinyues yongyuan253015@gmail.com
+ * @LastEditTime: 2022-09-11 12:57:04
  * @FilePath: \react\src\components\Container\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
+import {useEffect}  from "react";
 import { Outlet, useNavigate } from
   "react-router-dom"
 import { Layout, Menu, MenuProps } from "antd";
 import './container.scss';
 import { connect } from "react-redux";
+
 
 const { Content, Footer, Sider } = Layout;
 

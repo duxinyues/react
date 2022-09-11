@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-08-13 15:31:23
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-08-14 21:35:22
+ * @LastEditTime: 2022-09-11 13:01:47
  * @FilePath: \react\src\components\Widget\login\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -13,9 +13,12 @@ import "./index.scss";
 import { Form, Input, Button, } from "antd";
 import { UserOutlined, LockOutlined, } from "@ant-design/icons";
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import useLocalStorage from "@/hooks/useLocalStorage";
+import { useNavigate } from "react-router";
 
 export default function Login() {
+    const { setLocalStorage } = useLocalStorage("login");
     let materials: any[] = [];
     let parameters: any
     useEffect(() => {
@@ -248,6 +251,7 @@ export default function Login() {
         }
         animate();
     }
+    const navigate = useNavigate();
     return <div className="container">
         <div id="login"></div>
         <div className="content">
@@ -255,19 +259,23 @@ export default function Login() {
             <div className="login-main">
                 <Form
                     className="login-from"
-                    onFinish={() => { console.log("登录") }}
+                    onFinish={(values) => {
+                        console.log("登录", values);
+                        setLocalStorage('true');
+                        navigate('/')
+                    }}
                 >
                     <Form.Item
-                        name="userkey"
-                        rules={[{ required: true, message: "000" }]}
+                        name="userName"
+                        rules={[{ required: true, message: "请输入用户名" }]}
                     >
                         <Input placeholder='' prefix={<UserOutlined style={{ color: "rgba(0,0,0,.25)" }} />} />
                     </Form.Item>
                     <Form.Item
                         name="password"
-                        rules={[{ required: true, message: '678' }]}
+                        rules={[{ required: true, message: '请输入密码' }]}
                     >
-                        <Input type="password" placeholder='----' prefix={<LockOutlined style={{ color: "rgba(0,0,0,.25)" }} />} />
+                        <Input type="password" placeholder='' prefix={<LockOutlined style={{ color: "rgba(0,0,0,.25)" }} />} />
                     </Form.Item>
                     <Form.Item>
                         <Button type="primary" block htmlType="submit" >登录</Button>

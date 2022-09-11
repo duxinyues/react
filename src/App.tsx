@@ -7,8 +7,9 @@
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
-import { Suspense, lazy } from "react";
-import { useRoutes } from "react-router-dom";
+import { Suspense, lazy,useEffect } from "react";
+import { useRoutes,useNavigate } from "react-router-dom";
+import useLocalStorage from "@/hooks/useLocalStorage";
 const Container = lazy(() => import('./components/Container'))
 const NoMatch = lazy(() => import('./components/NoMatch'))
 const Bar = lazy(() => import('./components/EchartComponents/Bar'));
@@ -100,6 +101,13 @@ function App() {
     { path: "/three3d", element: <Three3D /> },
     { path: "/login", element: <Login /> },
     { path: "*", element: <NoMatch /> },])
+    const {localStorage} = useLocalStorage("login");
+    const navigate = useNavigate();
+    useEffect(()=>{
+      if(!localStorage){
+        navigate("/login")
+      }
+    },[])
   return (
     <Suspense fallback={<div className="react-container"><div className="progress-9"></div></div>}>
       {element}

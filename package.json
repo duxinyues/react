@@ -31,6 +31,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
     "request": "^2.88.2",
     "sass": "^1.51.0",
@@ -75,8 +76,8 @@
     "compression-webpack-plugin": "^10.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.22.0",
+    "lerna": "^5.5.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^4.6.1"
-  },
-  "proxy": "https://gitee.com/"
+  }
 }

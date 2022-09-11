@@ -2,7 +2,7 @@
  * @Author: 韦永愿 1638877065@qq.com
  * @Date: 2022-08-12 09:06:11
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-07 17:26:57
+ * @LastEditTime: 2022-09-11 21:26:29
  * @FilePath: \react\src\reducers\menu.ts
  * @Description: 
  * Copyright (c) 2022 by 韦永愿 email: 1638877065@qq.com, All Rights Reserved.
@@ -13,8 +13,7 @@ const menuState = [
         key: "component",
         router: null,
         children: [
-            // { title: "编辑目录",key:'directory', router: "/widget/directory" },
-            { title: "登录", key: 'directory', router: "/login" }
+            // { title: "登录", key: 'directory', router: "/login" }
         ]
     },
     {
@@ -31,27 +30,17 @@ const menuState = [
         ]
     },
     // {
-    //     title: "CSS",
-    //     key: "2",
+    //     title: "THREE",
+    //     key: "3",
     //     router: null,
     //     children: [
-    //         { title: "flex", key: '2-1', router: "/components/flex", component: "Flex" },
-    //         { title: "grid", key: '2-2', router: "/components/grid", component: "Grid" },
-    //         { title: "动画", key: '2-3', router: "/components/transition", component: "Transition" },
+    //         { title: "实例", key: '3-1', router: "/components/Three", component: "Three" },
+    //         { title: "场景", key: '3-2', router: "/components/Scene", component: "Scene" },
+    //         { title: "材质", key: '3-3', router: "/components/Material", component: "Material" },
+    //         { title: "光源", key: '3-4', router: "/components/Light", component: "Light" },
+    //         { title: "几何", key: '3-5', router: "/components/Box", component: "Box" },
     //     ]
     // },
-    {
-        title: "THREE",
-        key: "3",
-        router: null,
-        children: [
-            { title: "实例", key: '3-1', router: "/components/Three", component: "Three" },
-            { title: "场景", key: '3-2', router: "/components/Scene", component: "Scene" },
-            { title: "材质", key: '3-3', router: "/components/Material", component: "Material" },
-            { title: "光源", key: '3-4', router: "/components/Light", component: "Light" },
-            { title: "几何", key: '3-5', router: "/components/Box", component: "Box" },
-        ]
-    },
     {
         title: "可视化",
         key: "visualization",
@@ -60,15 +49,15 @@ const menuState = [
             { title: "可视化1", key: 'visualization-1', router: "/app1", component: "Modal" },
         ]
     },
-    {
-        title: "React-moveable",
-        key: "Move",
-        router: null,
-        children: [
-            { title: "Drag", key: 'Move-1', router: "/move/drag" },
-            { title: "Resizable", key: 'Move-2', router: "/move/resizable" },
-        ]
-    },
+    // {
+    //     title: "React-moveable",
+    //     key: "Move",
+    //     router: null,
+    //     children: [
+    //         { title: "Drag", key: 'Move-1', router: "/move/drag" },
+    //         { title: "Resizable", key: 'Move-2', router: "/move/resizable" },
+    //     ]
+    // },
 
 ];
 export default function menuReducer(state = menuState, action: any) {

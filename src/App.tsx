@@ -34,6 +34,8 @@ const App1 = lazy(() => import('./components/Visualization/app1'));
 const Drag = lazy(() => import("./components/moveable"));
 const Resizable = lazy(() => import("./components/moveable/Resizable"));
 const Login = lazy(() => import('./components/Widget/login'));
+const Table = lazy(()=>import('./components/Tables'));
+const Comm = lazy(()=>import('./components/React'))
 
 function App() {
   const element = useRoutes([
@@ -72,6 +74,8 @@ function App() {
         { path: "/components/ScatterChart", element: <ScatterChart /> },
         { path: "/components/SortDrag", element: <SortDrag /> },
         { path: "/components/Sin", element: <Sin /> },
+        { path: "/components/table", element: <Table /> },
+        { path: "/components/react", element: <Comm /> },
       ],
     },
     {

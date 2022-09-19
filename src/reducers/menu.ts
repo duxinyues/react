@@ -2,7 +2,7 @@
  * @Author: 韦永愿 1638877065@qq.com
  * @Date: 2022-08-12 09:06:11
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-13 11:04:41
+ * @LastEditTime: 2022-09-14 15:57:10
  * @FilePath: \react\src\reducers\menu.ts
  * @Description: 
  * Copyright (c) 2022 by 韦永愿 email: 1638877065@qq.com, All Rights Reserved.
@@ -13,7 +13,7 @@ const menuState = [
         key: "component",
         router: null,
         children: [
-            { title: "表格", key: 'table', router: "/components/table" },
+            // { title: "表格", key: 'table', router: "/components/table" },
             { title: "React", key: 'react', router: "/components/react" }
         ]
     },

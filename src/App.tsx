@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-17 15:27:25
+ * @LastEditTime: 2022-09-29 22:39:51
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -85,24 +85,24 @@ function App() {
         { path: "/widget/directory", element: <Directory /> },
       ]
     },
-    { path: "/app1", element: <App1 /> },
-    {
-      path: "/move",
-      element: <Container />,
-      children: [
-        {
-          index: true,
-          path: "/move/drag",
-          element: <Drag />,
-        },
-        {
-          index: true,
-          path: "/move/resizable",
-          element: <Resizable />,
-        },
-      ]
-    },
-    { path: "/three3d", element: <Three3D /> },
+    // { path: "/app1", element: <App1 /> },
+    // {
+    //   path: "/move",
+    //   element: <Container />,
+    //   children: [
+    //     {
+    //       index: true,
+    //       path: "/move/drag",
+    //       element: <Drag />,
+    //     },
+    //     {
+    //       index: true,
+    //       path: "/move/resizable",
+    //       element: <Resizable />,
+    //     },
+    //   ]
+    // },
+    // { path: "/three3d", element: <Three3D /> },
     { path: "/login", element: <Login /> },
     { path: "*", element: <NoMatch /> },])
     const {localStorage} = useLocalStorage("login");

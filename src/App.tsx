@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-29 22:39:51
+ * @LastEditTime: 2022-10-19 15:49:06
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -41,14 +41,14 @@ function App() {
   const element = useRoutes([
     {
       path: "/",
-      element: <Container />,
-      children: [
-        {
-          index: true,
-          path: "/",
-          element: <Dashboard />,
-        },
-      ]
+      element: <Comm />,
+      // children: [
+      //   {
+      //     index: true,
+      //     path: "/",
+      //     element: <Dashboard />,
+      //   },
+      // ]
     },
     {
       path: "/components",
@@ -109,7 +109,7 @@ function App() {
     const navigate = useNavigate();
     useEffect(()=>{
       if(!localStorage){
-        navigate("/login")
+        // navigate("/login")
       }
     },[])
   return (

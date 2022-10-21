@@ -79,5 +79,6 @@
     "lerna": "^5.5.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^4.6.1"
-  }
+  },
+  "proxy": "http://192.168.0.109:3000"
 }

@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-08-13 15:31:23
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-09-11 13:01:47
+ * @LastEditTime: 2022-10-21 22:08:04
  * @FilePath: \react\src\components\Widget\login\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -262,7 +262,12 @@ export default function Login() {
                     onFinish={(values) => {
                         console.log("登录", values);
                         setLocalStorage('true');
-                        navigate('/')
+                        // navigate('/')
+                        fetch('http://localhost:3000/article').then(res => res.json()).then(res => {
+                            console.log("res", res)
+                        }).catch(err => {
+                            console.log(err)
+                        })
                     }}
                 >
                     <Form.Item

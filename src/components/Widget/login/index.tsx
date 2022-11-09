@@ -2,7 +2,7 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-08-13 15:31:23
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-10-21 22:08:04
+ * @LastEditTime: 2022-10-21 22:16:44
  * @FilePath: \react\src\components\Widget\login\index.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
@@ -22,6 +22,11 @@ export default function Login() {
     let materials: any[] = [];
     let parameters: any
     useEffect(() => {
+        fetch('http://localhost:3000/article').then(res => res.json()).then(res => {
+            console.log("res", res)
+        }).catch(err => {
+            console.log(err)
+        })
         init()
     }, [])
     const init = () => {
@@ -262,12 +267,8 @@ export default function Login() {
                     onFinish={(values) => {
                         console.log("登录", values);
                         setLocalStorage('true');
-                        // navigate('/')
-                        fetch('http://localhost:3000/article').then(res => res.json()).then(res => {
-                            console.log("res", res)
-                        }).catch(err => {
-                            console.log(err)
-                        })
+                        navigate('/')
+
                     }}
                 >
                     <Form.Item

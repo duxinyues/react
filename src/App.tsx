@@ -2,13 +2,13 @@
  * @Author: duxinyues yongyuan253015@gmail.com
  * @Date: 2022-06-26 22:10:16
  * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-10-19 15:49:06
+ * @LastEditTime: 2022-11-06 22:11:30
  * @FilePath: \react\src\App.tsx
  * @Description: 
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
-import { Suspense, lazy,useEffect } from "react";
-import { useRoutes,useNavigate } from "react-router-dom";
+import { Suspense, lazy, useEffect } from "react";
+import { useRoutes, useNavigate } from "react-router-dom";
 import useLocalStorage from "@/hooks/useLocalStorage";
 const Container = lazy(() => import('./components/Container'))
 const NoMatch = lazy(() => import('./components/NoMatch'))
@@ -34,21 +34,22 @@ const App1 = lazy(() => import('./components/Visualization/app1'));
 const Drag = lazy(() => import("./components/moveable"));
 const Resizable = lazy(() => import("./components/moveable/Resizable"));
 const Login = lazy(() => import('./components/Widget/login'));
-const Table = lazy(()=>import('./components/Tables'));
-const Comm = lazy(()=>import('./components/React'))
+const Table = lazy(() => import('./components/Tables'));
+const Comm = lazy(() => import('./components/React'));
+const Dnd = lazy(() => import("./components/Dnd"))
 
 function App() {
   const element = useRoutes([
     {
       path: "/",
-      element: <Comm />,
-      // children: [
-      //   {
-      //     index: true,
-      //     path: "/",
-      //     element: <Dashboard />,
-      //   },
-      // ]
+      element: <Dnd />,
+      children: [
+        {
+          index: true,
+          path: "/",
+          element: <Dashboard />,
+        },
+      ]
     },
     {
       path: "/components",
@@ -85,33 +86,33 @@ function App() {
         { path: "/widget/directory", element: <Directory /> },
       ]
     },
-    // { path: "/app1", element: <App1 /> },
-    // {
-    //   path: "/move",
-    //   element: <Container />,
-    //   children: [
-    //     {
-    //       index: true,
-    //       path: "/move/drag",
-    //       element: <Drag />,
-    //     },
-    //     {
-    //       index: true,
-    //       path: "/move/resizable",
-    //       element: <Resizable />,
-    //     },
-    //   ]
-    // },
-    // { path: "/three3d", element: <Three3D /> },
+    { path: "/app1", element: <App1 /> },
+    {
+      path: "/move",
+      element: <Container />,
+      children: [
+        {
+          index: true,
+          path: "/move/drag",
+          element: <Drag />,
+        },
+        {
+          index: true,
+          path: "/move/resizable",
+          element: <Resizable />,
+        },
+      ]
+    },
+    { path: "/three3d", element: <Three3D /> },
     { path: "/login", element: <Login /> },
     { path: "*", element: <NoMatch /> },])
-    const {localStorage} = useLocalStorage("login");
-    const navigate = useNavigate();
-    useEffect(()=>{
-      if(!localStorage){
-        // navigate("/login")
-      }
-    },[])
+  const { localStorage } = useLocalStorage("login");
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!localStorage) {
+      // navigate("/login")
+    }
+  }, [])
   return (
     <Suspense fallback={<div className="react-container"><div className="progress-9"></div></div>}>
       {element}

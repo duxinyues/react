@@ -7,25 +7,24 @@
  * @Description: DnD
  * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
  */
+import { Button } from "antd";
 import { Children } from "react";
-function Content({ children }:any) {
-    return <div>
-        {
-            Children.map(children, child => {
-                return <div className="Row">
-                    {child}
-                </div>
-            })
-        }
+import { useNavigate } from "react-router-dom";
+function Content({ children }: any) {
+  const navigate = useNavigate();
+  return (
+    <div>
+      {Children.map(children, (child) => {
+        return <div className="Row">{child}</div>;
+      })}
+      <Button onClick={() => navigate("/params/"+9999)}>
+        跳转参数
+      </Button>
     </div>
+  );
 }
 
 function Dnd() {
-    return <Content >
-        <p>908</p>
-        <p>909</p>
-        <p>910</p>
-        <p>911</p>
-    </Content>
+  return <Content></Content>;
 }
-export default Dnd
+export default Dnd;

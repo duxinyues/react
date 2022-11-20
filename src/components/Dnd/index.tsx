@@ -1,30 +1,68 @@
-/*
- * @Author: duxinyues yongyuan253015@gmail.com
- * @Date: 2022-11-06 22:09:19
- * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-11-08 23:17:06
- * @FilePath: \react\src\components\Dnd\index.tsx
- * @Description: DnD
- * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
- */
-import { Button } from "antd";
-import { Children } from "react";
-import { useNavigate } from "react-router-dom";
-function Content({ children }: any) {
-  const navigate = useNavigate();
-  return (
-    <div>
-      {Children.map(children, (child) => {
-        return <div className="Row">{child}</div>;
-      })}
-      <Button onClick={() => navigate("/params/"+9999)}>
-        跳转参数
-      </Button>
-    </div>
-  );
+import React from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import Classification from './Classification';
+import './index.scss';
+import { WORD_TYPE } from './type';
+import Word from './Word';
+
+const WORDS = [
+  {
+    text: 'interesting',
+    type: WORD_TYPE.adj,
+  },
+  {
+    text: 'interest',
+    type: WORD_TYPE.verb,
+  },
+  {
+    text: 'forget',
+    type: WORD_TYPE.verb,
+  },
+  {
+    text: 'interested',
+    type: WORD_TYPE.adj,
+  },
+];
+
+const Classifications = [
+  {
+    title: '形容词',
+    type: WORD_TYPE.adj,
+  },
+  {
+    title: '动词',
+    type: WORD_TYPE.verb,
+  },
+];
+
+class WordClassification extends React.Component {
+  constructor(props: any) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <DndProvider backend={HTML5Backend}>
+        <div className='word-container'>
+          <h2>任意拖拽</h2>
+          <div className='word_drop_group'>
+            {Classifications.map((each, index) => (
+              <Classification {...each} key={'classification' + index} />
+            ))}
+          </div>
+
+          <div className='word_drag_group'>
+            {WORDS.map((each, index) => {
+              let newEach = { ...each, id: 'drag' + index };
+              return <Word {...newEach} key={'word' + index} />;
+            })}
+          </div>
+        </div>
+      </DndProvider>
+    );
+  }
 }
 
-function Dnd() {
-  return <Content></Content>;
-}
-export default Dnd;
+export default WordClassification;

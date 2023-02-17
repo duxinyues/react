@@ -1,12 +1,3 @@
-/*
- * @Author: duxinyues yongyuan253015@gmail.com
- * @Date: 2022-06-26 22:10:16
- * @LastEditors: duxinyues yongyuan253015@gmail.com
- * @LastEditTime: 2022-11-30 16:21:50
- * @FilePath: \react\src\App.tsx
- * @Description:
- * Copyright (c) 2022 by duxinyues email: yongyuan253015@gmail.com, All Rights Reserved.
- */
 import { Suspense, lazy, useEffect } from "react";
 import { useRoutes, useNavigate } from "react-router-dom";
 import useLocalStorage from "@/hooks/useLocalStorage";
@@ -43,22 +34,20 @@ const Comm = lazy(() => import("./components/React"));
 const Dnd = lazy(() => import("./components/Dnd"));
 const Params = lazy(() => import("./components/Dnd/Params"));
 
-const loadRouter = (children: React.ReactNode) => (
-  <Suspense
-    fallback={
-      <div className="react-container">
-        <div className="progress-9"></div>
-      </div>
-    }
-  >
-    {children}
-  </Suspense>
-);
+const loadRouter = (children: any) => {
+  return (
+    <Suspense fallback={<div className="react-container"><div className="progress-9"></div></div>
+      }
+    >
+      {children}
+    </Suspense>
+  );
+};
 function App() {
   const element = useRoutes([
     {
       path: "/",
-      element: loadRouter(<Dnd />),
+      element: loadRouter(<Container />),
       children: [
         {
           index: true,
@@ -137,11 +126,11 @@ function App() {
     { path: "/login", element: loadRouter(<Login />) },
     { path: "*", element: loadRouter(<NoMatch />) },
   ]);
-  const { localStorage } = useLocalStorage("login");
+  const { localStorage } = useLocalStorage("user");
   const navigate = useNavigate();
   useEffect(() => {
     if (!localStorage) {
-      // navigate("/login")
+      navigate("/login");
     }
   }, []);
   return element;

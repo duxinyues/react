@@ -2,6 +2,7 @@
   "name": "react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@craco/craco": "^6.4.5",
     "@jiaminghi/data-view-react": "^1.2.5",
@@ -38,6 +39,7 @@
     "request": "^2.88.2",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
+    "slate-react": "^0.88.0",
     "three": "^0.133.1",
     "typescript": "^4.6.4",
     "use-file-picker": "^1.5.0",
@@ -82,5 +84,5 @@
     "progress-bar-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^4.6.1"
   },
-  "proxy": "http://192.168.0.109:3000"
+  "proxy": "http://192.168.0.110:8098/"
 }

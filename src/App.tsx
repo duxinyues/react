@@ -1,6 +1,8 @@
 import { Suspense, lazy, useEffect } from "react";
 import { useRoutes, useNavigate } from "react-router-dom";
 import useLocalStorage from "@/hooks/useLocalStorage";
+
+
 const Container = lazy(() => import("./components/Container"));
 const NoMatch = lazy(() => import("./components/NoMatch"));
 const Bar = lazy(() => import("./components/EchartComponents/Bar"));
@@ -129,9 +131,9 @@ function App() {
   const { localStorage } = useLocalStorage("user");
   const navigate = useNavigate();
   useEffect(() => {
-    if (!localStorage) {
-      navigate("/login");
-    }
+    // if (!localStorage) {
+    //   navigate("/login");
+    // }
   }, []);
   return element;
 }
